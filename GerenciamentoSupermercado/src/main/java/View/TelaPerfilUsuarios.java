@@ -1,19 +1,21 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
 
 /**
  *
- * @author AntônioVieira
+ * @author JhéssikLeal
  */
-public class telaPerfil extends javax.swing.JPanel {
+public class TelaPerfilUsuarios extends javax.swing.JFrame {
+    
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaPerfilUsuarios.class.getName());
 
     /**
-     * Creates new form telaPerfil
+     * Creates new form TelaPerfilUsuarios
      */
-    public telaPerfil() {
+    public TelaPerfilUsuarios() {
         initComponents();
     }
 
@@ -26,6 +28,7 @@ public class telaPerfil extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         perfil = new javax.swing.JPanel();
         areaPerfil = new javax.swing.JTabbedPane();
         areaPerfilUsuario = new javax.swing.JPanel();
@@ -81,7 +84,9 @@ public class telaPerfil extends javax.swing.JPanel {
         jScrollPane5 = new javax.swing.JScrollPane();
         areaRegistrodeAtividades = new javax.swing.JTable();
 
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbNomePerfil.setText("jLabel1");
 
@@ -122,7 +127,7 @@ public class telaPerfil extends javax.swing.JPanel {
                     .addComponent(tfPerfilAcessoPerfil)
                     .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
                         .addComponent(lbPerfilAcessoPerfil)
-                        .addGap(0, 361, Short.MAX_VALUE))
+                        .addGap(0, 453, Short.MAX_VALUE))
                     .addComponent(ffTelefonePerfil))
                 .addContainerGap())
             .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
@@ -178,7 +183,7 @@ public class telaPerfil extends javax.swing.JPanel {
                     .addComponent(tfPerfilAcessoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSalvarAlteracoesPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Perfil do Usuário", areaPerfilUsuario);
@@ -199,13 +204,6 @@ public class telaPerfil extends javax.swing.JPanel {
             }
         ));
         jScrollPane1.setViewportView(tbUsuarios);
-        if (tbUsuarios.getColumnModel().getColumnCount() > 0) {
-            tbUsuarios.getColumnModel().getColumn(0).setHeaderValue("USUÁRIO");
-            tbUsuarios.getColumnModel().getColumn(1).setHeaderValue("CARGO");
-            tbUsuarios.getColumnModel().getColumn(2).setHeaderValue("PERFIL DE ACESSO");
-            tbUsuarios.getColumnModel().getColumn(3).setHeaderValue("LOJA");
-            tbUsuarios.getColumnModel().getColumn(4).setHeaderValue("STATUS");
-        }
 
         btnCadastroUsuarioNovo.setText("Novo Usuário");
 
@@ -220,7 +218,7 @@ public class telaPerfil extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaCadastroDeUsuarioLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addGap(0, 159, Short.MAX_VALUE))
         );
         areaCadastroDeUsuarioLayout.setVerticalGroup(
             areaCadastroDeUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +227,7 @@ public class telaPerfil extends javax.swing.JPanel {
                 .addComponent(btnCadastroUsuarioNovo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Cadastro de Usuário", areaCadastroDeUsuario);
@@ -256,7 +254,7 @@ public class telaPerfil extends javax.swing.JPanel {
         areaPermissoesLayout.setHorizontalGroup(
             areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaPermissoesLayout.createSequentialGroup()
-                .addContainerGap(53, Short.MAX_VALUE)
+                .addContainerGap(181, Short.MAX_VALUE)
                 .addGroup(areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPermissoesLayout.createSequentialGroup()
                         .addComponent(btnControlePermissoes)
@@ -277,7 +275,7 @@ public class telaPerfil extends javax.swing.JPanel {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(btnSalvarPermissoes)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Área Permissões", areaPermissoes);
@@ -310,17 +308,17 @@ public class telaPerfil extends javax.swing.JPanel {
             .addGroup(areaBloqueioDesbloqueioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(140, Short.MAX_VALUE))
         );
         areaBloqueioDesbloqueioLayout.setVerticalGroup(
             areaBloqueioDesbloqueioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaBloqueioDesbloqueioLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
-        areaPerfil.addTab("Bloquio e desbloqueio de usuário", areaBloqueioDesbloqueio);
+        areaPerfil.addTab("Bloqueio e desbloqueio de usuário", areaBloqueioDesbloqueio);
 
         cbHistoricoAcesso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -355,7 +353,7 @@ public class telaPerfil extends javax.swing.JPanel {
                 .addGap(159, 159, 159))
             .addGroup(areaHistoricoAcessoLayout.createSequentialGroup()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 39, Short.MAX_VALUE))
+                .addGap(0, 167, Short.MAX_VALUE))
         );
         areaHistoricoAcessoLayout.setVerticalGroup(
             areaHistoricoAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,7 +361,7 @@ public class telaPerfil extends javax.swing.JPanel {
                 .addComponent(cbHistoricoAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Histórico de acessos", areaHistoricoAcesso);
@@ -456,7 +454,7 @@ public class telaPerfil extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(lbOperadorCaixa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfOperadorCaixa, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                .addComponent(tfOperadorCaixa)
                 .addGap(18, 18, 18)
                 .addComponent(btnOpperadorCaixaPermissoes))
         );
@@ -502,7 +500,7 @@ public class telaPerfil extends javax.swing.JPanel {
                 .addComponent(areaGerenteLoja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(areaOperadorCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         areaPerfisdeAcessoLayout.setVerticalGroup(
             areaPerfisdeAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -515,7 +513,7 @@ public class telaPerfil extends javax.swing.JPanel {
                     .addComponent(areaOperadorCaixa, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(51, 51, 51)
                 .addComponent(areaRepositor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(204, Short.MAX_VALUE))
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Perfis de Acesso", areaPerfisdeAcesso);
@@ -553,7 +551,7 @@ public class telaPerfil extends javax.swing.JPanel {
                     .addGroup(areaRegistroAtividadeLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(cbRegistroAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 840, Short.MAX_VALUE))
                 .addContainerGap())
         );
         areaRegistroAtividadeLayout.setVerticalGroup(
@@ -563,7 +561,7 @@ public class telaPerfil extends javax.swing.JPanel {
                 .addComponent(cbRegistroAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Registro de atividades", areaRegistroAtividade);
@@ -574,19 +572,60 @@ public class telaPerfil extends javax.swing.JPanel {
             perfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(perfilLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(areaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 724, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addComponent(areaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 852, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         perfilLayout.setVerticalGroup(
             perfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(perfilLayout.createSequentialGroup()
-                .addComponent(areaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 581, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 367, Short.MAX_VALUE))
+                .addComponent(areaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 286, Short.MAX_VALUE))
         );
 
-        add(perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+        jPanel1.add(perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 0, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 926, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 926, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 762, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 762, Short.MAX_VALUE))
+        );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
+            logger.log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(() -> new TelaPerfilUsuarios().setVisible(true));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel areaAdministrado;
@@ -613,6 +652,7 @@ public class telaPerfil extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> cbHistoricoAcesso;
     private javax.swing.JComboBox<String> cbRegistroAtividade;
     private javax.swing.JFormattedTextField ffTelefonePerfil;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

@@ -34,8 +34,7 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
         tfEmailCadatradoRecuperarSenha = new javax.swing.JTextField();
         btnEnviarCodigoRecuperarSenha = new javax.swing.JButton();
         btnVoltaLoginRecuperarSenha = new javax.swing.JButton();
-        cpRecuperacaoSenha = new javax.swing.JScrollPane();
-        tfRecuperacaoSenha = new javax.swing.JTextArea();
+        lbInformacoes = new javax.swing.JLabel();
 
         lbLogotipoRecuperarSenha.setText("jLabel1");
 
@@ -47,11 +46,7 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
 
         btnVoltaLoginRecuperarSenha.setText("Volta ao login");
 
-        tfRecuperacaoSenha.setColumns(20);
-        tfRecuperacaoSenha.setRows(5);
-        tfRecuperacaoSenha.setText("Informe o e-mail cadastrado. Enviaremos um código de verificação de 6 digitos.");
-        tfRecuperacaoSenha.setToolTipText("");
-        cpRecuperacaoSenha.setViewportView(tfRecuperacaoSenha);
+        lbInformacoes.setText("Informe o e-mail cadastrado.  Enviaremos um código de verificação de 6 digitos.");
 
         javax.swing.GroupLayout areaRecuperarSenhaLayout = new javax.swing.GroupLayout(areaRecuperarSenha);
         areaRecuperarSenha.setLayout(areaRecuperarSenhaLayout);
@@ -68,9 +63,6 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
                                     .addComponent(lbNomeSupermercadoRecuperar)
                                     .addComponent(lbLogotipoRecuperarSenha)))
                             .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(cpRecuperacaoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(lbEmailRecuperarSenha))
                             .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
@@ -81,8 +73,12 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
                                 .addGroup(areaRecuperarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnVoltaLoginRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnEnviarCodigoRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 19, Short.MAX_VALUE)))
+                        .addGap(0, 70, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         areaRecuperarSenhaLayout.setVerticalGroup(
             areaRecuperarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,8 +90,8 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(spRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cpRecuperacaoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addComponent(lbInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lbEmailRecuperarSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tfEmailCadatradoRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -113,14 +109,14 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(areaRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(areaRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -129,12 +125,11 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
     private javax.swing.JPanel areaRecuperarSenha;
     private javax.swing.JButton btnEnviarCodigoRecuperarSenha;
     private javax.swing.JButton btnVoltaLoginRecuperarSenha;
-    private javax.swing.JScrollPane cpRecuperacaoSenha;
     private javax.swing.JLabel lbEmailRecuperarSenha;
+    private javax.swing.JLabel lbInformacoes;
     private javax.swing.JLabel lbLogotipoRecuperarSenha;
     private javax.swing.JLabel lbNomeSupermercadoRecuperar;
     private javax.swing.JSeparator spRecuperarSenha;
     private javax.swing.JTextField tfEmailCadatradoRecuperarSenha;
-    private javax.swing.JTextArea tfRecuperacaoSenha;
     // End of variables declaration//GEN-END:variables
 }

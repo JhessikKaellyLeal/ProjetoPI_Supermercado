@@ -40,7 +40,7 @@ public class telaLogout extends javax.swing.JPanel {
 
         taEncerrarSessao.setColumns(20);
         taEncerrarSessao.setRows(5);
-        taEncerrarSessao.setText("Você está saindo do terminal CAIXA-ADM como Admistrador.Alterações não serão perdidas.");
+        taEncerrarSessao.setText("Você está saindo do terminal \nCAIXA-ADM como Admistrador.\nAlterações não serão perdidas.");
         jScrollPane1.setViewportView(taEncerrarSessao);
 
         btnCancelarEncerrarSessao.setText("Cancelar");
@@ -62,12 +62,12 @@ public class telaLogout extends javax.swing.JPanel {
                                 .addComponent(lbLogotipoEncerramento))))
                     .addGroup(areaEncerramentoLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(areaEncerramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                            .addGroup(areaEncerramentoLayout.createSequentialGroup()
-                                .addComponent(btnCancelarEncerrarSessao)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                                .addComponent(btnSairEncerrarSessao)))))
+                        .addComponent(btnCancelarEncerrarSessao)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addComponent(btnSairEncerrarSessao))
+                    .addGroup(areaEncerramentoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         areaEncerramentoLayout.setVerticalGroup(
@@ -78,8 +78,8 @@ public class telaLogout extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(lbEncerramentoSessão)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(areaEncerramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarEncerrarSessao)
                     .addComponent(btnSairEncerrarSessao))
