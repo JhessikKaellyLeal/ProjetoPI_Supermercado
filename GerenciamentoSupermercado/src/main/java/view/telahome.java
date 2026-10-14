@@ -28,15 +28,6 @@ public class telahome extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jpTopo = new javax.swing.JPanel();
-        lbSupermercado = new javax.swing.JLabel();
-        lbBoaEconomia = new javax.swing.JLabel();
-        lbTraço = new javax.swing.JLabel();
-        lbPaginaInicial = new javax.swing.JLabel();
-        lbUsuarioAdmin = new javax.swing.JLabel();
-        lbDivisao = new javax.swing.JLabel();
-        lbSair = new javax.swing.JLabel();
-        lbEspaço = new javax.swing.JLabel();
         jpBanner = new javax.swing.JPanel();
         lbOla = new javax.swing.JLabel();
         lbBemVindo = new javax.swing.JLabel();
@@ -124,92 +115,15 @@ public class telahome extends javax.swing.JFrame {
         btnConfigurar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         setMaximumSize(new java.awt.Dimension(2100000, 2100000));
         setPreferredSize(new java.awt.Dimension(720, 864));
         setResizable(false);
 
-        jpTopo.setBackground(new java.awt.Color(0, 0, 0));
+        jpBanner.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpBanner.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-        lbSupermercado.setBackground(new java.awt.Color(255, 255, 255));
-        lbSupermercado.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        lbSupermercado.setForeground(new java.awt.Color(255, 255, 255));
-        lbSupermercado.setText("SUPERMERCADO");
-
-        lbBoaEconomia.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        lbBoaEconomia.setForeground(new java.awt.Color(255, 255, 255));
-        lbBoaEconomia.setText("BOA ECONOMIA");
-
-        lbTraço.setFont(new java.awt.Font("Arial", 0, 30)); // NOI18N
-        lbTraço.setForeground(new java.awt.Color(204, 204, 204));
-        lbTraço.setText("|");
-
-        lbPaginaInicial.setForeground(new java.awt.Color(255, 255, 255));
-        lbPaginaInicial.setText("Pagina Inicial");
-
-        lbUsuarioAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        lbUsuarioAdmin.setText("Ususario:admin");
-
-        lbDivisao.setFont(new java.awt.Font("Arial", 0, 30)); // NOI18N
-        lbDivisao.setForeground(new java.awt.Color(255, 255, 255));
-        lbDivisao.setText("|");
-
-        lbSair.setForeground(new java.awt.Color(255, 255, 255));
-        lbSair.setText("Sair");
-
-        lbEspaço.setFont(new java.awt.Font("Arial", 0, 30)); // NOI18N
-        lbEspaço.setForeground(new java.awt.Color(204, 204, 204));
-        lbEspaço.setText("|");
-
-        javax.swing.GroupLayout jpTopoLayout = new javax.swing.GroupLayout(jpTopo);
-        jpTopo.setLayout(jpTopoLayout);
-        jpTopoLayout.setHorizontalGroup(
-            jpTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpTopoLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(jpTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbSupermercado, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbBoaEconomia, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addComponent(lbTraço)
-                .addGap(45, 45, 45)
-                .addComponent(lbPaginaInicial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lbEspaço, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lbUsuarioAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbDivisao, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75)
-                .addComponent(lbSair)
-                .addGap(123, 123, 123))
-        );
-        jpTopoLayout.setVerticalGroup(
-            jpTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTopoLayout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addComponent(lbSupermercado, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jpTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbBoaEconomia)
-                    .addComponent(lbTraço, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbEspaço, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTopoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jpTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTopoLayout.createSequentialGroup()
-                        .addComponent(lbPaginaInicial)
-                        .addGap(36, 36, 36))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTopoLayout.createSequentialGroup()
-                        .addGroup(jpTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbDivisao)
-                            .addComponent(lbUsuarioAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbSair))
-                        .addGap(5, 5, 5))))
-        );
-
-        jpBanner.setBackground(new java.awt.Color(204, 255, 204));
-
+        lbOla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         lbOla.setText("Ola, Admin!");
 
         lbBemVindo.setText("Bem-vindo ao sistema do Supermrecado Boa Economia.");
@@ -236,7 +150,7 @@ public class telahome extends javax.swing.JFrame {
                         .addGroup(jpBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbOla)
                             .addComponent(lbBemVindo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 671, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jpBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbJuntosPor)
                             .addGroup(jpBannerLayout.createSequentialGroup()
@@ -251,10 +165,10 @@ public class telahome extends javax.swing.JFrame {
         jpBannerLayout.setVerticalGroup(
             jpBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBannerLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jpBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbOla)
-                    .addComponent(lbJuntosPor))
+                .addGap(18, 18, 18)
+                .addGroup(jpBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbJuntosPor)
+                    .addComponent(lbOla))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbBemVindo)
@@ -266,20 +180,27 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jpAçoesRapidas.setBackground(new java.awt.Color(255, 204, 204));
+        jpAçoesRapidas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpAçoesRapidas.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         lbAçoesRapidas.setText("Açoes Rapidas");
 
+        btnNovaVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         btnNovaVenda.setText("Nova Venda");
 
+        btnCadastrarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.png"))); // NOI18N
         btnCadastrarProduto.setText("Cadastar Produto");
 
+        btnCadastrarClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.png"))); // NOI18N
         btnCadastrarClientes.setText("Cadastrar Clientes");
 
+        btnNovoPedido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         btnNovoPedido.setText("Novo Pedido");
 
+        btnContasPagarReceber.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document.png"))); // NOI18N
         btnContasPagarReceber.setText("Contas a Pagar/Receber");
 
+        btnRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/graph-bar.png"))); // NOI18N
         btnRelatorios.setText("Relatorios");
 
         javax.swing.GroupLayout jpAçoesRapidasLayout = new javax.swing.GroupLayout(jpAçoesRapidas);
@@ -287,24 +208,23 @@ public class telahome extends javax.swing.JFrame {
         jpAçoesRapidasLayout.setHorizontalGroup(
             jpAçoesRapidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpAçoesRapidasLayout.createSequentialGroup()
-                .addGroup(jpAçoesRapidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpAçoesRapidasLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(lbAçoesRapidas))
-                    .addGroup(jpAçoesRapidasLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(btnNovaVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCadastrarProduto)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCadastrarClientes)
-                        .addGap(41, 41, 41)
-                        .addComponent(btnNovoPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(btnContasPagarReceber)
-                        .addGap(42, 42, 42)
-                        .addComponent(btnRelatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE)
+                .addComponent(btnNovaVenda)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCadastrarProduto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCadastrarClientes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnNovoPedido)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnContasPagarReceber)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnRelatorios)
+                .addGap(29, 29, 29))
+            .addGroup(jpAçoesRapidasLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(lbAçoesRapidas)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpAçoesRapidasLayout.setVerticalGroup(
             jpAçoesRapidasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -322,10 +242,13 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        jpResumoGeral.setBackground(new java.awt.Color(204, 255, 255));
+        jpResumoGeral.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpResumoGeral.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
+        lbResumoGeral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/graph-bar.png"))); // NOI18N
         lbResumoGeral.setText("Resumo geral");
 
+        lbVendasHoje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         lbVendasHoje.setText("Vendas hoje");
 
         lb4258.setText("R$ 4.258,90");
@@ -343,9 +266,10 @@ public class telahome extends javax.swing.JFrame {
                         .addComponent(lbemRelacaoaOntem))
                     .addGroup(jpVendasHojeLayout.createSequentialGroup()
                         .addGap(47, 47, 47)
-                        .addGroup(jpVendasHojeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbVendasHoje)
-                            .addComponent(lb4258))))
+                        .addComponent(lb4258))
+                    .addGroup(jpVendasHojeLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(lbVendasHoje)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpVendasHojeLayout.setVerticalGroup(
@@ -360,6 +284,7 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cash-register.png"))); // NOI18N
         jLabel25.setText("Caixas abertos");
 
         jLabel31.setText("3");
@@ -376,25 +301,26 @@ public class telahome extends javax.swing.JFrame {
                         .addGap(15, 15, 15)
                         .addComponent(jLabel25))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel32))
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel32)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                        .addGap(72, 72, 72)
+                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel25)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel31)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel32)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document.png"))); // NOI18N
         jLabel26.setText("Pedidos Pendentes");
 
         jLabel33.setText("5");
@@ -406,31 +332,30 @@ public class telahome extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel34)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(jLabel26))))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel33)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel34)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                            .addGap(27, 27, 27)
+                            .addComponent(jLabel26))
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                            .addGap(85, 85, 85)
+                            .addComponent(jLabel33))))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(21, 21, 21)
                 .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel34)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circle.png"))); // NOI18N
         jLabel27.setText("Contas a pagar");
 
         jLabel35.setText("2.340,00");
@@ -444,14 +369,14 @@ public class telahome extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
+                        .addGap(38, 38, 38)
                         .addComponent(jLabel35))
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
+                        .addGap(24, 24, 24)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel36)
                             .addComponent(jLabel27))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -462,9 +387,13 @@ public class telahome extends javax.swing.JFrame {
                 .addComponent(jLabel35)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel36)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel14.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel14.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circle.png"))); // NOI18N
         jLabel28.setText("Contas a receber");
 
         jLabel37.setText("1.870,50");
@@ -475,17 +404,17 @@ public class telahome extends javax.swing.JFrame {
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                        .addComponent(jLabel28)
-                        .addGap(15, 15, 15))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel38)
                             .addComponent(jLabel37))
-                        .addGap(37, 37, 37))))
+                        .addGap(37, 37, 37))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addGap(29, 29, 29))))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -496,7 +425,7 @@ public class telahome extends javax.swing.JFrame {
                 .addComponent(jLabel37)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel38)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jpResumoGeralLayout = new javax.swing.GroupLayout(jpResumoGeral);
@@ -504,22 +433,22 @@ public class telahome extends javax.swing.JFrame {
         jpResumoGeralLayout.setHorizontalGroup(
             jpResumoGeralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpResumoGeralLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
                 .addGroup(jpResumoGeralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpResumoGeralLayout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(lbResumoGeral))
+                        .addComponent(lbResumoGeral)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jpResumoGeralLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
                         .addComponent(jpVendasHoje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(29, 29, 29)
+                        .addGap(28, 28, 28)
                         .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))))
         );
         jpResumoGeralLayout.setVerticalGroup(
             jpResumoGeralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -527,35 +456,41 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lbResumoGeral)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpResumoGeralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpVendasHoje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jpResumoGeralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jpVendasHoje, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
 
-        jpNotificações.setBackground(new java.awt.Color(255, 255, 204));
+        jpNotificações.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpNotificações.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         lbNotificaçoes.setText("Notificaçoes");
 
         lbVerTodas.setText("Ver todas");
 
+        lbPedido4587.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         lbPedido4587.setText("Pedido #4587 aguardando entrega");
 
         lb10e24.setText("10:24");
 
+        lbEstoqueBaixo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/warning.png"))); // NOI18N
         lbEstoqueBaixo.setText("Estoque baixo: Arroz (5 un.)");
 
         lb9e50.setText("09:50");
 
+        lbContaPagarVencida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credit-card.png"))); // NOI18N
         lbContaPagarVencida.setText("Conta a pagar vencida");
 
         lb8e32.setText("08:32");
 
+        VendaFinalizada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checked.png"))); // NOI18N
         VendaFinalizada.setText("Venda finalizada");
 
+        lbNovoClienteCadastrado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/information.png"))); // NOI18N
         lbNovoClienteCadastrado.setText("Novo cliente cadastrado");
 
         lb8e15.setText("08:15");
@@ -582,11 +517,8 @@ public class telahome extends javax.swing.JFrame {
         jpNotificaçõesLayout.setHorizontalGroup(
             jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpNotificaçõesLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(21, 21, 21)
                 .addGroup(jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jpNotificaçõesLayout.createSequentialGroup()
-                        .addComponent(lbJoaoPereira)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jpNotificaçõesLayout.createSequentialGroup()
                         .addGroup(jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jpNotificaçõesLayout.createSequentialGroup()
@@ -608,25 +540,33 @@ public class telahome extends javax.swing.JFrame {
                                             .addComponent(lb9e50)
                                             .addComponent(lb10e24)))
                                     .addGroup(jpNotificaçõesLayout.createSequentialGroup()
-                                        .addComponent(lbCaixa2)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(jpNotificaçõesLayout.createSequentialGroup()
-                                        .addComponent(lbNovoClienteCadastrado)
+                                        .addGroup(jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lbCaixa2)
+                                            .addComponent(VendaFinalizada))
+                                        .addGap(113, 113, 113)
+                                        .addComponent(lb8e15))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpNotificaçõesLayout.createSequentialGroup()
+                                        .addGroup(jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lbFornecedor)
+                                            .addComponent(lbNovoClienteCadastrado))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(lb7e48)
-                                        .addGap(6, 6, 6))
-                                    .addGroup(jpNotificaçõesLayout.createSequentialGroup()
-                                        .addComponent(VendaFinalizada)
-                                        .addGap(113, 113, 113)
-                                        .addComponent(lb8e15)))
+                                        .addGap(6, 6, 6)))
                                 .addGap(0, 38, Short.MAX_VALUE)))
                         .addGap(16, 16, 16))
                     .addGroup(jpNotificaçõesLayout.createSequentialGroup()
                         .addGroup(jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbClienteMariaSilva)
-                            .addComponent(lbReporProduto)
-                            .addComponent(lbFornecedor))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(jpNotificaçõesLayout.createSequentialGroup()
+                                .addGap(29, 29, 29)
+                                .addComponent(lbJoaoPereira))
+                            .addGroup(jpNotificaçõesLayout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(lbClienteMariaSilva)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jpNotificaçõesLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(lbReporProduto)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jpNotificaçõesLayout.setVerticalGroup(
             jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -651,9 +591,9 @@ public class telahome extends javax.swing.JFrame {
                 .addGroup(jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbContaPagarVencida)
                     .addComponent(lb8e32))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(4, 4, 4)
                 .addComponent(lbFornecedor)
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jpNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(VendaFinalizada)
                     .addComponent(lb8e15))
@@ -668,22 +608,29 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        jpAtalhos.setBackground(new java.awt.Color(204, 204, 255));
+        jpAtalhos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpAtalhos.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         lbAtalhos.setText("Atalhos");
 
+        btnNovaVenda2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         btnNovaVenda2.setText("Nova Venda");
         btnNovaVenda2.addActionListener(this::btnNovaVenda2ActionPerformed);
 
+        btnCadastrarProduto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.png"))); // NOI18N
         btnCadastrarProduto2.setText("Cadastrar Produto");
         btnCadastrarProduto2.addActionListener(this::btnCadastrarProduto2ActionPerformed);
 
+        btnNovoPedido2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         btnNovoPedido2.setText("Novo Pedido");
 
+        btnRelatorio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/graph-bar.png"))); // NOI18N
         btnRelatorio2.setText("Relatorio");
 
+        btnCadastrarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.png"))); // NOI18N
         btnCadastrarCliente.setText("Cadastrar Cliente");
 
+        btnContasPagarReceber2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document.png"))); // NOI18N
         btnContasPagarReceber2.setText("Contas a Pagar/Receber");
 
         javax.swing.GroupLayout jpAtalhosLayout = new javax.swing.GroupLayout(jpAtalhos);
@@ -691,22 +638,23 @@ public class telahome extends javax.swing.JFrame {
         jpAtalhosLayout.setHorizontalGroup(
             jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpAtalhosLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
+                .addGap(19, 19, 19)
                 .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpAtalhosLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
                         .addComponent(lbAtalhos)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpAtalhosLayout.createSequentialGroup()
-                        .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(btnNovaVenda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnCadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnContasPagarReceber2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                        .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnRelatorio2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                        .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(btnNovoPedido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCadastrarProduto2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(21, 21, 21))))
+                            .addComponent(btnCadastrarProduto2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnRelatorio2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(12, 12, 12))))
         );
         jpAtalhosLayout.setVerticalGroup(
             jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -715,20 +663,21 @@ public class telahome extends javax.swing.JFrame {
                 .addComponent(lbAtalhos)
                 .addGap(18, 18, 18)
                 .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnCadastrarProduto2, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                    .addComponent(btnNovaVenda2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(58, 58, 58)
+                    .addComponent(btnCadastrarProduto2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNovaVenda2, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
                 .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnNovoPedido2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
                 .addGroup(jpAtalhosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnContasPagarReceber2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRelatorio2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49))
+                .addGap(70, 70, 70))
         );
 
-        jpPedidosPendentes.setBackground(new java.awt.Color(255, 153, 51));
+        jpPedidosPendentes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpPedidosPendentes.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         tbPedidosEntregasPendentes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -752,6 +701,7 @@ public class telahome extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbPedidosEntregasPendentes);
 
+        lbPedidosEntregasPendentes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         lbPedidosEntregasPendentes.setText("Pedidos e entregas Pendentes");
 
         lbVerTodas2.setText("Ver todas >");
@@ -768,12 +718,12 @@ public class telahome extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lbVerTodas2))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
         jpPedidosPendentesLayout.setVerticalGroup(
             jpPedidosPendentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpPedidosPendentesLayout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jpPedidosPendentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbPedidosEntregasPendentes)
                     .addComponent(lbVerTodas2))
@@ -782,7 +732,8 @@ public class telahome extends javax.swing.JFrame {
                 .addGap(42, 42, 42))
         );
 
-        jpContasPagarReceber.setBackground(new java.awt.Color(153, 153, 255));
+        jpContasPagarReceber.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpContasPagarReceber.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
         tbContasPagarReceber.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -797,6 +748,7 @@ public class telahome extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tbContasPagarReceber);
 
+        lbContasPagarReceber.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cash-register.png"))); // NOI18N
         lbContasPagarReceber.setText("Contas a pagar/Receber");
 
         lbVerTodas3.setText("Ver todas >");
@@ -828,8 +780,10 @@ public class telahome extends javax.swing.JFrame {
                 .addGap(37, 37, 37))
         );
 
-        jpCentralNotificações.setBackground(new java.awt.Color(204, 255, 204));
+        jpCentralNotificações.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpCentralNotificações.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
+        lbCentralNotificaçoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         lbCentralNotificaçoes.setText("Central de Notificações");
 
         lbVoçePossui3.setText("Voçe possui 3 novas notificações");
@@ -844,13 +798,14 @@ public class telahome extends javax.swing.JFrame {
                 .addGroup(jpCentralNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpCentralNotificaçõesLayout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addGroup(jpCentralNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbVoçePossui3)
-                            .addComponent(lbCentralNotificaçoes)))
+                        .addComponent(lbVoçePossui3))
                     .addGroup(jpCentralNotificaçõesLayout.createSequentialGroup()
                         .addGap(103, 103, 103)
-                        .addComponent(btnVerNotificaçoes)))
-                .addContainerGap(121, Short.MAX_VALUE))
+                        .addComponent(btnVerNotificaçoes))
+                    .addGroup(jpCentralNotificaçõesLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lbCentralNotificaçoes)))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
         jpCentralNotificaçõesLayout.setVerticalGroup(
             jpCentralNotificaçõesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -861,11 +816,13 @@ public class telahome extends javax.swing.JFrame {
                 .addComponent(lbVoçePossui3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnVerNotificaçoes)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jpHistorico.setBackground(new java.awt.Color(255, 204, 204));
+        jpHistorico.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpHistorico.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
+        lbHistorico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clock.png"))); // NOI18N
         lbHistorico.setText("Historico");
 
         lbAcesseHistoricoMovimentaçoes.setText("Acesse o historico de movimentações do sistema");
@@ -880,12 +837,13 @@ public class telahome extends javax.swing.JFrame {
                 .addGroup(jpHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpHistoricoLayout.createSequentialGroup()
                         .addGap(59, 59, 59)
-                        .addGroup(jpHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbAcesseHistoricoMovimentaçoes)
-                            .addComponent(lbHistorico)))
+                        .addComponent(lbAcesseHistoricoMovimentaçoes))
                     .addGroup(jpHistoricoLayout.createSequentialGroup()
                         .addGap(110, 110, 110)
-                        .addComponent(btnVerHistorico)))
+                        .addComponent(btnVerHistorico))
+                    .addGroup(jpHistoricoLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(lbHistorico)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpHistoricoLayout.setVerticalGroup(
@@ -897,11 +855,13 @@ public class telahome extends javax.swing.JFrame {
                 .addComponent(lbAcesseHistoricoMovimentaçoes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnVerHistorico)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jpAlertas.setBackground(new java.awt.Color(204, 255, 255));
+        jpAlertas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jpAlertas.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
+        lbConfigurarAlertas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/setting.png"))); // NOI18N
         lbConfigurarAlertas.setText("Configurar Alertas");
 
         lbPersonalizarAlertas.setText("Personalizar os alertas do sistema");
@@ -917,12 +877,13 @@ public class telahome extends javax.swing.JFrame {
                 .addGroup(jpAlertasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpAlertasLayout.createSequentialGroup()
                         .addGap(36, 36, 36)
-                        .addGroup(jpAlertasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbPersonalizarAlertas)
-                            .addComponent(lbConfigurarAlertas)))
+                        .addComponent(lbPersonalizarAlertas))
                     .addGroup(jpAlertasLayout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(btnConfigurar)))
+                        .addComponent(btnConfigurar))
+                    .addGroup(jpAlertasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lbConfigurarAlertas)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpAlertasLayout.setVerticalGroup(
@@ -932,7 +893,7 @@ public class telahome extends javax.swing.JFrame {
                 .addComponent(lbConfigurarAlertas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbPersonalizarAlertas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnConfigurar)
                 .addContainerGap())
         );
@@ -941,39 +902,39 @@ public class telahome extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpTopo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpBanner, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jpAçoesRapidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(59, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jpBanner, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jpResumoGeral, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jpCentralNotificações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jpHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jpAlertas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(jpAçoesRapidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jpNotificações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jpCentralNotificações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jpHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jpAlertas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jpPedidosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jpContasPagarReceber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(39, 39, 39)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jpAtalhos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jpNotificações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jpAtalhos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jpTopo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jpBanner, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -984,19 +945,19 @@ public class telahome extends javax.swing.JFrame {
                     .addComponent(jpNotificações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jpAtalhos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jpPedidosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpContasPagarReceber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jpContasPagarReceber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jpPedidosPendentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jpCentralNotificações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpAlertas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jpHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jpAlertas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jpCentralNotificações, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jpAtalhos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
 
         pack();
@@ -1085,7 +1046,6 @@ public class telahome extends javax.swing.JFrame {
     private javax.swing.JPanel jpNotificações;
     private javax.swing.JPanel jpPedidosPendentes;
     private javax.swing.JPanel jpResumoGeral;
-    private javax.swing.JPanel jpTopo;
     private javax.swing.JPanel jpVendasHoje;
     private javax.swing.JLabel lb10e24;
     private javax.swing.JLabel lb4258;
@@ -1097,7 +1057,6 @@ public class telahome extends javax.swing.JFrame {
     private javax.swing.JLabel lbAtalhos;
     private javax.swing.JLabel lbAçoesRapidas;
     private javax.swing.JLabel lbBemVindo;
-    private javax.swing.JLabel lbBoaEconomia;
     private javax.swing.JLabel lbCaixa2;
     private javax.swing.JLabel lbCentralNotificaçoes;
     private javax.swing.JLabel lbClienteMariaSilva;
@@ -1105,8 +1064,6 @@ public class telahome extends javax.swing.JFrame {
     private javax.swing.JLabel lbContaPagarVencida;
     private javax.swing.JLabel lbContasPagarReceber;
     private javax.swing.JLabel lbDiaDia;
-    private javax.swing.JLabel lbDivisao;
-    private javax.swing.JLabel lbEspaço;
     private javax.swing.JLabel lbEstoqueBaixo;
     private javax.swing.JLabel lbFornecedor;
     private javax.swing.JLabel lbHistorico;
@@ -1116,16 +1073,11 @@ public class telahome extends javax.swing.JFrame {
     private javax.swing.JLabel lbNotificaçoes;
     private javax.swing.JLabel lbNovoClienteCadastrado;
     private javax.swing.JLabel lbOla;
-    private javax.swing.JLabel lbPaginaInicial;
     private javax.swing.JLabel lbPedido4587;
     private javax.swing.JLabel lbPedidosEntregasPendentes;
     private javax.swing.JLabel lbPersonalizarAlertas;
     private javax.swing.JLabel lbReporProduto;
     private javax.swing.JLabel lbResumoGeral;
-    private javax.swing.JLabel lbSair;
-    private javax.swing.JLabel lbSupermercado;
-    private javax.swing.JLabel lbTraço;
-    private javax.swing.JLabel lbUsuarioAdmin;
     private javax.swing.JLabel lbVendasHoje;
     private javax.swing.JLabel lbVerTodas;
     private javax.swing.JLabel lbVerTodas2;
