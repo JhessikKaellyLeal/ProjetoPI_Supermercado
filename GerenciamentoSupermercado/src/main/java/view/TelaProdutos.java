@@ -1,3 +1,5 @@
+package view;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -16,6 +18,8 @@ public class TelaProdutos extends javax.swing.JFrame {
      */
     public TelaProdutos() {
         initComponents();
+        
+        
     }
 
     /**
@@ -365,47 +369,40 @@ public class TelaProdutos extends javax.swing.JFrame {
 
         btnNovoCP.setBackground(new java.awt.Color(204, 204, 204));
         btnNovoCP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnNovoCP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\mais.png")); // NOI18N
         btnNovoCP.setText("Novo");
         btnNovoCP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         btnSalvarCP.setBackground(new java.awt.Color(204, 204, 204));
         btnSalvarCP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnSalvarCP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\verifica.png")); // NOI18N
         btnSalvarCP.setText("Salvar");
         btnSalvarCP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         btnEditarCP.setBackground(new java.awt.Color(204, 204, 204));
         btnEditarCP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnEditarCP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\ferramenta-lapis.png")); // NOI18N
         btnEditarCP.setText("Editar");
         btnEditarCP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnEditarCP.addActionListener(this::btnEditarCPActionPerformed);
 
         btnExcluirCP.setBackground(new java.awt.Color(204, 204, 204));
         btnExcluirCP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnExcluirCP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\lixeira-de-reciclagem.png")); // NOI18N
         btnExcluirCP.setText("Excluir");
         btnExcluirCP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnExcluirCP.addActionListener(this::btnExcluirCPActionPerformed);
 
         btnLimparCP.setBackground(new java.awt.Color(204, 204, 204));
         btnLimparCP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnLimparCP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\vassoura.png")); // NOI18N
         btnLimparCP.setText("Limpar");
         btnLimparCP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnLimparCP.addActionListener(this::btnLimparCPActionPerformed);
 
         btnPesquisarCP.setBackground(new java.awt.Color(204, 204, 204));
         btnPesquisarCP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnPesquisarCP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\pesquisa-de-lupa.png")); // NOI18N
         btnPesquisarCP.setText("Pesquisar");
         btnPesquisarCP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnPesquisarCP.addActionListener(this::btnPesquisarCPActionPerformed);
 
         btnVoltarCP.setBackground(new java.awt.Color(204, 204, 204));
         btnVoltarCP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnVoltarCP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\voltar.png")); // NOI18N
         btnVoltarCP.setText("Voltar");
         btnVoltarCP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnVoltarCP.addActionListener(this::btnVoltarCPActionPerformed);
@@ -730,47 +727,40 @@ public class TelaProdutos extends javax.swing.JFrame {
 
         btnNovoCD.setBackground(new java.awt.Color(204, 204, 204));
         btnNovoCD.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnNovoCD.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\mais.png")); // NOI18N
         btnNovoCD.setText("Novo");
         btnNovoCD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         btnSalvarCD.setBackground(new java.awt.Color(204, 204, 204));
         btnSalvarCD.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnSalvarCD.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\verifica.png")); // NOI18N
         btnSalvarCD.setText("Salvar");
         btnSalvarCD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         btnEditarCD.setBackground(new java.awt.Color(204, 204, 204));
         btnEditarCD.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnEditarCD.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\ferramenta-lapis.png")); // NOI18N
         btnEditarCD.setText("Editar");
         btnEditarCD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnEditarCD.addActionListener(this::btnEditarCDActionPerformed);
 
         btnExcluirCD.setBackground(new java.awt.Color(204, 204, 204));
         btnExcluirCD.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnExcluirCD.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\lixeira-de-reciclagem.png")); // NOI18N
         btnExcluirCD.setText("Excluir");
         btnExcluirCD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnExcluirCD.addActionListener(this::btnExcluirCDActionPerformed);
 
         btnLimparCD.setBackground(new java.awt.Color(204, 204, 204));
         btnLimparCD.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnLimparCD.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\vassoura.png")); // NOI18N
         btnLimparCD.setText("Limpar");
         btnLimparCD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnLimparCD.addActionListener(this::btnLimparCDActionPerformed);
 
         btnPesquisarCD.setBackground(new java.awt.Color(204, 204, 204));
         btnPesquisarCD.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnPesquisarCD.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\pesquisa-de-lupa.png")); // NOI18N
         btnPesquisarCD.setText("Pesquisar");
         btnPesquisarCD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnPesquisarCD.addActionListener(this::btnPesquisarCDActionPerformed);
 
         btnVoltarCD.setBackground(new java.awt.Color(204, 204, 204));
         btnVoltarCD.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnVoltarCD.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\voltar.png")); // NOI18N
         btnVoltarCD.setText("Voltar");
         btnVoltarCD.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnVoltarCD.addActionListener(this::btnVoltarCDActionPerformed);
@@ -1026,35 +1016,30 @@ public class TelaProdutos extends javax.swing.JFrame {
 
         btnImprimirHP.setBackground(new java.awt.Color(204, 204, 204));
         btnImprimirHP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnImprimirHP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\imprimir.png")); // NOI18N
         btnImprimirHP.setText("Imprimir");
         btnImprimirHP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnImprimirHP.addActionListener(this::btnImprimirHPActionPerformed);
 
         btnExportarCSVHP.setBackground(new java.awt.Color(204, 204, 204));
         btnExportarCSVHP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnExportarCSVHP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\baixar-para-unidade-de-armazenamento.png")); // NOI18N
         btnExportarCSVHP.setText("Exportar para CSV");
         btnExportarCSVHP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnExportarCSVHP.addActionListener(this::btnExportarCSVHPActionPerformed);
 
         btnLimparHP.setBackground(new java.awt.Color(204, 204, 204));
         btnLimparHP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnLimparHP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\vassoura.png")); // NOI18N
         btnLimparHP.setText("Limpar Filtros");
         btnLimparHP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnLimparHP.addActionListener(this::btnLimparHPActionPerformed);
 
         btnPesquisarHP.setBackground(new java.awt.Color(204, 204, 204));
         btnPesquisarHP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnPesquisarHP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\pesquisa-de-lupa.png")); // NOI18N
         btnPesquisarHP.setText("Pesquisar");
         btnPesquisarHP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnPesquisarHP.addActionListener(this::btnPesquisarHPActionPerformed);
 
         btnVoltarHP.setBackground(new java.awt.Color(204, 204, 204));
         btnVoltarHP.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnVoltarHP.setIcon(new javax.swing.ImageIcon("C:\\Users\\RogerioSilva\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\voltar.png")); // NOI18N
         btnVoltarHP.setText("Voltar");
         btnVoltarHP.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnVoltarHP.addActionListener(this::btnVoltarHPActionPerformed);
