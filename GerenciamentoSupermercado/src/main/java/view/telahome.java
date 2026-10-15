@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
 
 /**
  *
@@ -15,8 +15,18 @@ public class telahome extends javax.swing.JFrame {
     /**
      * Creates new form telahome
      */
-    public telahome() {
+    public telahome(Usuario usuario) {
         initComponents();
+        MenuPadrao.instalar(
+        this,
+        usuario,
+        "clientes",
+        id -> {
+            // Aqui será definida a navegação entre as telas.
+            // Por enquanto, o formulário atual é preservado.
+        },
+        this::dispose
+    );
     }
 
     /**
@@ -118,7 +128,6 @@ public class telahome extends javax.swing.JFrame {
         setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         setMaximumSize(new java.awt.Dimension(2100000, 2100000));
         setPreferredSize(new java.awt.Dimension(720, 864));
-        setResizable(false);
 
         jpBanner.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jpBanner.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -903,7 +912,7 @@ public class telahome extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -979,6 +988,7 @@ public class telahome extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        Usuario usuario = new Usuario("Arthur","Administrador",null);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -997,7 +1007,7 @@ public class telahome extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new telahome().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new telahome(usuario).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
