@@ -601,98 +601,93 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
+                          <Component id="lbAvisoBarraPesquisa2" alignment="0" min="-2" pref="1170" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lbAvisoBarraPesquisa2" alignment="0" min="-2" pref="1170" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lbPesquisarFuncionario2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="txBarraPesquisaFuncionarios2" min="-2" pref="577" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Component id="lbStatus2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="cbStatusPF2" min="-2" pref="174" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                      <Component id="lbSetorpai" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="lbPesquisarFuncionario2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="txBarraPesquisaFuncionarios2" min="-2" pref="577" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                              <Component id="lbStatus2" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="cbStatusPF2" min="-2" pref="174" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                              <Component id="lbSetorpai" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="tfCodigoCargos1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="lbNomeSetor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="tfNomeSetor" alignment="0" min="-2" pref="457" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="lbDescricoaSetores" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="tfDescricaoSetores" max="32767" attributes="0"/>
+                                              </Group>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="tfCodigoCargos1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="lbNomeSetor" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="tfNomeSetor" alignment="0" min="-2" pref="457" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="lbDescricoaSetores" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="tfDescricaoSetores" max="32767" attributes="0"/>
-                                                      </Group>
+                                                      <Component id="btnNovo2" min="-2" pref="90" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
+                                                      <Component id="btnSalvar2" min="-2" pref="90" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Group type="102" attributes="0">
-                                                              <Component id="btnNovo2" min="-2" pref="90" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
-                                                              <Component id="btnSalvar2" min="-2" pref="90" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="lbSetorPai" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="cbSetorCargos1" min="-2" pref="300" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <EmptySpace max="32767" attributes="0"/>
-                                                              <Component id="btnVoltar2" min="-2" pref="90" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                                          <Component id="lbGerenteResponsavel" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="cbNivelHierarquia1" min="-2" pref="304" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-                                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                                          <Component id="lbAtivoSetores" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="chbCargoAtivo1" min="-2" max="-2" attributes="0"/>
-                                                                      </Group>
-                                                                  </Group>
-                                                                  <Group type="102" alignment="0" attributes="0">
-                                                                      <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                                                                      <Component id="btnEditar2" min="-2" pref="90" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
-                                                                      <Component id="btnExcluir2" min="-2" pref="90" max="-2" attributes="0"/>
-                                                                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
-                                                                      <Component id="btnLimpar2" min="-2" pref="90" max="-2" attributes="0"/>
-                                                                  </Group>
-                                                              </Group>
-                                                              <EmptySpace min="0" pref="247" max="32767" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="lbSetorPai" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="cbSetorCargos1" min="-2" pref="300" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Component id="btnVoltar2" min="-2" pref="90" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="lbGerenteResponsavel" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="cbNivelHierarquia1" min="-2" pref="304" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="lbAtivoSetores" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="chbCargoAtivo1" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                                                              <Component id="btnEditar2" min="-2" pref="90" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
+                                                              <Component id="btnExcluir2" min="-2" pref="90" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                                              <Component id="btnLimpar2" min="-2" pref="90" max="-2" attributes="0"/>
+                                                          </Group>
+                                                      </Group>
+                                                      <EmptySpace min="0" pref="247" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
                                           </Group>
                                       </Group>
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="btnPesquisar2" min="-2" pref="90" max="-2" attributes="0"/>
-                                          <Component id="cbStatusPF3" min="-2" pref="174" max="-2" attributes="0"/>
-                                      </Group>
+                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="btnPesquisar2" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="cbStatusPF3" min="-2" pref="174" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
