@@ -40,12 +40,18 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
 
         lbNomeSupermercadoRecuperar.setText("jLabel2");
 
+        lbEmailRecuperarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lbEmailRecuperarSenha.setText("E-mail cadastrado");
 
+        tfEmailCadatradoRecuperarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+
+        btnEnviarCodigoRecuperarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnEnviarCodigoRecuperarSenha.setText("Enviar código");
 
+        btnVoltaLoginRecuperarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnVoltaLoginRecuperarSenha.setText("Volta ao login");
 
+        lbInformacoes.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lbInformacoes.setText("Informe o e-mail cadastrado.  Enviaremos um código de verificação de 6 digitos.");
 
         javax.swing.GroupLayout areaRecuperarSenhaLayout = new javax.swing.GroupLayout(areaRecuperarSenha);
@@ -66,19 +72,18 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
                                 .addContainerGap()
                                 .addComponent(lbEmailRecuperarSenha))
                             .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addComponent(tfEmailCadatradoRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
                                 .addGap(80, 80, 80)
                                 .addGroup(areaRecuperarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnVoltaLoginRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnEnviarCodigoRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 70, Short.MAX_VALUE)))
+                                    .addComponent(btnEnviarCodigoRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(lbInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(tfEmailCadatradoRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 238, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(areaRecuperarSenhaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lbInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         areaRecuperarSenhaLayout.setVerticalGroup(
             areaRecuperarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,13 +98,13 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
                 .addComponent(lbInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lbEmailRecuperarSenha)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(tfEmailCadatradoRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(btnEnviarCodigoRecuperarSenha)
                 .addGap(18, 18, 18)
                 .addComponent(btnVoltaLoginRecuperarSenha)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -109,7 +114,7 @@ public class RecuperacaoSenha extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(83, 83, 83)
                 .addComponent(areaRecuperarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

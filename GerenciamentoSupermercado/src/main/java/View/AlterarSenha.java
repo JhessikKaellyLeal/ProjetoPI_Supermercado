@@ -50,36 +50,46 @@ public class AlterarSenha extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lbAlterarSenhar.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
         lbAlterarSenhar.setText("Alterar Senha");
 
         taAlterarSenhaNova.setColumns(20);
+        taAlterarSenhaNova.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         taAlterarSenhaNova.setRows(5);
         taAlterarSenhaNova.setText("Por segurança, informe a senha atual antes de definir uma nova");
         jScrollPane4.setViewportView(taAlterarSenhaNova);
 
+        lbSenhaAtual.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         lbSenhaAtual.setText("Senha Atual");
 
+        txSenhaAtual.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txSenhaAtual.setText("Digite sua senha atual");
 
-        btnMostrarSenhaAtualAlterarSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMostrarSenhaAtualAlterarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnMostrarSenhaAtualAlterarSenha.setText("Mostrar");
 
+        lbSenhaNovaAlterarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lbSenhaNovaAlterarSenha.setText("Nova Senha");
 
+        tfSenhaNovaAlterarSenha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         tfSenhaNovaAlterarSenha.setText("Minimo 8 caracteres");
 
-        btnMostrarSenhaNova.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMostrarSenhaNova.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnMostrarSenhaNova.setText("Mostrar");
 
+        lbConfirmarSenharNovaAlterarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lbConfirmarSenharNovaAlterarSenha.setText("Confirmar nova senha");
 
+        tfConfirmarSenhaNovaAlterarSenha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         tfConfirmarSenhaNovaAlterarSenha.setText("Repita a nova senha");
 
-        btnMostrarConfirmarNovaSenha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnMostrarConfirmarNovaSenha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnMostrarConfirmarNovaSenha.setText("Mostrar");
 
+        btnCancelarAlterarSenha.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnCancelarAlterarSenha.setText("Cancelar");
 
+        btnSalvarSenhaNovaAlterarSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnSalvarSenhaNovaAlterarSenha.setText("Salvar nova senha");
 
         lbLogotipoAlteraSenha.setText("jLabel1");
@@ -103,38 +113,39 @@ public class AlterarSenha extends javax.swing.JFrame {
                     .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addGroup(areaAlterarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaAlterarSenhaLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(tfSenhaNovaAlterarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnMostrarSenhaNova))
                             .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
                                 .addComponent(lbConfirmarSenharNovaAlterarSenha)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
                                 .addComponent(tfConfirmarSenhaNovaAlterarSenha)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnMostrarConfirmarNovaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnMostrarConfirmarNovaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaAlterarSenhaLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btnMostrarSenhaNova))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaAlterarSenhaLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCancelarAlterarSenha))
                     .addComponent(jScrollPane4)
                     .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(lbLogotipoAlteraSenha)
+                        .addGap(118, 421, Short.MAX_VALUE))
+                    .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(areaAlterarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbSenhaNovaAlterarSenha)
+                            .addComponent(spSenhaAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfSenhaNovaAlterarSenha))
+                        .addGap(81, 81, 81))
+                    .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
                         .addGroup(areaAlterarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
-                                .addGap(58, 58, 58)
-                                .addComponent(btnSalvarSenhaNovaAlterarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(155, 155, 155)
+                                .addComponent(lbAlterarSenhar))
                             .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
-                                .addGap(126, 126, 126)
-                                .addGroup(areaAlterarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbLogotipoAlteraSenha)
-                                    .addComponent(lbAlterarSenhar)))
-                            .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addGroup(areaAlterarSenhaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbSenhaNovaAlterarSenha)
-                                    .addComponent(spSenhaAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(153, 153, 153)
+                                .addComponent(btnSalvarSenhaNovaAlterarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -143,9 +154,9 @@ public class AlterarSenha extends javax.swing.JFrame {
             .addGroup(areaAlterarSenhaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lbLogotipoAlteraSenha)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lbAlterarSenhar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(spAlterarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -171,11 +182,12 @@ public class AlterarSenha extends javax.swing.JFrame {
                     .addComponent(btnMostrarConfirmarNovaSenha))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCancelarAlterarSenha)
-                .addGap(18, 18, 18)
-                .addComponent(btnSalvarSenhaNovaAlterarSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSalvarSenhaNovaAlterarSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
-        getContentPane().add(areaAlterarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 12, 390, 450));
+        getContentPane().add(areaAlterarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 12, 590, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

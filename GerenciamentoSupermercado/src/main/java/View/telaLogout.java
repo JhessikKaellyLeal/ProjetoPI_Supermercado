@@ -36,15 +36,19 @@ public class telaLogout extends javax.swing.JPanel {
 
         lbLogotipoEncerramento.setText("jLabel1");
 
+        lbEncerramentoSessão.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lbEncerramentoSessão.setText("Encerrar Sessão?");
 
         taEncerrarSessao.setColumns(20);
+        taEncerrarSessao.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         taEncerrarSessao.setRows(5);
         taEncerrarSessao.setText("Você está saindo do terminal \nCAIXA-ADM como Admistrador.\nAlterações não serão perdidas.");
         jScrollPane1.setViewportView(taEncerrarSessao);
 
+        btnCancelarEncerrarSessao.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnCancelarEncerrarSessao.setText("Cancelar");
 
+        btnSairEncerrarSessao.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnSairEncerrarSessao.setText("Sair agora");
 
         javax.swing.GroupLayout areaEncerramentoLayout = new javax.swing.GroupLayout(areaEncerramento);
@@ -52,22 +56,25 @@ public class telaLogout extends javax.swing.JPanel {
         areaEncerramentoLayout.setHorizontalGroup(
             areaEncerramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaEncerramentoLayout.createSequentialGroup()
-                .addGroup(areaEncerramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaEncerramentoLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                .addGroup(areaEncerramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaEncerramentoLayout.createSequentialGroup()
                         .addGroup(areaEncerramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbEncerramentoSessão)
                             .addGroup(areaEncerramentoLayout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(lbLogotipoEncerramento))))
-                    .addGroup(areaEncerramentoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
+                                .addGap(83, 83, 83)
+                                .addComponent(lbEncerramentoSessão))
+                            .addGroup(areaEncerramentoLayout.createSequentialGroup()
+                                .addGap(147, 147, 147)
+                                .addComponent(lbLogotipoEncerramento)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, areaEncerramentoLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(btnCancelarEncerrarSessao)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnSairEncerrarSessao))
                     .addGroup(areaEncerramentoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                        .addContainerGap(16, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)))
                 .addContainerGap())
         );
         areaEncerramentoLayout.setVerticalGroup(
@@ -75,15 +82,15 @@ public class telaLogout extends javax.swing.JPanel {
             .addGroup(areaEncerramentoLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(lbLogotipoEncerramento)
-                .addGap(18, 18, 18)
+                .addGap(36, 36, 36)
                 .addComponent(lbEncerramentoSessão)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
                 .addGroup(areaEncerramentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancelarEncerrarSessao)
-                    .addComponent(btnSairEncerrarSessao))
-                .addContainerGap())
+                    .addComponent(btnSairEncerrarSessao)
+                    .addComponent(btnCancelarEncerrarSessao))
+                .addGap(60, 60, 60))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -91,16 +98,15 @@ public class telaLogout extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+                .addContainerGap(65, Short.MAX_VALUE)
                 .addComponent(areaEncerramento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
                 .addComponent(areaEncerramento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addGap(0, 39, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

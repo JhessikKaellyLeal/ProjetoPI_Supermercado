@@ -49,34 +49,44 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
         lbNomeSupermercado.setText("jLabel1");
         jPanel1.add(lbNomeSupermercado, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 120, 35));
 
+        lbUsuario.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lbUsuario.setText("Usuário ou e-mail");
-        jPanel1.add(lbUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, 190, -1));
+        jPanel1.add(lbUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 190, -1));
 
         lbLogotipo.setText("jLabel3");
         jPanel1.add(lbLogotipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 130, 28));
 
+        lbSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         lbSenha.setText("Senha");
-        jPanel1.add(lbSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 66, -1));
+        jPanel1.add(lbSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 90, -1));
 
+        pfSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         pfSenha.setText("jPasswordField1");
-        jPanel1.add(pfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 300, -1));
-        jPanel1.add(tfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 240, 363, -1));
+        jPanel1.add(pfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, 300, -1));
 
+        tfUsuario.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jPanel1.add(tfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 363, -1));
+
+        cbLogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         cbLogin.setText("Manter-me conectado neste terminal");
-        jPanel1.add(cbLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
+        jPanel1.add(cbLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, -1, -1));
 
+        btnEntrada.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnEntrada.setText("Entrar no sistema");
-        jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 280, 30));
+        jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 280, 30));
 
+        btnEsqueciSenha.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnEsqueciSenha.setText("Esqueceu a senha");
-        jPanel1.add(btnEsqueciSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, -1, -1));
+        jPanel1.add(btnEsqueciSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, -1, -1));
 
+        btnAjuda.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnAjuda.setText("Preciso de ajuda");
-        jPanel1.add(btnAjuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, -1, -1));
+        jPanel1.add(btnAjuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 500, -1, 30));
 
+        btnMostrarSenha.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnMostrarSenha.setText("Mostrar");
-        jPanel1.add(btnMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, -1, -1));
-        jPanel1.add(spLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 360, 10));
+        jPanel1.add(btnMostrarSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 120, 30));
+        jPanel1.add(spLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 740, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
