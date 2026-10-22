@@ -9,5 +9,5 @@ package Model;
  * @author AntônioVieira
  */
 public class ContasPagar {
-   private 
+  
 }
