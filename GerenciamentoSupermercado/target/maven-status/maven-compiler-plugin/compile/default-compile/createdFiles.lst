@@ -1,0 +1,7 @@
+View\IconeMenu.class
+View\Usuario.class
+View\TelaPedidos.class
+model\Usuario.class
+View\TelaEntregas.class
+com\mycompany\gerenciamentosupermercado\GerenciamentoSupermercado.class
+View\MenuPadrao.class
