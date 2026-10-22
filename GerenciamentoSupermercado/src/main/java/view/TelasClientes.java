@@ -129,28 +129,36 @@ public class TelasClientes extends javax.swing.JFrame {
         btnAtualizarPedidos = new javax.swing.JButton();
         btnExportarPedidos = new javax.swing.JButton();
         painelHistorico = new javax.swing.JPanel();
-        lblTituloHistorico = new javax.swing.JLabel();
-        lblDescricaoHistorico = new javax.swing.JLabel();
-        txtPesquisaHistorico = new javax.swing.JTextField();
-        btnPesquisarHistorico = new javax.swing.JButton();
-        lblClienteSelecionadoHistorico = new javax.swing.JLabel();
-        lblNomeClienteHistorico = new javax.swing.JLabel();
-        lblCPFHistorico = new javax.swing.JLabel();
-        lblValorCPFHistorico = new javax.swing.JLabel();
-        lblTituloComprasHistorico = new javax.swing.JLabel();
+        btnComprovante = new javax.swing.JButton();
+        btnExportarHistorico = new javax.swing.JButton();
+        painelhistoricoCompras = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tabelaComprasHistorico = new javax.swing.JTable();
+        lblTituloComprasHistorico = new javax.swing.JLabel();
+        painelhistorico = new javax.swing.JPanel();
+        btnPesquisarHistorico = new javax.swing.JButton();
+        txtPesquisaHistorico = new javax.swing.JTextField();
+        lblTituloHistorico = new javax.swing.JLabel();
+        btnLimparHistorico = new javax.swing.JButton();
+        lbpesquisarcliente = new javax.swing.JLabel();
+        lblDescricaoHistorico = new javax.swing.JLabel();
+        painelhistoricoPagamentos = new javax.swing.JPanel();
         lblTituloPagamentosHistorico = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tabelaPagamentosHistorico = new javax.swing.JTable();
-        lblTotalComprasHistorico = new javax.swing.JLabel();
-        lblValorTotalComprasHistorico = new javax.swing.JLabel();
-        lblTotalPagoHistorico = new javax.swing.JLabel();
-        lblValorTotalPagoHistorico = new javax.swing.JLabel();
-        lblSaldoPendenteHistorico = new javax.swing.JLabel();
-        lblValorSaldoPendenteHistorico = new javax.swing.JLabel();
-        btnAtualizarHistorico = new javax.swing.JButton();
-        btnExportarHistorico = new javax.swing.JButton();
+        lbGerarComprovante = new javax.swing.JLabel();
+        painelTotalCompras = new javax.swing.JPanel();
+        lbtotalcompras = new javax.swing.JLabel();
+        lbValortotalCompras = new javax.swing.JLabel();
+        lBSubtituloCompras = new javax.swing.JLabel();
+        painelTotalPago = new javax.swing.JPanel();
+        lBtotalPago = new javax.swing.JLabel();
+        LbVALORtOTALpAGO = new javax.swing.JLabel();
+        lBsubTotalPagp = new javax.swing.JLabel();
+        lBSaldoPendente = new javax.swing.JPanel();
+        lbsaldopendente1 = new javax.swing.JLabel();
+        lBvalorPendente = new javax.swing.JLabel();
+        lBsubValorPendente = new javax.swing.JLabel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -198,9 +206,13 @@ public class TelasClientes extends javax.swing.JFrame {
 
         painelConteudo.setLayout(new java.awt.BorderLayout());
 
+        abasClientes.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        painelCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         painelDadosCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        lblTituloCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 40)); // NOI18N
+        lblTituloCadastro.setFont(new java.awt.Font("Arial Black", 1, 40)); // NOI18N
         lblTituloCadastro.setText("Cadastro de Clientes");
 
         btnLimpar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -214,14 +226,22 @@ public class TelasClientes extends javax.swing.JFrame {
         btnSalvar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
         btnSalvar.setPreferredSize(new java.awt.Dimension(183, 45));
 
-        ftfTelefone.setText("(00) 00000-0000");
+        try {
+            ftfTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         ftfTelefone.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         ftfTelefone.setPreferredSize(new java.awt.Dimension(101, 40));
 
-        lblTelefone.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTelefone.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         lblTelefone.setText("Telefone *");
 
-        ftfCPF.setText("000.000.000-00");
+        try {
+            ftfCPF.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         ftfCPF.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         ftfCPF.setPreferredSize(new java.awt.Dimension(96, 40));
         ftfCPF.addActionListener(this::ftfCPFActionPerformed);
@@ -229,13 +249,13 @@ public class TelasClientes extends javax.swing.JFrame {
         txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         txtNome.setPreferredSize(new java.awt.Dimension(68, 40));
 
-        lblCPF.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblCPF.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         lblCPF.setText("CPF *");
 
-        lblDescricaoCadastro.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
-        lblDescricaoCadastro.setText("Cadastre um cliente informando os dados essenciais.");
+        lblDescricaoCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 22)); // NOI18N
+        lblDescricaoCadastro.setText("Preencha as informações para finalizar sua compra");
 
-        lblNome.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblNome.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         lblNome.setText("Nome Completo *");
 
         javax.swing.GroupLayout painelDadosClienteLayout = new javax.swing.GroupLayout(painelDadosCliente);
@@ -243,50 +263,48 @@ public class TelasClientes extends javax.swing.JFrame {
         painelDadosClienteLayout.setHorizontalGroup(
             painelDadosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelDadosClienteLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(painelDadosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelDadosClienteLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(painelDadosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblDescricaoCadastro)
-                            .addComponent(lblTituloCadastro)
-                            .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 618, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblCPF)
-                            .addComponent(lblTelefone)
-                            .addGroup(painelDadosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(ftfCPF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ftfTelefone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 508, Short.MAX_VALUE)
-                                .addComponent(txtNome, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(painelDadosClienteLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
-                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(191, 191, 191)
-                        .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(142, Short.MAX_VALUE))
+                    .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 618, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDescricaoCadastro)
+                    .addComponent(lblTituloCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 513, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCPF)
+                    .addComponent(ftfCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTelefone)
+                    .addComponent(ftfTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(134, Short.MAX_VALUE))
+            .addGroup(painelDadosClienteLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(194, 194, 194))
         );
         painelDadosClienteLayout.setVerticalGroup(
             painelDadosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelDadosClienteLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(lblTituloCadastro)
+                .addGap(26, 26, 26)
+                .addComponent(lblTituloCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblDescricaoCadastro)
                 .addGap(45, 45, 45)
                 .addComponent(lblNome)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(36, 36, 36)
                 .addComponent(lblCPF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ftfCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(45, 45, 45)
                 .addComponent(lblTelefone)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ftfTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104)
+                .addGap(59, 59, 59)
                 .addGroup(painelDadosClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout painelCadastroLayout = new javax.swing.GroupLayout(painelCadastro);
@@ -296,17 +314,19 @@ public class TelasClientes extends javax.swing.JFrame {
             .addGroup(painelCadastroLayout.createSequentialGroup()
                 .addGap(149, 149, 149)
                 .addComponent(painelDadosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1019, Short.MAX_VALUE))
+                .addContainerGap(1875, Short.MAX_VALUE))
         );
         painelCadastroLayout.setVerticalGroup(
             painelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCadastroLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(painelDadosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1981, Short.MAX_VALUE))
+                .addContainerGap(1976, Short.MAX_VALUE))
         );
 
         abasClientes.addTab("Cadastro", painelCadastro);
+
+        painelConsulta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         painelConsultaClientes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         painelConsultaClientes.setForeground(new java.awt.Color(255, 255, 255));
@@ -332,7 +352,7 @@ public class TelasClientes extends javax.swing.JFrame {
         lblDescricaoConsulta.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
         lblDescricaoConsulta.setText("Pesquise e visualize os clientes cadastrados no sistema.");
 
-        lblTituloConsulta.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 40)); // NOI18N
+        lblTituloConsulta.setFont(new java.awt.Font("Arial Black", 1, 40)); // NOI18N
         lblTituloConsulta.setText("Consulta de Clientes");
 
         btnPesquisarConsulta.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
@@ -457,7 +477,7 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addGroup(painelConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(painelConsultaClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 1374, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelConsultaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(559, Short.MAX_VALUE))
+                .addContainerGap(1415, Short.MAX_VALUE))
         );
         painelConsultaLayout.setVerticalGroup(
             painelConsultaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,10 +486,12 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addComponent(painelConsultaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(painelConsultaClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1877, Short.MAX_VALUE))
+                .addGap(0, 1863, Short.MAX_VALUE))
         );
 
         abasClientes.addTab("Consulta", painelConsulta);
+
+        painelEdicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         painelEdicaoClientes.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED), javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(102, 102, 102), null)));
 
@@ -782,11 +804,12 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addComponent(painelEdicaoClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(painelHistoricoClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1415, Short.MAX_VALUE))
+                .addContainerGap(1411, Short.MAX_VALUE))
         );
 
         abasClientes.addTab("Edição e Desativação", painelEdicao);
 
+        painelPedidosRelatorio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         painelPedidosRelatorio.setPreferredSize(new java.awt.Dimension(1200, 936));
 
         lblTituloPedidosRelatorio.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 40)); // NOI18N
@@ -949,7 +972,7 @@ public class TelasClientes extends javax.swing.JFrame {
                                     .addComponent(lblValorPedidosRelatorio)))))
                     .addComponent(lblTituloTabelaPedidos)
                     .addComponent(tabelaPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 1234, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(523, Short.MAX_VALUE))
+                .addContainerGap(1379, Short.MAX_VALUE))
         );
         painelPedidosRelatorioLayout.setVerticalGroup(
             painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1000,36 +1023,24 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAtualizarPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnExportarPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1868, Short.MAX_VALUE))
+                .addContainerGap(1864, Short.MAX_VALUE))
         );
 
         abasClientes.addTab("Pedidos e Relatório", painelPedidosRelatorio);
 
-        lblTituloHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 40)); // NOI18N
-        lblTituloHistorico.setText("Histórico de Compras e Pagamentos");
+        painelHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        lblDescricaoHistorico.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
-        lblDescricaoHistorico.setText("Consulte as compras e os pagamentos realizados por cada cliente.");
+        btnComprovante.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        btnComprovante.setText("Comprovante");
+        btnComprovante.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        txtPesquisaHistorico.setPreferredSize(new java.awt.Dimension(68, 40));
+        btnExportarHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        btnExportarHistorico.setText("Exportar ");
+        btnExportarHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
+        btnExportarHistorico.setPreferredSize(new java.awt.Dimension(171, 40));
 
-        btnPesquisarHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
-        btnPesquisarHistorico.setText("Pesquisar");
-        btnPesquisarHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
-        btnPesquisarHistorico.setPreferredSize(new java.awt.Dimension(98, 40));
-
-        lblClienteSelecionadoHistorico.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
-        lblClienteSelecionadoHistorico.setText("Cliente selecionado:");
-
-        lblNomeClienteHistorico.setFont(new java.awt.Font("Arial", 0, 19)); // NOI18N
-        lblNomeClienteHistorico.setText("Nenhum cliente selecionado");
-
-        lblCPFHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-
-        lblValorCPFHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-
-        lblTituloComprasHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblTituloComprasHistorico.setText("Histórico de Compras");
+        painelhistoricoCompras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painelhistoricoCompras.setPreferredSize(new java.awt.Dimension(300, 200));
 
         tabelaComprasHistorico.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tabelaComprasHistorico.setModel(new javax.swing.table.DefaultTableModel(
@@ -1040,12 +1051,104 @@ public class TelasClientes extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Nº da compra", "Data", "Valor total", "Forma de pagamento", "Status"
+                "Código da compra", "Data", "Valor total", "Forma de pagamento", "Status"
             }
         ));
         jScrollPane2.setViewportView(tabelaComprasHistorico);
 
-        lblTituloPagamentosHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloComprasHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lblTituloComprasHistorico.setText("Histórico de Compras");
+
+        javax.swing.GroupLayout painelhistoricoComprasLayout = new javax.swing.GroupLayout(painelhistoricoCompras);
+        painelhistoricoCompras.setLayout(painelhistoricoComprasLayout);
+        painelhistoricoComprasLayout.setHorizontalGroup(
+            painelhistoricoComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelhistoricoComprasLayout.createSequentialGroup()
+                .addGroup(painelhistoricoComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelhistoricoComprasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 862, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelhistoricoComprasLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(lblTituloComprasHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+        painelhistoricoComprasLayout.setVerticalGroup(
+            painelhistoricoComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelhistoricoComprasLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(lblTituloComprasHistorico)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        painelhistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painelhistorico.setPreferredSize(new java.awt.Dimension(1200, 900));
+
+        btnPesquisarHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        btnPesquisarHistorico.setText("Pesquisar");
+        btnPesquisarHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
+        btnPesquisarHistorico.setPreferredSize(new java.awt.Dimension(98, 40));
+
+        txtPesquisaHistorico.setPreferredSize(new java.awt.Dimension(68, 40));
+
+        lblTituloHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 40)); // NOI18N
+        lblTituloHistorico.setText("Histórico de Compras e Pagamentos");
+
+        btnLimparHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
+        btnLimparHistorico.setText("Limpar");
+        btnLimparHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
+        btnLimparHistorico.setPreferredSize(new java.awt.Dimension(176, 40));
+
+        lbpesquisarcliente.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbpesquisarcliente.setText("Pesquisar cliente:");
+
+        lblDescricaoHistorico.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
+        lblDescricaoHistorico.setText("Consulte as compras e os pagamentos realizados por cada cliente.");
+
+        javax.swing.GroupLayout painelhistoricoLayout = new javax.swing.GroupLayout(painelhistorico);
+        painelhistorico.setLayout(painelhistoricoLayout);
+        painelhistoricoLayout.setHorizontalGroup(
+            painelhistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelhistoricoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(painelhistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelhistoricoLayout.createSequentialGroup()
+                        .addGroup(painelhistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblDescricaoHistorico)
+                            .addComponent(lblTituloHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 907, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbpesquisarcliente))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(painelhistoricoLayout.createSequentialGroup()
+                        .addComponent(txtPesquisaHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 798, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnPesquisarHistorico, javax.swing.GroupLayout.DEFAULT_SIZE, 144, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnLimparHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45))))
+        );
+        painelhistoricoLayout.setVerticalGroup(
+            painelhistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelhistoricoLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(lblTituloHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblDescricaoHistorico)
+                .addGap(64, 64, 64)
+                .addComponent(lbpesquisarcliente)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelhistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPesquisaHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimparHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+
+        painelhistoricoPagamentos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painelhistoricoPagamentos.setPreferredSize(new java.awt.Dimension(400, 400));
+
+        lblTituloPagamentosHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         lblTituloPagamentosHistorico.setText("Histórico de Pagamentos");
 
         tabelaPagamentosHistorico.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
@@ -1054,136 +1157,206 @@ public class TelasClientes extends javax.swing.JFrame {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null}
             },
             new String [] {
-                "Nº do pagamento", "Data", "Valor", "Forma de pagamento", "Situação"
+                "Código da compra", "Data", "Valor pago", "Forma de pagamento", "Situação"
             }
         ));
         jScrollPane3.setViewportView(tabelaPagamentosHistorico);
 
-        lblTotalComprasHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblTotalComprasHistorico.setText("Total de compras:");
+        javax.swing.GroupLayout painelhistoricoPagamentosLayout = new javax.swing.GroupLayout(painelhistoricoPagamentos);
+        painelhistoricoPagamentos.setLayout(painelhistoricoPagamentosLayout);
+        painelhistoricoPagamentosLayout.setHorizontalGroup(
+            painelhistoricoPagamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelhistoricoPagamentosLayout.createSequentialGroup()
+                .addGroup(painelhistoricoPagamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelhistoricoPagamentosLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 817, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelhistoricoPagamentosLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(lblTituloPagamentosHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelhistoricoPagamentosLayout.setVerticalGroup(
+            painelhistoricoPagamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelhistoricoPagamentosLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(lblTituloPagamentosHistorico)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(63, Short.MAX_VALUE))
+        );
 
-        lblValorTotalComprasHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblValorTotalComprasHistorico.setText("0");
+        lbGerarComprovante.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbGerarComprovante.setText("Gerar comprovante de uma compra ou pagamento selecionado.");
 
-        lblTotalPagoHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblTotalPagoHistorico.setText("Total pago:");
+        painelTotalCompras.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        lblValorTotalPagoHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblValorTotalPagoHistorico.setText("R$ 0,00");
+        lbtotalcompras.setForeground(new java.awt.Color(153, 153, 153));
+        lbtotalcompras.setText("TOTAL DE COMPRAS");
 
-        lblSaldoPendenteHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblSaldoPendenteHistorico.setText("Saldo pendente:");
+        lbValortotalCompras.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lbValortotalCompras.setText("R$ 500,00");
 
-        lblValorSaldoPendenteHistorico.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        lblValorSaldoPendenteHistorico.setText("R$ 0,00");
+        lBSubtituloCompras.setText("3 compras  registradas");
 
-        btnAtualizarHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
-        btnAtualizarHistorico.setText("Atualizar histórico");
-        btnAtualizarHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
-        btnAtualizarHistorico.setPreferredSize(new java.awt.Dimension(176, 40));
+        javax.swing.GroupLayout painelTotalComprasLayout = new javax.swing.GroupLayout(painelTotalCompras);
+        painelTotalCompras.setLayout(painelTotalComprasLayout);
+        painelTotalComprasLayout.setHorizontalGroup(
+            painelTotalComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTotalComprasLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(painelTotalComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lBSubtituloCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(painelTotalComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lbValortotalCompras, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lbtotalcompras, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        painelTotalComprasLayout.setVerticalGroup(
+            painelTotalComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTotalComprasLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(lbtotalcompras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbValortotalCompras)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(lBSubtituloCompras)
+                .addGap(23, 23, 23))
+        );
 
-        btnExportarHistorico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18)); // NOI18N
-        btnExportarHistorico.setText("Exportar relatório");
-        btnExportarHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
-        btnExportarHistorico.setPreferredSize(new java.awt.Dimension(171, 40));
+        painelTotalPago.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painelTotalPago.setPreferredSize(new java.awt.Dimension(146, 147));
+
+        lBtotalPago.setForeground(new java.awt.Color(153, 153, 153));
+        lBtotalPago.setText("TOTAL PAGO");
+
+        LbVALORtOTALpAGO.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        LbVALORtOTALpAGO.setText("R$ 350,00");
+
+        lBsubTotalPagp.setText("Pagamentos confirmados");
+
+        javax.swing.GroupLayout painelTotalPagoLayout = new javax.swing.GroupLayout(painelTotalPago);
+        painelTotalPago.setLayout(painelTotalPagoLayout);
+        painelTotalPagoLayout.setHorizontalGroup(
+            painelTotalPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTotalPagoLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(painelTotalPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lBsubTotalPagp)
+                    .addComponent(LbVALORtOTALpAGO)
+                    .addComponent(lBtotalPago))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        painelTotalPagoLayout.setVerticalGroup(
+            painelTotalPagoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelTotalPagoLayout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(lBtotalPago)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LbVALORtOTALpAGO)
+                .addGap(18, 18, 18)
+                .addComponent(lBsubTotalPagp)
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+
+        lBSaldoPendente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        lBSaldoPendente.setPreferredSize(new java.awt.Dimension(146, 104));
+
+        lbsaldopendente1.setForeground(new java.awt.Color(153, 153, 153));
+        lbsaldopendente1.setText("SALDO PENDENTE");
+
+        lBvalorPendente.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        lBvalorPendente.setText("R$ 150,00");
+
+        lBsubValorPendente.setText("Valor a pagar");
+
+        javax.swing.GroupLayout lBSaldoPendenteLayout = new javax.swing.GroupLayout(lBSaldoPendente);
+        lBSaldoPendente.setLayout(lBSaldoPendenteLayout);
+        lBSaldoPendenteLayout.setHorizontalGroup(
+            lBSaldoPendenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lBSaldoPendenteLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(lBSaldoPendenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lBSaldoPendenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lbsaldopendente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lBvalorPendente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lBsubValorPendente, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
+        lBSaldoPendenteLayout.setVerticalGroup(
+            lBSaldoPendenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(lBSaldoPendenteLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(lbsaldopendente1)
+                .addGap(18, 18, 18)
+                .addComponent(lBvalorPendente)
+                .addGap(12, 12, 12)
+                .addComponent(lBsubValorPendente)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout painelHistoricoLayout = new javax.swing.GroupLayout(painelHistorico);
         painelHistorico.setLayout(painelHistoricoLayout);
         painelHistoricoLayout.setHorizontalGroup(
             painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelHistoricoLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelHistoricoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(painelhistoricoPagamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 845, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelHistoricoLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(painelTotalCompras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)
+                        .addComponent(painelTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(116, 116, 116)
+                        .addComponent(lBSaldoPendente, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelHistoricoLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
                         .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTituloPagamentosHistorico)
-                            .addComponent(lblTituloComprasHistorico)
-                            .addGroup(painelHistoricoLayout.createSequentialGroup()
-                                .addComponent(lblNomeClienteHistorico)
-                                .addGap(548, 548, 548)
-                                .addComponent(btnPesquisarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblClienteSelecionadoHistorico)
-                            .addComponent(txtPesquisaHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(painelHistoricoLayout.createSequentialGroup()
-                                    .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblTotalComprasHistorico)
-                                        .addComponent(lblValorTotalComprasHistorico))
-                                    .addGap(152, 152, 152)
-                                    .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblTotalPagoHistorico)
-                                        .addComponent(lblValorTotalPagoHistorico))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblValorSaldoPendenteHistorico)
-                                        .addComponent(lblSaldoPendenteHistorico)))
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 1015, Short.MAX_VALUE))
-                    .addGroup(painelHistoricoLayout.createSequentialGroup()
-                        .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 664, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblTituloHistorico)
-                            .addComponent(lblDescricaoHistorico))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(painelHistoricoLayout.createSequentialGroup()
-                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelHistoricoLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(lblCPFHistorico)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblValorCPFHistorico))
-                    .addGroup(painelHistoricoLayout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addComponent(btnAtualizarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(226, 226, 226)
-                        .addComponent(btnExportarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnExportarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnComprovante, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(painelHistoricoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(painelhistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 1249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(painelhistoricoCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 933, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbGerarComprovante))
+                .addContainerGap(1552, Short.MAX_VALUE))
         );
         painelHistoricoLayout.setVerticalGroup(
             painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelHistoricoLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(lblTituloHistorico)
-                .addGap(26, 26, 26)
-                .addComponent(lblDescricaoHistorico)
-                .addGap(18, 18, 18)
-                .addComponent(txtPesquisaHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(lblClienteSelecionadoHistorico)
+                .addGap(48, 48, 48)
+                .addComponent(painelhistorico, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(painelhistoricoCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNomeClienteHistorico)
-                    .addComponent(btnPesquisarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
-                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCPFHistorico)
-                    .addComponent(lblValorCPFHistorico))
+                .addComponent(painelhistoricoPagamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(lblTituloComprasHistorico)
+                .addComponent(lbGerarComprovante)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(lblTituloPagamentosHistorico)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTotalComprasHistorico)
-                    .addComponent(lblTotalPagoHistorico)
-                    .addComponent(lblSaldoPendenteHistorico))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblValorTotalComprasHistorico)
-                    .addComponent(lblValorTotalPagoHistorico)
-                    .addComponent(lblValorSaldoPendenteHistorico))
-                .addGap(125, 125, 125)
-                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAtualizarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnExportarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1626, Short.MAX_VALUE))
+                .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(painelHistoricoLayout.createSequentialGroup()
+                        .addComponent(btnComprovante, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(70, 70, 70)
+                        .addGroup(painelHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(painelTotalCompras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(painelHistoricoLayout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(lBSaldoPendente, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71)
+                .addComponent(btnExportarHistorico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1392, Short.MAX_VALUE))
         );
 
         abasClientes.addTab("Histórico de Compras e Pagamentos", painelHistorico);
@@ -1194,11 +1367,13 @@ public class TelasClientes extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(painelTopo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(abasClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 1951, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(210, 210, 210)
+                .addGap(2167, 2167, 2167)
                 .addComponent(painelConteudo, javax.swing.GroupLayout.DEFAULT_SIZE, 899, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(abasClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1206,7 +1381,7 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addComponent(painelTopo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(abasClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 2713, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(640, 640, 640)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelConteudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1263,9 +1438,10 @@ public class TelasClientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Bairro;
+    private javax.swing.JLabel LbVALORtOTALpAGO;
     private javax.swing.JTabbedPane abasClientes;
-    private javax.swing.JButton btnAtualizarHistorico;
     private javax.swing.JButton btnAtualizarPedidos;
+    private javax.swing.JButton btnComprovante;
     private javax.swing.JButton btnDesativarCliente;
     private javax.swing.JButton btnExportarHistorico;
     private javax.swing.JButton btnExportarPedidos;
@@ -1275,6 +1451,7 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JButton btnLimparEdicao;
     private javax.swing.JButton btnLimparFiltros;
     private javax.swing.JButton btnLimparFiltrosRelatorio;
+    private javax.swing.JButton btnLimparHistorico;
     private javax.swing.JButton btnPesquisarConsulta;
     private javax.swing.JButton btnPesquisarEdicao;
     private javax.swing.JButton btnPesquisarHistorico;
@@ -1295,11 +1472,17 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JPanel lBSaldoPendente;
+    private javax.swing.JLabel lBSubtituloCompras;
+    private javax.swing.JLabel lBsubTotalPagp;
+    private javax.swing.JLabel lBsubValorPendente;
+    private javax.swing.JLabel lBtotalPago;
+    private javax.swing.JLabel lBvalorPendente;
+    private javax.swing.JLabel lbGerarComprovante;
+    private javax.swing.JLabel lbValortotalCompras;
     private javax.swing.JLabel lblCPF;
     private javax.swing.JLabel lblCPFCdicao;
-    private javax.swing.JLabel lblCPFHistorico;
     private javax.swing.JLabel lblCidadeEdicao;
-    private javax.swing.JLabel lblClienteSelecionadoHistorico;
     private javax.swing.JLabel lblClientesCadastrados;
     private javax.swing.JLabel lblCodigoEdicao;
     private javax.swing.JLabel lblDataNascimentoEdicao;
@@ -1312,7 +1495,6 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lblEnderecoEdicao;
     private javax.swing.JLabel lblMensagemConsulta;
     private javax.swing.JLabel lblNome;
-    private javax.swing.JLabel lblNomeClienteHistorico;
     private javax.swing.JLabel lblNomeEdicao;
     private javax.swing.JLabel lblNomeSupermercado;
     private javax.swing.JLabel lblPedidosPendentesRelatorio;
@@ -1323,7 +1505,6 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lblQuantidadePedidosRelatorio;
     private javax.swing.JLabel lblQuantidadePendentesRelatorio;
     private javax.swing.JLabel lblRGEdicao;
-    private javax.swing.JLabel lblSaldoPendenteHistorico;
     private javax.swing.JLabel lblSlogan;
     private javax.swing.JLabel lblStatusConsulta;
     private javax.swing.JLabel lblStatusEdicao;
@@ -1341,16 +1522,13 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lblTituloPagamentosHistorico;
     private javax.swing.JLabel lblTituloPedidosRelatorio;
     private javax.swing.JLabel lblTituloTabelaPedidos;
-    private javax.swing.JLabel lblTotalComprasHistorico;
-    private javax.swing.JLabel lblTotalPagoHistorico;
     private javax.swing.JLabel lblTotalPedidosRelatorio;
     private javax.swing.JLabel lblTotalValorPedidosRelatorio;
     private javax.swing.JLabel lblUsuario;
-    private javax.swing.JLabel lblValorCPFHistorico;
     private javax.swing.JLabel lblValorPedidosRelatorio;
-    private javax.swing.JLabel lblValorSaldoPendenteHistorico;
-    private javax.swing.JLabel lblValorTotalComprasHistorico;
-    private javax.swing.JLabel lblValorTotalPagoHistorico;
+    private javax.swing.JLabel lbpesquisarcliente;
+    private javax.swing.JLabel lbsaldopendente1;
+    private javax.swing.JLabel lbtotalcompras;
     private javax.swing.JPanel painelCadastro;
     private javax.swing.JPanel painelConsulta;
     private javax.swing.JPanel painelConsultaClientes;
@@ -1364,6 +1542,11 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JPanel painelHistoricoClientes;
     private javax.swing.JPanel painelPedidosRelatorio;
     private javax.swing.JPanel painelTopo;
+    private javax.swing.JPanel painelTotalCompras;
+    private javax.swing.JPanel painelTotalPago;
+    private javax.swing.JPanel painelhistorico;
+    private javax.swing.JPanel painelhistoricoCompras;
+    private javax.swing.JPanel painelhistoricoPagamentos;
     private javax.swing.JScrollPane scrollTabelaEdicao;
     private javax.swing.JTable tabelaComprasHistorico;
     private javax.swing.JTable tabelaConsultaClientes;
