@@ -8,15 +8,16 @@ package view;
  *
  * @author GeovannaOliviera
  */
-public class criacaoTelas extends javax.swing.JFrame {
+public class TelaEstoque extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(criacaoTelas.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaEstoque.class.getName());
 
     /**
      * Creates new form criacaoTelas
      */
-    public criacaoTelas() {
+    public TelaEstoque() {
         initComponents();
+     
     }
 
     /**
@@ -1096,9 +1097,9 @@ public class criacaoTelas extends javax.swing.JFrame {
             pnTotalUnidadeRELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnTotalUnidadeRELayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(pnTotalUnidadeRELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlTotatlUnidadeRE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnTotalUnidadeRELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlTotatlUnidadeRE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlTotalUnidadeIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
@@ -1167,9 +1168,9 @@ public class criacaoTelas extends javax.swing.JFrame {
             pnIVRELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnIVRELayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(pnIVRELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlItensVencidosRE)
-                    .addComponent(jlIconIV, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnIVRELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlIconIV, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlItensVencidosRE))
                 .addGap(18, 18, 18)
                 .addComponent(jlItensVencidosIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2623,9 +2624,9 @@ public class criacaoTelas extends javax.swing.JFrame {
             pnPEBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnPEBLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addGroup(pnPEBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlProdutosEBaixo)
-                    .addComponent(jlIconPEB, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnPEBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlIconPEB, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlProdutosEBaixo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jlProdutosEstoqueBaixoN, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -3723,7 +3724,7 @@ public class criacaoTelas extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new criacaoTelas().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TelaEstoque().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

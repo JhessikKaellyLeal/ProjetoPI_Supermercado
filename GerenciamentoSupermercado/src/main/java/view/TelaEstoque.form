@@ -1413,9 +1413,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jlTotatlUnidadeRE" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel4" alignment="0" min="-2" pref="35" max="-2" attributes="0"/>
+                                  <Component id="jlTotatlUnidadeRE" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jlTotalUnidadeIcon" min="-2" pref="46" max="-2" attributes="0"/>
@@ -1536,9 +1536,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jlItensVencidosRE" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jlIconIV" alignment="0" min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Component id="jlItensVencidosRE" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jlItensVencidosIcon" min="-2" pref="24" max="-2" attributes="0"/>
@@ -4196,9 +4196,9 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jlProdutosEBaixo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jlIconPEB" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="jlProdutosEBaixo" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jlProdutosEstoqueBaixoN" min="-2" pref="31" max="-2" attributes="0"/>
