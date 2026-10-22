@@ -433,44 +433,102 @@ public class TelaEntregas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTabbedPane1.setFont(new java.awt.Font("Arial Black", 0, 15)); // NOI18N
+
+        entregadores.setBackground(new java.awt.Color(236, 236, 236));
+
+        lblNome.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNome.setText("Nome:");
 
+        lblCpf.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCpf.setText("CPF:");
 
+        lblDataNascimento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataNascimento.setText("Data De Nascimento:");
 
+        lblTelefone.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTelefone.setText("Telefone:");
 
+        lblStatusEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusEntregadores.setText("Status");
 
-        tituloDadosEntregadores.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtNome.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        try {
+            ftfCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfCpf.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        try {
+            ftfDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataNascimento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        try {
+            ftfTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfTelefone.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        tituloDadosEntregadores.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         tituloDadosEntregadores.setText("Dados do Entregador");
 
-        tituloEndereco.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tituloEndereco.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         tituloEndereco.setText("Endereço");
 
+        lblRua.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblRua.setText("Rua / Avenida");
 
+        txtRua.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblNumero.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumero.setText("Número");
 
+        txtNumero.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        labBairro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         labBairro.setText("Bairro");
 
+        txtBairro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblCidade.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCidade.setText("Cidade");
 
+        txtCidade.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblCep.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCep.setText("CEP");
 
+        txtCep.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        btnNovoEntregadores.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoEntregadores.setText("Novo");
 
+        btnSalvaEntregadores.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvaEntregadores.setText("Salvar");
 
+        btnAlterarEntregadores.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarEntregadores.setText("Alterar");
 
+        btnExcluirEntregadores.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirEntregadores.setText("Excluir");
 
+        jLabel2.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jLabel2.setText("Código");
 
+        jTextField1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblVeiculoEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblVeiculoEntregadores.setText("Veículo");
 
+        txtVeiculoEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        tblEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblEntregadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -487,9 +545,18 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblEntregadores);
 
+        cbStatusEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusEntregadores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ativo", "Inativo", " " }));
 
+        lblDataContratacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataContratacao.setText("Data de Contratação");
+
+        try {
+            ftfDataContratacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataContratacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout entregadoresLayout = new javax.swing.GroupLayout(entregadores);
         entregadores.setLayout(entregadoresLayout);
@@ -516,7 +583,9 @@ public class TelaEntregas extends javax.swing.JFrame {
                                     .addComponent(lblVeiculoEntregadores)
                                     .addComponent(ftfTelefone, javax.swing.GroupLayout.DEFAULT_SIZE, 266, Short.MAX_VALUE)
                                     .addComponent(txtVeiculoEntregadores)
-                                    .addComponent(ftfDataContratacao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, entregadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblDataContratacao)
+                                        .addComponent(ftfDataContratacao, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addComponent(tituloDadosEntregadores)
                             .addComponent(lblNome))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -555,10 +624,7 @@ public class TelaEntregas extends javax.swing.JFrame {
                                 .addComponent(cbStatusEntregadores, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addGroup(entregadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(entregadoresLayout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(119, 119, 119)
-                                        .addComponent(lblDataContratacao))
+                                    .addComponent(jLabel2)
                                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 1242, Short.MAX_VALUE))))
         );
@@ -627,10 +693,12 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnExcluirEntregadores))
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(258, Short.MAX_VALUE))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Entregadores", entregadores);
+
+        veiculos.setBackground(new java.awt.Color(236, 236, 236));
 
         tituloVeiculo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tituloVeiculo.setText("Cadastro de Veículo");
@@ -815,6 +883,8 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Veículos", veiculos);
 
+        regiao.setBackground(new java.awt.Color(236, 236, 236));
+
         tituloRegiao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tituloRegiao.setText("Cadastro de Regiões");
 
@@ -946,6 +1016,8 @@ public class TelaEntregas extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Regiões", regiao);
+
+        taxas.setBackground(new java.awt.Color(236, 236, 236));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Cadastro de Taxas");
@@ -1081,6 +1153,8 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Taxas", taxas);
 
+        endereço.setBackground(new java.awt.Color(236, 236, 236));
+
         lblTituloEntrega.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTituloEntrega.setText("Endereços de Entrega");
 
@@ -1184,6 +1258,8 @@ public class TelaEntregas extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Endereços", endereço);
+
+        entregas.setBackground(new java.awt.Color(236, 236, 236));
 
         lbltituloEntregas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbltituloEntregas.setText("Consulta de Entregas");
@@ -1402,6 +1478,8 @@ public class TelaEntregas extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Entregas", entregas);
+
+        dataHorario.setBackground(new java.awt.Color(236, 236, 236));
 
         lbltituloDataHorario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lbltituloDataHorario.setText("Filtros de Consulta");
@@ -1643,6 +1721,8 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Data e Horário", dataHorario);
 
+        agenda.setBackground(new java.awt.Color(236, 236, 236));
+
         lblTituloAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTituloAgenda.setText("Agenda de Entregas");
 
@@ -1856,6 +1936,8 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Agenda", agenda);
 
+        distribuicao.setBackground(new java.awt.Color(236, 236, 236));
+
         lblTituloDistribuicao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTituloDistribuicao.setText("Distribuição/ Controle de Entregas");
 
@@ -2037,6 +2119,8 @@ public class TelaEntregas extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Distribuição", distribuicao);
+
+        status.setBackground(new java.awt.Color(236, 236, 236));
 
         lblTituloStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTituloStatus.setText("Status das Entregas");
@@ -2250,6 +2334,8 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Status", status);
 
+        tentativas.setBackground(new java.awt.Color(236, 236, 236));
+
         lblTituloTentativas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTituloTentativas.setText("Tentativas de Entrega");
 
@@ -2434,6 +2520,8 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Tentativas", tentativas);
 
+        confirmacao.setBackground(new java.awt.Color(236, 236, 236));
+
         lblTituloConfirmacao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTituloConfirmacao.setText("Confirmação de Entregas");
 
@@ -2617,55 +2705,84 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Confirmação", confirmacao);
 
-        lblTituloHistoricoRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        historicoRelatorio.setBackground(new java.awt.Color(236, 236, 236));
+
+        lblTituloHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblTituloHistoricoRelatorio.setText("Histórico e Relatórios");
 
+        lblPeriodoHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPeriodoHistoricoRelatorio.setText("Período");
 
+        ftfPeriodoHistoricoRelatorio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfPeriodoHistoricoRelatorio.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfPeriodoHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblTipoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTipoRelatorio.setText("Tipo de relatório");
 
+        cbTipoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbTipoRelatorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos" }));
 
+        lblStatusHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusHistoricoRelatorio.setText("Status");
 
+        cbStatusHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusHistoricoRelatorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Confirmada", "Em andamento", "Cancelada" }));
 
+        lblEntregadorHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEntregadorHistoricoRelatorio.setText("Entregador");
 
+        cbEntregadorHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbEntregadorHistoricoRelatorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos" }));
 
+        btnPesquisarHistoricoRelatorio.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarHistoricoRelatorio.setText("Pesquisar");
 
         lblIconeTotalHistoricoRelatorio.setText("Icone");
 
+        lblTotalHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblTotalHistoricoRelatorio.setText("Total de entregas");
 
+        lblNumeroTotalHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroTotalHistoricoRelatorio.setText("Nº");
 
         lblIconeEntregasHistoricoRelatorio.setText("Icone");
 
+        lblEntregasHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblEntregasHistoricoRelatorio.setText("Entregas concluídas");
 
+        lblNumeroEntregasHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroEntregasHistoricoRelatorio.setText("Nº");
 
         lblIconeAndamentoHistoricoRelatorio.setText("Icone");
 
+        lblAndamentoHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblAndamentoHistoricoRelatorio.setText("Em andamento");
 
+        lblNumeroAndamentoHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroAndamentoHistoricoRelatorio.setText("Nº");
 
         lblIconeCanceladaHistoricoRelatorio.setText("Icone");
 
+        lblCanceladaHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblCanceladaHistoricoRelatorio.setText("Canceladas");
 
+        lblNumeroCanceladaHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroCanceladaHistoricoRelatorio.setText("Nº");
 
         lblIconeTempoHistoricoRelatorio.setText("Icone");
 
+        lblTempoHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblTempoHistoricoRelatorio.setText("Tempo médio de entrega");
 
+        lblNumeroTempoHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroTempoHistoricoRelatorio.setText("Nº");
 
+        tblHistoricoEntregasRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblHistoricoEntregasRelatorio.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -2683,16 +2800,22 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane20.setViewportView(tblHistoricoEntregasRelatorio);
 
+        btnRelatorioEntregas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnRelatorioEntregas.setText("Relatório de entregas");
 
+        btnRelatorioEntregador.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnRelatorioEntregador.setText("Relatório por entregador");
 
+        btnRelatorioRegiao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnRelatorioRegiao.setText("Relatório por região");
 
+        btnRelatorioFinanceiro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnRelatorioFinanceiro.setText("Relatótio financeiro");
 
+        btnRelatorioStatus.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnRelatorioStatus.setText("Relatório de status");
 
+        btnExportarRelatorio.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExportarRelatorio.setText("Exportar relatório");
 
         javax.swing.GroupLayout historicoRelatorioLayout = new javax.swing.GroupLayout(historicoRelatorio);
@@ -2700,74 +2823,83 @@ public class TelaEntregas extends javax.swing.JFrame {
         historicoRelatorioLayout.setHorizontalGroup(
             historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(historicoRelatorioLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTituloHistoricoRelatorio)
+                    .addComponent(lblIconeTotalHistoricoRelatorio)
                     .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTituloHistoricoRelatorio)
+                            .addComponent(lblPeriodoHistoricoRelatorio)
+                            .addComponent(ftfPeriodoHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblTotalHistoricoRelatorio)
                             .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblPeriodoHistoricoRelatorio)
-                                    .addComponent(ftfPeriodoHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(62, 62, 62)
+                                .addComponent(lblNumeroTotalHistoricoRelatorio)))
+                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(historicoRelatorioLayout.createSequentialGroup()
                                 .addGap(31, 31, 31)
                                 .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblTipoRelatorio)
                                     .addComponent(cbTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblEntregasHistoricoRelatorio)
-                                    .addComponent(lblNumeroEntregasHistoricoRelatorio))
+                                    .addComponent(lblIconeEntregasHistoricoRelatorio)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historicoRelatorioLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblNumeroEntregasHistoricoRelatorio)
+                                .addGap(111, 111, 111)))
+                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(historicoRelatorioLayout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblStatusHistoricoRelatorio)
+                                    .addComponent(cbStatusHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(30, 30, 30)
+                                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblEntregadorHistoricoRelatorio)
+                                    .addGroup(historicoRelatorioLayout.createSequentialGroup()
+                                        .addComponent(cbEntregadorHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnPesquisarHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(historicoRelatorioLayout.createSequentialGroup()
                                 .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                                        .addGap(31, 31, 31)
+                                        .addGap(53, 53, 53)
                                         .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblStatusHistoricoRelatorio)
-                                            .addComponent(cbStatusHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(30, 30, 30)
-                                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblEntregadorHistoricoRelatorio)
-                                            .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                                                .addComponent(cbEntregadorHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(btnPesquisarHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(lblIconeAndamentoHistoricoRelatorio)
+                                            .addComponent(lblAndamentoHistoricoRelatorio)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historicoRelatorioLayout.createSequentialGroup()
+                                        .addComponent(lblNumeroAndamentoHistoricoRelatorio)
+                                        .addGap(67, 67, 67)))
+                                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                                        .addGap(44, 44, 44)
+                                        .addGap(65, 65, 65)
                                         .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblAndamentoHistoricoRelatorio)
-                                            .addComponent(lblNumeroAndamentoHistoricoRelatorio))
-                                        .addGap(115, 115, 115)
-                                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblNumeroCanceladaHistoricoRelatorio)
+                                            .addComponent(lblIconeCanceladaHistoricoRelatorio)
                                             .addComponent(lblCanceladaHistoricoRelatorio))
-                                        .addGap(102, 102, 102)
+                                        .addGap(13, 13, 13))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historicoRelatorioLayout.createSequentialGroup()
+                                        .addComponent(lblNumeroCanceladaHistoricoRelatorio)
+                                        .addGap(49, 49, 49)))
+                                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(historicoRelatorioLayout.createSequentialGroup()
+                                        .addGap(64, 64, 64)
                                         .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblTempoHistoricoRelatorio)
-                                            .addComponent(lblNumeroTempoHistoricoRelatorio)))))
-                            .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                                .addComponent(lblIconeTotalHistoricoRelatorio)
-                                .addGap(148, 148, 148)
-                                .addComponent(lblIconeEntregasHistoricoRelatorio)
-                                .addGap(160, 160, 160)
-                                .addComponent(lblIconeAndamentoHistoricoRelatorio)
-                                .addGap(157, 157, 157)
-                                .addComponent(lblIconeCanceladaHistoricoRelatorio)
-                                .addGap(140, 140, 140)
-                                .addComponent(lblIconeTempoHistoricoRelatorio))))
+                                            .addComponent(lblIconeTempoHistoricoRelatorio)
+                                            .addComponent(lblTempoHistoricoRelatorio)))
+                                    .addGroup(historicoRelatorioLayout.createSequentialGroup()
+                                        .addGap(127, 127, 127)
+                                        .addComponent(lblNumeroTempoHistoricoRelatorio))))))
                     .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTotalHistoricoRelatorio)
-                            .addComponent(lblNumeroTotalHistoricoRelatorio)))
-                    .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnRelatorioFinanceiro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnRelatorioStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnRelatorioEntregas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRelatorioEntregador, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                            .addComponent(btnRelatorioEntregador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnRelatorioRegiao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnExportarRelatorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, 815, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(990, Short.MAX_VALUE))
+                .addContainerGap(912, Short.MAX_VALUE))
         );
         historicoRelatorioLayout.setVerticalGroup(
             historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2775,44 +2907,41 @@ public class TelaEntregas extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(lblTituloHistoricoRelatorio)
                 .addGap(18, 18, 18)
-                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(historicoRelatorioLayout.createSequentialGroup()
-                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblPeriodoHistoricoRelatorio)
-                            .addComponent(lblTipoRelatorio)
-                            .addComponent(lblStatusHistoricoRelatorio)
-                            .addComponent(lblEntregadorHistoricoRelatorio))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ftfPeriodoHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbStatusHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbEntregadorHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPesquisarHistoricoRelatorio))
-                        .addGap(26, 26, 26)
-                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblTotalHistoricoRelatorio)
-                            .addComponent(lblEntregasHistoricoRelatorio))
-                        .addGap(16, 16, 16))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historicoRelatorioLayout.createSequentialGroup()
-                        .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblAndamentoHistoricoRelatorio)
-                            .addComponent(lblCanceladaHistoricoRelatorio)
-                            .addComponent(lblTempoHistoricoRelatorio))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIconeTotalHistoricoRelatorio)
-                    .addComponent(lblIconeEntregasHistoricoRelatorio)
-                    .addComponent(lblIconeAndamentoHistoricoRelatorio)
-                    .addComponent(lblIconeCanceladaHistoricoRelatorio)
-                    .addComponent(lblIconeTempoHistoricoRelatorio))
+                    .addComponent(lblPeriodoHistoricoRelatorio)
+                    .addComponent(lblTipoRelatorio)
+                    .addComponent(lblStatusHistoricoRelatorio)
+                    .addComponent(lblEntregadorHistoricoRelatorio))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ftfPeriodoHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbStatusHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbEntregadorHistoricoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPesquisarHistoricoRelatorio))
+                .addGap(26, 26, 26)
+                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblTotalHistoricoRelatorio)
+                    .addComponent(lblEntregasHistoricoRelatorio)
+                    .addComponent(lblAndamentoHistoricoRelatorio)
+                    .addComponent(lblCanceladaHistoricoRelatorio)
+                    .addComponent(lblTempoHistoricoRelatorio))
+                .addGap(16, 16, 16)
+                .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblIconeCanceladaHistoricoRelatorio)
+                        .addComponent(lblIconeAndamentoHistoricoRelatorio)
+                        .addComponent(lblIconeTempoHistoricoRelatorio))
+                    .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblIconeTotalHistoricoRelatorio)
+                        .addComponent(lblIconeEntregasHistoricoRelatorio)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNumeroTotalHistoricoRelatorio)
-                    .addComponent(lblNumeroEntregasHistoricoRelatorio)
                     .addComponent(lblNumeroAndamentoHistoricoRelatorio)
                     .addComponent(lblNumeroCanceladaHistoricoRelatorio)
-                    .addComponent(lblNumeroTempoHistoricoRelatorio))
+                    .addComponent(lblNumeroTempoHistoricoRelatorio)
+                    .addComponent(lblNumeroEntregasHistoricoRelatorio))
                 .addGap(27, 27, 27)
                 .addGroup(historicoRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2828,7 +2957,7 @@ public class TelaEntregas extends javax.swing.JFrame {
                         .addComponent(btnRelatorioStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnExportarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(386, Short.MAX_VALUE))
+                .addContainerGap(360, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Histórico e Relatórios", historicoRelatorio);

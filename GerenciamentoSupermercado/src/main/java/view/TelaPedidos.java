@@ -103,13 +103,12 @@ public class TelaPedidos extends javax.swing.JFrame {
         lblInformacaoEnderecoConsulta = new javax.swing.JLabel();
         jScrollPane16 = new javax.swing.JScrollPane();
         tblPedidoConsulta = new javax.swing.JTable();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        lblValorTotalConsulta = new javax.swing.JLabel();
-        lblInformacaoValorConsulta = new javax.swing.JLabel();
         btnVoltarConsulta = new javax.swing.JButton();
         btnVisualizarConsulta = new javax.swing.JButton();
         btnImprimirConsulta = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        lblValorTotalConsulta = new javax.swing.JLabel();
+        lblInformacaoValorConsulta = new javax.swing.JLabel();
         separacao = new javax.swing.JPanel();
         lblPeriodoSeparacao = new javax.swing.JLabel();
         ftfPeriodoSeparacao = new javax.swing.JFormattedTextField();
@@ -159,7 +158,6 @@ public class TelaPedidos extends javax.swing.JFrame {
         lblClienteConferencia = new javax.swing.JLabel();
         txtClienteConferencia = new javax.swing.JTextField();
         lblStatusConferencia = new javax.swing.JLabel();
-        cbStatusConferencia = new javax.swing.JComboBox<>();
         btnPesquisarConferencia = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         tblPedidosConferencia = new javax.swing.JTable();
@@ -177,6 +175,7 @@ public class TelaPedidos extends javax.swing.JFrame {
         btnConfirmarConferencia = new javax.swing.JButton();
         btnImprimirListaConferencia = new javax.swing.JButton();
         btnVerDetalhesConferencia = new javax.swing.JButton();
+        cbStatusConferencia = new javax.swing.JComboBox<>();
         alteracaoStatus = new javax.swing.JPanel();
         lblNumeroPedidoAlteracao = new javax.swing.JLabel();
         lbldataPedidoAlteracao = new javax.swing.JLabel();
@@ -185,7 +184,6 @@ public class TelaPedidos extends javax.swing.JFrame {
         lblClienteAlteracao = new javax.swing.JLabel();
         txtClienteAlteracao = new javax.swing.JTextField();
         lblStatusAlteracao = new javax.swing.JLabel();
-        cbStatusAlteracao = new javax.swing.JComboBox<>();
         btnPesquisarAlteracao = new javax.swing.JButton();
         jScrollPane10 = new javax.swing.JScrollPane();
         tblStatusPedidoAlteracao = new javax.swing.JTable();
@@ -208,6 +206,7 @@ public class TelaPedidos extends javax.swing.JFrame {
         jScrollPane12 = new javax.swing.JScrollPane();
         tblHistoricoAlteracao = new javax.swing.JTable();
         btnSalvarAlteracao = new javax.swing.JButton();
+        cbStatusAlteracao = new javax.swing.JComboBox<>();
         cancelamento = new javax.swing.JPanel();
         lblPeriodoCancelamento = new javax.swing.JLabel();
         ftfPeriodoCancelamento = new javax.swing.JFormattedTextField();
@@ -243,53 +242,113 @@ public class TelaPedidos extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jTabbedPane1.setForeground(new java.awt.Color(10, 4, 138));
+        jTabbedPane1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+
+        cadastro.setBackground(new java.awt.Color(236, 236, 236));
+
+        lblNumeroPedidoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroPedidoCadastro.setText("Nº do Pedido");
 
+        txtNumeroPedidoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumeroPedidoCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblDataPedidoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataPedidoCadastro.setText("Data do Pedido");
 
+        ftfDataPedidoCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataPedidoCadastro.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataPedidoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblClienteCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteCadastro.setText("Cliente");
 
+        lblTipoPagamentoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTipoPagamentoCadastro.setText("Tipo de Pagamento");
 
+        txtClienteCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        cbTipoPagamentoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbTipoPagamentoCadastro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "Cartão de Crédito", "Cartão de Débito", "Dinheiro", "Pix" }));
 
+        lblStatusPedidoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusPedidoCadastro.setText("Status do Pedido");
 
+        cbStatusPedidoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusPedidoCadastro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pronto", "Em separação", "Enviado", "Aguardando pagamento", "Concluído", " " }));
 
+        lblValorTotalCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblValorTotalCadastro.setText("Valor Total");
 
+        txtValorTotalCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtValorTotalCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblObservacoesCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacoesCadastro.setText("Observações");
 
         txtaObservacoesCadastro.setColumns(20);
         txtaObservacoesCadastro.setRows(5);
+        txtaObservacoesCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane1.setViewportView(txtaObservacoesCadastro);
 
-        lblTituloEnderecoCadastro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloEnderecoCadastro.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloEnderecoCadastro.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloEnderecoCadastro.setText("Endereço de Entrega");
 
+        lblRuaCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblRuaCadastro.setText("Rua");
 
+        txtRuaCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtRuaCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblCidadeCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCidadeCadastro.setText("Cidade");
 
+        txtCidadeCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtCidadeCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblNumeroCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroCadastro.setText("Nº");
 
+        txtNumeroCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumeroCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel5.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jLabel5.setText("CEP");
 
+        jTextField4.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        jTextField4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblBairroCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblBairroCadastro.setText("Bairro");
 
+        txtBairroCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtBairroCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        btnSalvarCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvarCadastro.setText("Salvar");
 
+        btnNovoCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoCadastro.setText("Novo");
 
+        btnEditarCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnEditarCadastro.setText("Editar");
 
+        btnExcluirCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirCadastro.setText("Excluir");
 
+        btnPesquisarCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarCadastro.setText("Pesquisar");
 
+        btnVoltaCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltaCadastro.setText("Voltar");
 
+        tblPedidosCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblPedidosCadastro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -321,22 +380,26 @@ public class TelaPedidos extends javax.swing.JFrame {
                             .addComponent(lblValorTotalCadastro))
                         .addGap(35, 35, 35)
                         .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(cadastroLayout.createSequentialGroup()
-                                .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblDataPedidoCadastro)
-                                    .addComponent(ftfDataPedidoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(34, 34, 34)
-                                .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblClienteCadastro)
-                                    .addComponent(txtClienteCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(27, 27, 27)
-                                .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblTipoPagamentoCadastro)
-                                    .addComponent(cbTipoPagamentoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(27, 27, 27)
-                                .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblStatusPedidoCadastro)
-                                    .addComponent(cbStatusPedidoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(cadastroLayout.createSequentialGroup()
+                                    .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblDataPedidoCadastro)
+                                        .addComponent(ftfDataPedidoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(34, 34, 34)
+                                    .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(cadastroLayout.createSequentialGroup()
+                                            .addComponent(lblClienteCadastro)
+                                            .addGap(0, 0, Short.MAX_VALUE))
+                                        .addComponent(txtClienteCadastro))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cbTipoPagamentoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblTipoPagamentoCadastro))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cbStatusPedidoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblStatusPedidoCadastro)))
+                                .addComponent(btnVoltaCadastro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(cadastroLayout.createSequentialGroup()
                                 .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblObservacoesCadastro)
@@ -345,26 +408,23 @@ public class TelaPedidos extends javax.swing.JFrame {
                                 .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(lblRuaCadastro)
                                     .addComponent(lblTituloEnderecoCadastro)
-                                    .addComponent(txtRuaCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                                    .addComponent(txtRuaCadastro)
                                     .addComponent(lblCidadeCadastro)
                                     .addComponent(txtCidadeCadastro))
+                                .addGap(23, 23, 23)
                                 .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(cadastroLayout.createSequentialGroup()
-                                        .addGap(23, 23, 23)
                                         .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtNumeroCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(lblNumeroCadastro)
-                                            .addComponent(jLabel5))
-                                        .addGap(18, 18, 18)
+                                            .addComponent(jLabel5)
+                                            .addComponent(txtNumeroCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(cadastroLayout.createSequentialGroup()
                                                 .addComponent(lblBairroCadastro)
-                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                .addGap(136, 136, 136))
                                             .addComponent(txtBairroCadastro)))
-                                    .addGroup(cadastroLayout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(btnVoltaCadastro, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(cadastroLayout.createSequentialGroup()
                         .addComponent(btnNovoCadastro)
                         .addGap(18, 18, 18)
@@ -376,7 +436,7 @@ public class TelaPedidos extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnPesquisarCadastro))
                     .addComponent(jScrollPane2))
-                .addContainerGap(965, Short.MAX_VALUE))
+                .addContainerGap(949, Short.MAX_VALUE))
         );
         cadastroLayout.setVerticalGroup(
             cadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -436,25 +496,57 @@ public class TelaPedidos extends javax.swing.JFrame {
                         .addComponent(btnPesquisarCadastro)))
                 .addGap(27, 27, 27)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(325, Short.MAX_VALUE))
+                .addContainerGap(335, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cadastro", cadastro);
 
+        consultaDetalhes.setBackground(new java.awt.Color(236, 236, 236));
+
+        lblNumeroPedidoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroPedidoConsulta.setText("Nº Pedido");
 
+        txtNumeroPedidoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumeroPedidoConsulta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblDataInicialConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataInicialConsulta.setText("Data Inicial");
 
+        ftfDataInicialConsulta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataInicialConsulta.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataInicialConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblDataFinalConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataFinalConsulta.setText("Data Final");
 
+        ftfDataFinalConsulta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataFinalConsulta.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataFinalConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblClienteConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteConsulta.setText("Cliente");
 
+        lblStatusPedidoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusPedidoConsulta.setText("Status do Pedido");
 
+        txtClienteConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteConsulta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        cbStatusPedidoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusPedidoConsulta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Pronto", "Em separação", "Enviado", "Concluído", "Aguardando pagamento" }));
 
+        btnPesquisarConsulta.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarConsulta.setText("Pesquisar");
 
+        tblPedidosEncontradosConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblPedidosEncontradosConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -470,26 +562,42 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tblPedidosEncontradosConsulta);
 
+        lblClienteConsultaDetalhes.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblClienteConsultaDetalhes.setForeground(new java.awt.Color(39, 34, 160));
         lblClienteConsultaDetalhes.setText("Cliente");
 
+        lblInformacaoClienteConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacaoClienteConsulta.setText("Informações");
 
+        lblDataPedidoConsulta.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblDataPedidoConsulta.setForeground(new java.awt.Color(39, 34, 160));
         lblDataPedidoConsulta.setText("Data do Pedido");
 
+        lblInformacaoDataConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacaoDataConsulta.setText("Informações");
 
+        lblPagamentoConsulta.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblPagamentoConsulta.setForeground(new java.awt.Color(39, 34, 160));
         lblPagamentoConsulta.setText("Pagamento");
 
+        lblInformacaoPagamentoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacaoPagamentoConsulta.setText("Informações");
 
+        lblStatusConsulta.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblStatusConsulta.setForeground(new java.awt.Color(39, 34, 160));
         lblStatusConsulta.setText("Status");
 
+        lblInformacaoStatusConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacaoStatusConsulta.setText("Informações");
 
+        lblEnderecoEntregaConsulta.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblEnderecoEntregaConsulta.setForeground(new java.awt.Color(39, 34, 160));
         lblEnderecoEntregaConsulta.setText("Endereço de Entrega");
 
+        lblInformacaoEnderecoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacaoEnderecoConsulta.setText("Informações");
 
+        tblPedidoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblPedidoConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -503,21 +611,48 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane16.setViewportView(tblPedidoConsulta);
 
-        jButton10.setText("jButton10");
-
-        jButton11.setText("jButton11");
-
-        lblValorTotalConsulta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblValorTotalConsulta.setText("Valor Total");
-
-        lblInformacaoValorConsulta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblInformacaoValorConsulta.setText("valor");
-
+        btnVoltarConsulta.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarConsulta.setText("Voltar");
 
+        btnVisualizarConsulta.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVisualizarConsulta.setText("Visualizar");
 
+        btnImprimirConsulta.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnImprimirConsulta.setText("Imprimir");
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblValorTotalConsulta.setFont(new java.awt.Font("Arial", 1, 28)); // NOI18N
+        lblValorTotalConsulta.setForeground(new java.awt.Color(10, 4, 138));
+        lblValorTotalConsulta.setText("Valor Total");
+
+        lblInformacaoValorConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 24)); // NOI18N
+        lblInformacaoValorConsulta.setText("valor");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(lblValorTotalConsulta))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(165, 165, 165)
+                        .addComponent(lblInformacaoValorConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lblValorTotalConsulta)
+                .addGap(34, 34, 34)
+                .addComponent(lblInformacaoValorConsulta)
+                .addContainerGap(121, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout consultaDetalhesLayout = new javax.swing.GroupLayout(consultaDetalhes);
         consultaDetalhes.setLayout(consultaDetalhesLayout);
@@ -546,15 +681,14 @@ public class TelaPedidos extends javax.swing.JFrame {
                             .addGap(104, 104, 104)
                             .addGroup(consultaDetalhesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(lblEnderecoEntregaConsulta)
-                                .addComponent(lblInformacaoEnderecoConsulta)
-                                .addComponent(lblValorTotalConsulta)))
-                        .addGroup(consultaDetalhesLayout.createSequentialGroup()
+                                .addComponent(lblInformacaoEnderecoConsulta)))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, consultaDetalhesLayout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(btnVisualizarConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btnImprimirConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVisualizarConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnImprimirConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnVoltarConsulta)))
+                            .addComponent(btnVoltarConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(consultaDetalhesLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(consultaDetalhesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -581,16 +715,12 @@ public class TelaPedidos extends javax.swing.JFrame {
                                     .addGroup(consultaDetalhesLayout.createSequentialGroup()
                                         .addComponent(cbStatusPedidoConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(btnPesquisarConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(btnPesquisarConsulta))))
                             .addGroup(consultaDetalhesLayout.createSequentialGroup()
                                 .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(111, 111, 111)
-                                .addComponent(lblInformacaoValorConsulta))
-                            .addGroup(consultaDetalhesLayout.createSequentialGroup()
-                                .addComponent(jButton10)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton11)))))
-                .addContainerGap(812, Short.MAX_VALUE))
+                                .addGap(43, 43, 43)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(799, Short.MAX_VALUE))
         );
         consultaDetalhesLayout.setVerticalGroup(
             consultaDetalhesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -628,41 +758,63 @@ public class TelaPedidos extends javax.swing.JFrame {
                     .addComponent(lblInformacaoEnderecoConsulta))
                 .addGap(30, 30, 30)
                 .addGroup(consultaDetalhesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(consultaDetalhesLayout.createSequentialGroup()
-                        .addComponent(lblValorTotalConsulta)
-                        .addGap(38, 38, 38)
-                        .addComponent(lblInformacaoValorConsulta))
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(consultaDetalhesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVisualizarConsulta)
                     .addGroup(consultaDetalhesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnImprimirConsulta)
-                        .addComponent(btnVoltarConsulta)))
-                .addGap(253, 253, 253)
-                .addGroup(consultaDetalhesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton10)
-                    .addComponent(jButton11))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnVisualizarConsulta)
+                        .addComponent(btnImprimirConsulta))
+                    .addComponent(btnVoltarConsulta))
+                .addContainerGap(298, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Consulta e Detalhes", consultaDetalhes);
 
         separacao.setBackground(new java.awt.Color(236, 236, 236));
 
+        lblPeriodoSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPeriodoSeparacao.setText("Perído de separação");
 
+        ftfPeriodoSeparacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfPeriodoSeparacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfPeriodoSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblStatusSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusSeparacao.setText("Status da Separação");
         lblStatusSeparacao.setToolTipText("");
 
+        ftPeriodoSeparacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftPeriodoSeparacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftPeriodoSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        cbStatusSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusSeparacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Em separação", "Pendente", "Aguardando", "Pronto para entrega", " " }));
 
+        lblClienteSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteSeparacao.setText("Cliente");
 
+        txtClienteSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteSeparacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblNumeroPedidoSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroPedidoSeparacao.setText("Nº do Pedido");
 
+        txtNumeroPedidoSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumeroPedidoSeparacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        btnPesquisarSeparacao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarSeparacao.setText("Pesquisar");
 
+        tblPedidoSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblPedidoSeparacao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -677,6 +829,7 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tblPedidoSeparacao);
 
+        tblItensPedidoConsulta.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblItensPedidoConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -690,57 +843,86 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(tblItensPedidoConsulta);
 
-        lblTituloDetalhesSeparacao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloDetalhesSeparacao.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloDetalhesSeparacao.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloDetalhesSeparacao.setText("Detalhes para Separação");
 
+        lblClienteDetalhes.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblClienteDetalhes.setForeground(new java.awt.Color(39, 34, 160));
         lblClienteDetalhes.setText("Cliente");
 
+        lblInformacoesNome.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacoesNome.setText("Nome");
 
+        lblDataPedidoDetalhes.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblDataPedidoDetalhes.setForeground(new java.awt.Color(39, 34, 160));
         lblDataPedidoDetalhes.setText("Data do Pedido");
 
+        lblInformacoesData.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacoesData.setText("data");
 
+        lblNumeroPedidoDetalhes.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblNumeroPedidoDetalhes.setForeground(new java.awt.Color(39, 34, 160));
         lblNumeroPedidoDetalhes.setText("Nº do Pedido");
 
+        lblInformacoesNumero.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacoesNumero.setText("numero");
 
+        lblStatusSeparacaoDetalhes.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
+        lblStatusSeparacaoDetalhes.setForeground(new java.awt.Color(39, 34, 160));
         lblStatusSeparacaoDetalhes.setText("Status da Separação");
 
+        lblInformacoesStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacoesStatus.setText("status");
 
+        jLabel11.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jLabel11.setText("Observações");
 
         txtaObservacoesSeparacao.setColumns(20);
         txtaObservacoesSeparacao.setRows(5);
+        txtaObservacoesSeparacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane6.setViewportView(txtaObservacoesSeparacao);
 
+        lblResumoSeparacao.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblResumoSeparacao.setForeground(new java.awt.Color(10, 4, 138));
         lblResumoSeparacao.setText("Resumo da Separação");
 
         barraSeparacao.setBackground(new java.awt.Color(51, 51, 255));
 
+        lblInformacoesResumoSeparacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacoesResumoSeparacao.setText("Informações");
 
+        lblPorcentagemResumoSeparacao.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblPorcentagemResumoSeparacao.setText("porcentagem");
 
+        jLabel48.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jLabel48.setText("Separados");
 
+        jLabel49.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jLabel49.setText("Pendente");
 
+        jLabel50.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jLabel50.setText("Aguardando");
 
+        lblNumeroSeparados.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblNumeroSeparados.setText("Nº");
 
+        lblNumeroPendente.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         lblNumeroPendente.setText("Nº");
 
+        lblNumeroAguardando.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblNumeroAguardando.setText("Nº");
 
+        btnVisualizarPedido.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVisualizarPedido.setText("Visualizar Pedido");
 
+        btnImprimirListaSeparacao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnImprimirListaSeparacao.setText("Imprimir lista");
 
+        btnMarcarSeparado.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnMarcarSeparado.setText("Marcar como Separado");
 
+        btnVoltar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltar.setText("Voltar");
 
         javax.swing.GroupLayout separacaoLayout = new javax.swing.GroupLayout(separacao);
@@ -748,91 +930,85 @@ public class TelaPedidos extends javax.swing.JFrame {
         separacaoLayout.setHorizontalGroup(
             separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(separacaoLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(separacaoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane4)
+                    .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jScrollPane4)
+                        .addGroup(separacaoLayout.createSequentialGroup()
+                            .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblPeriodoSeparacao)
                                 .addGroup(separacaoLayout.createSequentialGroup()
-                                    .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblPeriodoSeparacao)
-                                        .addGroup(separacaoLayout.createSequentialGroup()
-                                            .addComponent(ftfPeriodoSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(ftPeriodoSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(27, 27, 27)
-                                    .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(separacaoLayout.createSequentialGroup()
-                                            .addComponent(lblStatusSeparacao)
-                                            .addGap(53, 53, 53)
-                                            .addComponent(lblClienteSeparacao))
-                                        .addGroup(separacaoLayout.createSequentialGroup()
-                                            .addComponent(cbStatusSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(txtClienteSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGap(23, 23, 23)
-                                    .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblNumeroPedidoSeparacao)
-                                        .addGroup(separacaoLayout.createSequentialGroup()
-                                            .addComponent(txtNumeroPedidoSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(btnPesquisarSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(ftfPeriodoSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(ftPeriodoSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(27, 27, 27)
+                            .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbStatusSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblStatusSeparacao))
+                            .addGap(18, 18, 18)
+                            .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblClienteSeparacao)
+                                .addComponent(txtClienteSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(23, 23, 23)
+                            .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblNumeroPedidoSeparacao)
+                                .addGroup(separacaoLayout.createSequentialGroup()
+                                    .addComponent(txtNumeroPedidoSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btnPesquisarSeparacao)))))
+                    .addComponent(lblTituloDetalhesSeparacao)
+                    .addGroup(separacaoLayout.createSequentialGroup()
+                        .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblClienteDetalhes)
                             .addGroup(separacaoLayout.createSequentialGroup()
-                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 553, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(35, 35, 35)
-                                .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(lblTituloDetalhesSeparacao)
-                            .addGroup(separacaoLayout.createSequentialGroup()
-                                .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblClienteDetalhes)
-                                    .addComponent(lblInformacoesNome))
-                                .addGap(106, 106, 106)
+                                .addComponent(lblInformacoesNome)
+                                .addGap(131, 131, 131)
                                 .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblDataPedidoDetalhes)
-                                    .addComponent(lblInformacoesData))
-                                .addGap(106, 106, 106)
-                                .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblInformacoesNumero)
-                                    .addComponent(lblNumeroPedidoDetalhes))
-                                .addGap(100, 100, 100)
+                                    .addComponent(lblInformacoesData))))
+                        .addGap(106, 106, 106)
+                        .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(separacaoLayout.createSequentialGroup()
+                                .addGap(222, 222, 222)
                                 .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblInformacoesStatus)
-                                    .addComponent(lblStatusSeparacaoDetalhes)))))
-                    .addGroup(separacaoLayout.createSequentialGroup()
-                        .addGap(901, 901, 901)
+                                    .addComponent(lblStatusSeparacaoDetalhes)))
+                            .addComponent(lblNumeroPedidoDetalhes)
+                            .addComponent(lblInformacoesNumero)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, separacaoLayout.createSequentialGroup()
+                                .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel11))
+                                .addGap(18, 18, 18)))
+                        .addGap(119, 119, 119)
                         .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblResumoSeparacao)
-                            .addComponent(barraSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel50)
                             .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnVoltar)
-                                .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, separacaoLayout.createSequentialGroup()
-                                        .addComponent(jLabel50)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblNumeroAguardando))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, separacaoLayout.createSequentialGroup()
-                                        .addComponent(jLabel49)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblNumeroPendente))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, separacaoLayout.createSequentialGroup()
-                                        .addComponent(jLabel48)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblNumeroSeparados))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, separacaoLayout.createSequentialGroup()
+                                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblResumoSeparacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(separacaoLayout.createSequentialGroup()
                                         .addComponent(lblInformacoesResumoSeparacao)
-                                        .addGap(70, 70, 70)
-                                        .addComponent(lblPorcentagemResumoSeparacao))))))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblPorcentagemResumoSeparacao))
+                                    .addComponent(barraSeparacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel48)
+                                    .addComponent(jLabel49)))))
                     .addGroup(separacaoLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(btnVisualizarPedido)
                         .addGap(18, 18, 18)
                         .addComponent(btnImprimirListaSeparacao)
                         .addGap(18, 18, 18)
-                        .addComponent(btnMarcarSeparado)))
-                .addContainerGap(812, Short.MAX_VALUE))
+                        .addComponent(btnMarcarSeparado))
+                    .addGroup(separacaoLayout.createSequentialGroup()
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 553, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(627, 627, 627)
+                        .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblNumeroPendente)
+                                .addComponent(lblNumeroSeparados))
+                            .addComponent(lblNumeroAguardando))))
+                .addContainerGap(700, Short.MAX_VALUE))
         );
         separacaoLayout.setVerticalGroup(
             separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -852,8 +1028,8 @@ public class TelaPedidos extends javax.swing.JFrame {
                     .addComponent(txtNumeroPedidoSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnPesquisarSeparacao))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(lblTituloDetalhesSeparacao)
                 .addGap(26, 26, 26)
                 .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -861,24 +1037,28 @@ public class TelaPedidos extends javax.swing.JFrame {
                     .addComponent(lblDataPedidoDetalhes)
                     .addComponent(lblNumeroPedidoDetalhes)
                     .addComponent(lblStatusSeparacaoDetalhes))
-                .addGap(18, 18, 18)
+                .addGap(24, 24, 24)
                 .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblInformacoesNome)
                     .addComponent(lblInformacoesData)
+                    .addComponent(lblInformacoesNome)
                     .addComponent(lblInformacoesNumero)
-                    .addComponent(lblInformacoesStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(lblResumoSeparacao)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(lblInformacoesStatus)
+                    .addComponent(lblResumoSeparacao))
+                .addGap(26, 26, 26)
                 .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(separacaoLayout.createSequentialGroup()
+                            .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel11)
+                                .addComponent(lblInformacoesResumoSeparacao)
+                                .addComponent(lblPorcentagemResumoSeparacao))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jScrollPane6))
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(separacaoLayout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblInformacoesResumoSeparacao)
-                            .addComponent(lblPorcentagemResumoSeparacao))
-                        .addGap(12, 12, 12)
+                        .addGap(41, 41, 41)
                         .addComponent(barraSeparacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
+                        .addGap(18, 18, 18)
                         .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel48)
                             .addComponent(lblNumeroSeparados))
@@ -888,37 +1068,52 @@ public class TelaPedidos extends javax.swing.JFrame {
                             .addComponent(lblNumeroPendente))
                         .addGap(18, 18, 18)
                         .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel50)
-                            .addComponent(lblNumeroAguardando)))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(separacaoLayout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                            .addComponent(lblNumeroAguardando)
+                            .addComponent(jLabel50))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(separacaoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVisualizarPedido)
                     .addComponent(btnImprimirListaSeparacao)
                     .addComponent(btnMarcarSeparado)
                     .addComponent(btnVoltar))
-                .addGap(141, 141, 141))
+                .addGap(177, 243, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Separação", separacao);
 
+        conferencia.setBackground(new java.awt.Color(236, 236, 236));
+
+        lblNumeroPedidoConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroPedidoConferencia.setText("Nº do Pedido");
 
+        txtNumeroPedidoConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumeroPedidoConferencia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblDataPedidoConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataPedidoConferencia.setText("Data do Pedido");
 
+        ftfDataPedidoConferencia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataPedidoConferencia.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataPedidoConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblClienteConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteConferencia.setText("Cliente");
 
+        txtClienteConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteConferencia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblStatusConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusConferencia.setText("Status da Conferência");
         lblStatusConferencia.setToolTipText("");
 
-        cbStatusConferencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Pendente", "Conferido" }));
-
+        btnPesquisarConferencia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarConferencia.setText("Pesquisar");
 
+        tblPedidosConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblPedidosConferencia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -932,9 +1127,11 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane7.setViewportView(tblPedidosConferencia);
 
-        lblTituloItensConferencia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloItensConferencia.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloItensConferencia.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloItensConferencia.setText("Itens do Pedido");
 
+        tblItensConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblItensConferencia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -948,24 +1145,46 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane8.setViewportView(tblItensConferencia);
 
-        lblTituloPedidoConferencia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloPedidoConferencia.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloPedidoConferencia.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloPedidoConferencia.setText("Conferência do Pedido");
 
+        lblConferenteConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblConferenteConferencia.setText("Conferente");
 
+        txtConferente.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtConferente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblDataConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataConferencia.setText("Data da Conferência");
 
+        ftfDataConferencia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataConferencia.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblObservacaoConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacaoConferencia.setText("Observação");
 
         txtaObservacaoConferencia.setColumns(20);
         txtaObservacaoConferencia.setRows(5);
+        txtaObservacaoConferencia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane9.setViewportView(txtaObservacaoConferencia);
 
+        btnConfirmarConferencia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnConfirmarConferencia.setText("Confirmar Conferência");
 
+        btnImprimirListaConferencia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnImprimirListaConferencia.setText("Imprimir Lista");
 
+        btnVerDetalhesConferencia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVerDetalhesConferencia.setText("Ver Detalhes");
+
+        cbStatusConferencia.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        cbStatusConferencia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Pendente", "Conferido" }));
 
         javax.swing.GroupLayout conferenciaLayout = new javax.swing.GroupLayout(conferencia);
         conferencia.setLayout(conferenciaLayout);
@@ -980,45 +1199,45 @@ public class TelaPedidos extends javax.swing.JFrame {
                             .addComponent(lblNumeroPedidoConferencia))
                         .addGap(18, 18, 18)
                         .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ftfDataPedidoConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDataPedidoConferencia))
+                        .addGap(18, 18, 18)
+                        .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtClienteConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblClienteConferencia))
+                        .addGap(18, 18, 18)
+                        .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(conferenciaLayout.createSequentialGroup()
-                                .addComponent(lblDataPedidoConferencia)
-                                .addGap(74, 74, 74)
-                                .addComponent(lblClienteConferencia)
-                                .addGap(192, 192, 192)
-                                .addComponent(lblStatusConferencia))
-                            .addGroup(conferenciaLayout.createSequentialGroup()
-                                .addComponent(ftfDataPedidoConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtClienteConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(cbStatusConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnPesquisarConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(cbStatusConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnPesquisarConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblStatusConferencia)))
                     .addGroup(conferenciaLayout.createSequentialGroup()
                         .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblTituloItensConferencia)
                             .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(41, 41, 41)
-                        .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblTituloPedidoConferencia)
-                            .addGroup(conferenciaLayout.createSequentialGroup()
-                                .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblConferenteConferencia)
-                                    .addComponent(txtConferente, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(23, 23, 23)
-                                .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblDataConferencia)
-                                    .addComponent(ftfDataConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(lblObservacaoConferencia)
+                        .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblTituloPedidoConferencia)
+                                .addGroup(conferenciaLayout.createSequentialGroup()
+                                    .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblConferenteConferencia)
+                                        .addComponent(txtConferente, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGap(23, 23, 23)
+                                    .addGroup(conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblDataConferencia)
+                                        .addComponent(ftfDataConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(lblObservacaoConferencia)
+                                .addComponent(jScrollPane9))
                             .addGroup(conferenciaLayout.createSequentialGroup()
                                 .addComponent(btnConfirmarConferencia)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnImprimirListaConferencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnVerDetalhesConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane9)))
+                                .addComponent(btnVerDetalhesConferencia))))
                     .addComponent(jScrollPane7))
-                .addContainerGap(944, Short.MAX_VALUE))
+                .addContainerGap(811, Short.MAX_VALUE))
         );
         conferenciaLayout.setVerticalGroup(
             conferenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1034,8 +1253,8 @@ public class TelaPedidos extends javax.swing.JFrame {
                     .addComponent(txtNumeroPedidoConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ftfDataPedidoConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtClienteConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbStatusConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisarConferencia))
+                    .addComponent(btnPesquisarConferencia)
+                    .addComponent(cbStatusConferencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1062,25 +1281,44 @@ public class TelaPedidos extends javax.swing.JFrame {
                             .addComponent(btnConfirmarConferencia)
                             .addComponent(btnImprimirListaConferencia)
                             .addComponent(btnVerDetalhesConferencia))))
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addGap(294, 294, 294))
         );
 
         jTabbedPane1.addTab("Conferência", conferencia);
 
+        alteracaoStatus.setBackground(new java.awt.Color(236, 236, 236));
+
+        lblNumeroPedidoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroPedidoAlteracao.setText("Nº do Pedido");
 
+        lbldataPedidoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lbldataPedidoAlteracao.setText("Data do Pedido");
 
-        ftfDataPedidoAlteracao.setText(" ");
+        txtNumeroPedidoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumeroPedidoAlteracao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        ftfDataPedidoAlteracao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataPedidoAlteracao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataPedidoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblClienteAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteAlteracao.setText("Cliente ");
 
+        txtClienteAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteAlteracao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblStatusAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusAlteracao.setText("Status Atual");
 
-        cbStatusAlteracao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Aguardando pagamento", "Em separação", "Concluído", " " }));
-
+        btnPesquisarAlteracao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarAlteracao.setText("Pesquisar");
+        btnPesquisarAlteracao.setBorder(null);
 
+        tblStatusPedidoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblStatusPedidoAlteracao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -1094,32 +1332,53 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane10.setViewportView(tblStatusPedidoAlteracao);
 
-        lblTituloAlteracao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloAlteracao.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloAlteracao.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloAlteracao.setText("Alteração de Status");
 
+        lblPedidoSelecionadoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPedidoSelecionadoAlteracao.setText("Pedido Selecionado");
 
+        txtPedidoSelecionadoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtPedidoSelecionadoAlteracao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblClienteAlteracaoStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteAlteracaoStatus.setText("Cliente");
 
+        txtClienteAlteracaoStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteAlteracaoStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblValorTotalAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblValorTotalAlteracao.setText("Valor Total");
 
+        txtValorTotalAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtValorTotalAlteracao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblStatusAtualAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusAtualAlteracao.setText("Status Atual");
 
+        cbStatusAtualAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 16)); // NOI18N
         cbStatusAtualAlteracao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aguardando pagamento", "Em separação", " " }));
 
+        lblNovoStatusAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNovoStatusAlteracao.setText("Novo Status");
 
+        cbNovoStatusAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 16)); // NOI18N
         cbNovoStatusAlteracao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Em Separação", "Concluído" }));
 
+        lblObservacoesAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacoesAlteracao.setText("Observações(opcional)");
 
         txtObservacoesAlteracao.setColumns(20);
         txtObservacoesAlteracao.setRows(5);
+        txtObservacoesAlteracao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane11.setViewportView(txtObservacoesAlteracao);
 
-        lblTituloHistoricoAlteracao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloHistoricoAlteracao.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloHistoricoAlteracao.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloHistoricoAlteracao.setText("Histórico de Alterações");
 
+        tblHistoricoAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblHistoricoAlteracao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -1134,7 +1393,11 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane12.setViewportView(tblHistoricoAlteracao);
 
+        btnSalvarAlteracao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvarAlteracao.setText("Salvar Alteração");
+
+        cbStatusAlteracao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        cbStatusAlteracao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Aguardando pagamento", "Em separação", "Concluído", " " }));
 
         javax.swing.GroupLayout alteracaoStatusLayout = new javax.swing.GroupLayout(alteracaoStatus);
         alteracaoStatus.setLayout(alteracaoStatusLayout);
@@ -1153,53 +1416,49 @@ public class TelaPedidos extends javax.swing.JFrame {
                             .addComponent(ftfDataPedidoAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(31, 31, 31)
                         .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtClienteAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblClienteAlteracao))
+                        .addGap(18, 18, 18)
+                        .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(alteracaoStatusLayout.createSequentialGroup()
-                                .addComponent(lblClienteAlteracao)
-                                .addGap(191, 191, 191)
-                                .addComponent(lblStatusAlteracao))
-                            .addGroup(alteracaoStatusLayout.createSequentialGroup()
-                                .addComponent(txtClienteAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnPesquisarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btnPesquisarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblStatusAlteracao))
+                        .addContainerGap(994, Short.MAX_VALUE))
                     .addGroup(alteracaoStatusLayout.createSequentialGroup()
                         .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(alteracaoStatusLayout.createSequentialGroup()
-                                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblTituloAlteracao)
                                     .addGroup(alteracaoStatusLayout.createSequentialGroup()
                                         .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblTituloAlteracao)
-                                            .addGroup(alteracaoStatusLayout.createSequentialGroup()
-                                                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(lblPedidoSelecionadoAlteracao)
-                                                    .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                        .addComponent(txtValorTotalAlteracao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
-                                                        .addComponent(txtClienteAlteracaoStatus, javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(txtPedidoSelecionadoAlteracao, javax.swing.GroupLayout.Alignment.LEADING))
-                                                    .addComponent(lblClienteAlteracaoStatus)
-                                                    .addComponent(lblValorTotalAlteracao))
-                                                .addGap(49, 49, 49)
-                                                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addComponent(lblObservacoesAlteracao)
-                                                    .addComponent(lblNovoStatusAlteracao)
-                                                    .addComponent(lblStatusAtualAlteracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addGroup(alteracaoStatusLayout.createSequentialGroup()
-                                                        .addComponent(cbStatusAtualAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                                    .addComponent(cbNovoStatusAlteracao, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE))))
-                                        .addGap(68, 68, 68))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, alteracaoStatusLayout.createSequentialGroup()
-                                        .addComponent(btnSalvarAlteracao)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                            .addComponent(lblPedidoSelecionadoAlteracao)
+                                            .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(txtValorTotalAlteracao, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
+                                                .addComponent(txtPedidoSelecionadoAlteracao, javax.swing.GroupLayout.Alignment.LEADING))
+                                            .addComponent(lblClienteAlteracaoStatus)
+                                            .addComponent(lblValorTotalAlteracao)
+                                            .addComponent(txtClienteAlteracaoStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(lblObservacoesAlteracao)
+                                                .addComponent(lblNovoStatusAlteracao)
+                                                .addComponent(lblStatusAtualAlteracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(alteracaoStatusLayout.createSequentialGroup()
+                                                    .addComponent(cbStatusAtualAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE))
+                                                .addComponent(cbNovoStatusAlteracao, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(btnSalvarAlteracao))
+                                .addGap(48, 48, 48)
                                 .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblTituloHistoricoAlteracao)
                                     .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 626, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 827, Short.MAX_VALUE))))
+                        .addGap(0, 817, Short.MAX_VALUE))))
         );
         alteracaoStatusLayout.setVerticalGroup(
             alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1213,17 +1472,17 @@ public class TelaPedidos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNumeroPedidoAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ftfDataPedidoAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtClienteAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisarAlteracao))
+                    .addComponent(btnPesquisarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ftfDataPedidoAlteracao)
+                    .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTituloAlteracao)
                     .addComponent(lblTituloHistoricoAlteracao))
-                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(alteracaoStatusLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1249,27 +1508,55 @@ public class TelaPedidos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtValorTotalAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalvarAlteracao))
+                            .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(alteracaoStatusLayout.createSequentialGroup()
                         .addGap(2, 2, 2)
-                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(257, Short.MAX_VALUE))
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(alteracaoStatusLayout.createSequentialGroup()
+                        .addGap(312, 312, 312)
+                        .addComponent(btnSalvarAlteracao)))
+                .addGap(251, 251, 251))
         );
 
         jTabbedPane1.addTab("Alteração de Status", alteracaoStatus);
 
+        cancelamento.setBackground(new java.awt.Color(236, 236, 236));
+
+        lblPeriodoCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPeriodoCancelamento.setText("Período de Cancelamento");
 
+        ftfPeriodoCancelamento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfPeriodoCancelamento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfPeriodoCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        ftfPeriodoCancelaments.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfPeriodoCancelaments.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfPeriodoCancelaments.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblClienteCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteCancelamento.setText("Cliente");
 
+        txtClienteCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteCancelamento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblMotivoCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblMotivoCancelamento.setText("Motivo do Cancelamento");
 
+        cbMotivoCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbMotivoCancelamento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Cliente desistiu da compra", "Produto Indisponível", "Erro no pagamento", "Cliente não autorizou a compra", "Produto com defeito" }));
 
+        btnPesquisarCancelamento.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarCancelamento.setText("Pesquisar");
 
+        tblPedidosCancelados.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblPedidosCancelados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -1285,17 +1572,40 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane13.setViewportView(tblPedidosCancelados);
 
-        lblTituloDetalhesCancelamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloDetalhesCancelamento.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloDetalhesCancelamento.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloDetalhesCancelamento.setText("Detalhes do Pedido Cancelado");
 
+        lblPedidoDetalhesCancelado.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPedidoDetalhesCancelado.setText("Nº Pedido");
 
+        txtPedidoDetalhesCancelado.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtPedidoDetalhesCancelado.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblDataPedidoCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataPedidoCancelamento.setText("Data do Pedido");
 
+        ftfDataPedidoCancelamento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataPedidoCancelamento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataPedidoCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblClienteDetalhesCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteDetalhesCancelamento.setText("Cliente");
 
+        txtClienteDetalhesCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteDetalhesCancelamento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblValorTotalCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblValorTotalCancelamento.setText("Valor Total");
 
+        txtValorTotalCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtValorTotalCancelamento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        tblDetalhesCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblDetalhesCancelamento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -1309,23 +1619,40 @@ public class TelaPedidos extends javax.swing.JFrame {
         ));
         jScrollPane14.setViewportView(tblDetalhesCancelamento);
 
-        lblTituloInformacoesCancelamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloInformacoesCancelamento.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        lblTituloInformacoesCancelamento.setForeground(new java.awt.Color(10, 4, 138));
         lblTituloInformacoesCancelamento.setText("Informações do Cancelamento");
 
+        lblInformacoesMotivo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacoesMotivo.setText("Motivo");
 
+        cbInformacoesMotivo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbInformacoesMotivo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cliente desistiu da compra", "Produto indisponível", "Erro no pagamento", "Clinte não autorizou a compra", "Produto com defeito" }));
 
+        lblInformacoesDataCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblInformacoesDataCancelamento.setText("Data do Cancelamento");
 
+        ftfInformacoesDataCancelamento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfInformacoesDataCancelamento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfInformacoesDataCancelamento.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+
+        lblObservacoesCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacoesCancelamento.setText("Observações");
 
         txtaObservacoesCancelamento.setColumns(20);
+        txtaObservacoesCancelamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaObservacoesCancelamento.setRows(5);
+        txtaObservacoesCancelamento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane15.setViewportView(txtaObservacoesCancelamento);
 
+        btnImprimirComprovanteCancelamento.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnImprimirComprovanteCancelamento.setText("Imprimir Comprovante");
 
+        btnVoltarCancelamento.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarCancelamento.setText("Voltar");
 
         javax.swing.GroupLayout cancelamentoLayout = new javax.swing.GroupLayout(cancelamento);
@@ -1335,14 +1662,13 @@ public class TelaPedidos extends javax.swing.JFrame {
             .addGroup(cancelamentoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane13)
                     .addGroup(cancelamentoLayout.createSequentialGroup()
                         .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblPeriodoCancelamento)
                             .addGroup(cancelamentoLayout.createSequentialGroup()
-                                .addComponent(ftfPeriodoCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ftfPeriodoCancelaments, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(ftfPeriodoCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(ftfPeriodoCancelaments, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(24, 24, 24)
                         .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblClienteCancelamento)
@@ -1353,7 +1679,11 @@ public class TelaPedidos extends javax.swing.JFrame {
                             .addGroup(cancelamentoLayout.createSequentialGroup()
                                 .addComponent(cbMotivoCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
-                                .addComponent(btnPesquisarCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btnPesquisarCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(cancelamentoLayout.createSequentialGroup()
+                        .addComponent(btnImprimirComprovanteCancelamento)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnVoltarCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(cancelamentoLayout.createSequentialGroup()
                         .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(cancelamentoLayout.createSequentialGroup()
@@ -1368,27 +1698,25 @@ public class TelaPedidos extends javax.swing.JFrame {
                                     .addComponent(ftfDataPedidoCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblPedidoDetalhesCancelado))
+                            .addComponent(lblPedidoDetalhesCancelado)
+                            .addComponent(lblTituloDetalhesCancelamento))
                         .addGap(32, 32, 32)
                         .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbInformacoesMotivo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ftfInformacoesDataCancelamento)
-                            .addGroup(cancelamentoLayout.createSequentialGroup()
-                                .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblInformacoesMotivo)
-                                    .addComponent(lblInformacoesDataCancelamento)
-                                    .addComponent(lblObservacoesCancelamento))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jScrollPane15)))
-                    .addGroup(cancelamentoLayout.createSequentialGroup()
-                        .addComponent(lblTituloDetalhesCancelamento)
-                        .addGap(440, 440, 440)
-                        .addComponent(lblTituloInformacoesCancelamento))
-                    .addGroup(cancelamentoLayout.createSequentialGroup()
-                        .addComponent(btnImprimirComprovanteCancelamento)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnVoltarCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(988, Short.MAX_VALUE))
+                            .addComponent(lblTituloInformacoesCancelamento)
+                            .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cbInformacoesMotivo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ftfInformacoesDataCancelamento)
+                                .addGroup(cancelamentoLayout.createSequentialGroup()
+                                    .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblInformacoesMotivo)
+                                        .addComponent(lblInformacoesDataCancelamento)
+                                        .addComponent(lblObservacoesCancelamento))
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jScrollPane15, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)))))
+                .addContainerGap(773, Short.MAX_VALUE))
+            .addGroup(cancelamentoLayout.createSequentialGroup()
+                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 938, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         cancelamentoLayout.setVerticalGroup(
             cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1404,14 +1732,14 @@ public class TelaPedidos extends javax.swing.JFrame {
                     .addComponent(ftfPeriodoCancelaments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtClienteCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbMotivoCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisarCancelamento))
-                .addGap(18, 18, 18)
+                    .addComponent(btnPesquisarCancelamento, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTituloDetalhesCancelamento)
                     .addComponent(lblTituloInformacoesCancelamento))
-                .addGap(24, 24, 24)
+                .addGap(27, 27, 27)
                 .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPedidoDetalhesCancelado)
                     .addComponent(lblInformacoesMotivo))
@@ -1446,7 +1774,7 @@ public class TelaPedidos extends javax.swing.JFrame {
                 .addGroup(cancelamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnImprimirComprovanteCancelamento)
                     .addComponent(btnVoltarCancelamento))
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addContainerGap(272, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Cancelamento", cancelamento);
@@ -1544,14 +1872,13 @@ public class TelaPedidos extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField ftfPeriodoCancelamento;
     private javax.swing.JFormattedTextField ftfPeriodoCancelaments;
     private javax.swing.JFormattedTextField ftfPeriodoSeparacao;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;

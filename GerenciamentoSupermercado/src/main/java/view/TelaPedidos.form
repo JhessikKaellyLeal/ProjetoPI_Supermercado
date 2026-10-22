@@ -34,10 +34,23 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="8a" green="4" red="a" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial Black" size="14" style="0"/>
+        </Property>
+      </Properties>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
         <Container class="javax.swing.JPanel" name="cadastro">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ec" green="ec" red="ec" type="rgb"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Cadastro">
@@ -63,26 +76,32 @@
                               </Group>
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblDataPedidoCadastro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ftfDataPedidoCadastro" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lblDataPedidoCadastro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ftfDataPedidoCadastro" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <Component id="lblClienteCadastro" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Component id="txtClienteCadastro" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="cbTipoPagamentoCadastro" min="-2" pref="164" max="-2" attributes="0"/>
+                                              <Component id="lblTipoPagamentoCadastro" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="cbStatusPedidoCadastro" min="-2" pref="190" max="-2" attributes="0"/>
+                                              <Component id="lblStatusPedidoCadastro" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblClienteCadastro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtClienteCadastro" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblTipoPagamentoCadastro" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cbTipoPagamentoCadastro" alignment="0" min="-2" pref="164" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblStatusPedidoCadastro" min="-2" max="-2" attributes="0"/>
-                                          <Component id="cbStatusPedidoCadastro" min="-2" pref="190" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="btnVoltaCadastro" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -93,34 +112,30 @@
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="lblRuaCadastro" min="-2" max="-2" attributes="0"/>
                                           <Component id="lblTituloEnderecoCadastro" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtRuaCadastro" alignment="0" pref="229" max="32767" attributes="0"/>
+                                          <Component id="txtRuaCadastro" alignment="0" max="32767" attributes="0"/>
                                           <Component id="lblCidadeCadastro" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtCidadeCadastro" alignment="0" max="32767" attributes="0"/>
                                       </Group>
+                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="txtNumeroCadastro" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   <Component id="lblNumeroCadastro" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txtNumeroCadastro" min="-2" pref="71" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
                                                       <Component id="lblBairroCadastro" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="txtBairroCadastro" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jTextField4" min="-2" pref="263" max="-2" attributes="0"/>
-                                          </Group>
+                                          <Component id="jTextField4" min="-2" pref="263" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Component id="btnVoltaCadastro" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -136,7 +151,7 @@
                           </Group>
                           <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="965" max="32767" attributes="0"/>
+                      <EmptySpace pref="949" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -211,7 +226,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="325" max="32767" attributes="0"/>
+                      <EmptySpace pref="335" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -219,32 +234,80 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblNumeroPedidoCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNumeroPedidoCadastro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataPedidoCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfDataPedidoCadastro">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblTipoPagamentoCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tipo de Pagamento"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteCadastro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cbTipoPagamentoCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
                     <StringItem index="0" value="Selecione"/>
@@ -261,11 +324,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusPedidoCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cbStatusPedidoCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="6">
                     <StringItem index="0" value="Pronto"/>
@@ -283,13 +352,29 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblValorTotalCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Valor Total"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtValorTotalCadastro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblObservacoesCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
@@ -304,6 +389,11 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                        <BevelBorder/>
+                      </Border>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -311,73 +401,159 @@
             <Component class="javax.swing.JLabel" name="lblTituloEnderecoCadastro">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Endere&#xe7;o de Entrega"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblRuaCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Rua"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtRuaCadastro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblCidadeCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cidade"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtCidadeCadastro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNumeroCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba;"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNumeroCadastro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="CEP"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jTextField4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblBairroCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Bairro"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtBairroCadastro">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnSalvarCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnNovoCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnEditarCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnExcluirCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnPesquisarCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnVoltaCadastro">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -390,6 +566,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblPedidosCadastro">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="6" rowCount="6">
                         <Column editable="true" title="N&#xba; Pedido" type="java.lang.Object"/>
@@ -407,6 +586,11 @@
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="consultaDetalhes">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ec" green="ec" red="ec" type="rgb"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Consulta e Detalhes">
@@ -446,16 +630,15 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="lblEnderecoEntregaConsulta" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblInformacaoEnderecoConsulta" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblValorTotalConsulta" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="1" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnVisualizarConsulta" min="-2" pref="110" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="btnImprimirConsulta" min="-2" pref="104" max="-2" attributes="0"/>
+                                  <Component id="btnVisualizarConsulta" min="-2" pref="126" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="btnImprimirConsulta" min="-2" pref="133" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="btnVoltarConsulta" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnVoltarConsulta" min="-2" pref="121" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
@@ -488,24 +671,19 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="cbStatusPedidoConsulta" min="-2" pref="176" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="btnPesquisarConsulta" min="-2" pref="106" max="-2" attributes="0"/>
+                                              <Component id="btnPesquisarConsulta" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jScrollPane16" min="-2" pref="631" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
-                                      <Component id="lblInformacaoValorConsulta" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButton10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButton11" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="812" max="32767" attributes="0"/>
+                      <EmptySpace pref="799" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -549,27 +727,18 @@
                       </Group>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="lblValorTotalConsulta" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="lblInformacaoValorConsulta" min="-2" max="-2" attributes="0"/>
-                          </Group>
                           <Component id="jScrollPane16" min="-2" pref="280" max="-2" attributes="0"/>
+                          <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnVisualizarConsulta" min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnVisualizarConsulta" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnImprimirConsulta" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnVoltarConsulta" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="btnVoltarConsulta" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="298" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -577,39 +746,103 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblNumeroPedidoConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNumeroPedidoConsulta">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataInicialConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data Inicial"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfDataInicialConsulta">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataFinalConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data Final"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfDataFinalConsulta">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusPedidoConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteConsulta">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cbStatusPedidoConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="6">
                     <StringItem index="0" value="Todos"/>
@@ -627,6 +860,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnPesquisarConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
@@ -639,6 +875,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblPedidosEncontradosConsulta">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="6" rowCount="6">
                         <Column editable="true" title="N&#xba; Pedido" type="java.lang.Object"/>
@@ -655,51 +894,96 @@
             </Container>
             <Component class="javax.swing.JLabel" name="lblClienteConsultaDetalhes">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacaoClienteConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataPedidoConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacaoDataConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPagamentoConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pagamento"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacaoPagamentoConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacaoStatusConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblEnderecoEntregaConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Endere&#xe7;o de Entrega"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacaoEnderecoConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
@@ -712,6 +996,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblPedidoConsulta">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
                         <Column editable="true" title="Produto" type="java.lang.Object"/>
@@ -724,47 +1011,94 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton10">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jButton10"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton11">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jButton11"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblValorTotalConsulta">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Valor Total"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="lblInformacaoValorConsulta">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="valor"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="btnVoltarConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnVisualizarConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Visualizar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnImprimirConsulta">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Imprimir"/>
               </Properties>
             </Component>
+            <Container class="javax.swing.JPanel" name="jPanel1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="lblValorTotalConsulta" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                                  <Component id="lblInformacaoValorConsulta" min="-2" pref="50" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="168" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="lblValorTotalConsulta" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="lblInformacaoValorConsulta" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="121" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblValorTotalConsulta">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial" size="28" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="8a" green="4" red="a" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Valor Total"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblInformacaoValorConsulta">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="24" style="0"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="valor"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="separacao">
@@ -785,119 +1119,111 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jScrollPane4" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblPeriodoSeparacao" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="ftfPeriodoSeparacao" min="-2" pref="140" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="ftPeriodoSeparacao" min="-2" pref="127" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cbStatusSeparacao" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
+                                      <Component id="lblStatusSeparacao" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblClienteSeparacao" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtClienteSeparacao" min="-2" pref="218" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblNumeroPedidoSeparacao" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtNumeroPedidoSeparacao" min="-2" pref="156" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="btnPesquisarSeparacao" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Component id="lblTituloDetalhesSeparacao" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jScrollPane4" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblPeriodoSeparacao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="ftfPeriodoSeparacao" min="-2" pref="140" max="-2" attributes="0"/>
-                                                  <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="ftPeriodoSeparacao" min="-2" pref="127" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="lblStatusSeparacao" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                                                  <Component id="lblClienteSeparacao" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="cbStatusSeparacao" min="-2" pref="137" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="txtClienteSeparacao" min="-2" pref="218" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lblNumeroPedidoSeparacao" min="-2" max="-2" attributes="0"/>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="txtNumeroPedidoSeparacao" min="-2" pref="156" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="btnPesquisarSeparacao" min="-2" pref="111" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                  <Component id="lblClienteDetalhes" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lblInformacoesNome" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="131" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblDataPedidoDetalhes" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblInformacoesData" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jScrollPane5" min="-2" pref="553" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Component id="lblTituloDetalhesSeparacao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblClienteDetalhes" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblInformacoesNome" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblDataPedidoDetalhes" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblInformacoesData" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblInformacoesNumero" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblNumeroPedidoDetalhes" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lblInformacoesStatus" min="-2" max="-2" attributes="0"/>
                                           <Component id="lblStatusSeparacaoDetalhes" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="lblNumeroPedidoDetalhes" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblInformacoesNumero" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jScrollPane6" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="901" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblResumoSeparacao" min="-2" max="-2" attributes="0"/>
-                                  <Component id="barraSeparacao" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
+                                  <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                      <Component id="btnVoltar" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="lblNumeroAguardando" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="lblNumeroPendente" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="lblNumeroSeparados" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
+                                      <Component id="btnVoltar" min="-2" pref="107" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="lblResumoSeparacao" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
                                               <Component id="lblInformacoesResumoSeparacao" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Component id="lblPorcentagemResumoSeparacao" min="-2" max="-2" attributes="0"/>
                                           </Group>
+                                          <Component id="barraSeparacao" max="32767" attributes="0"/>
+                                          <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
                               <Component id="btnVisualizarPedido" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnImprimirListaSeparacao" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="btnMarcarSeparado" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jScrollPane5" min="-2" pref="553" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="627" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lblNumeroPendente" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblNumeroSeparados" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="lblNumeroAguardando" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="812" max="32767" attributes="0"/>
+                      <EmptySpace pref="700" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -921,8 +1247,8 @@
                           <Component id="btnPesquisarSeparacao" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane4" min="-2" pref="320" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jScrollPane4" min="-2" pref="278" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblTituloDetalhesSeparacao" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -931,26 +1257,32 @@
                           <Component id="lblNumeroPedidoDetalhes" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblStatusSeparacaoDetalhes" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lblInformacoesNome" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblInformacoesData" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblInformacoesNome" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblInformacoesNumero" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblInformacoesStatus" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblResumoSeparacao" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="34" max="32767" attributes="0"/>
-                      <Component id="lblResumoSeparacao" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblInformacoesResumoSeparacao" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblPorcentagemResumoSeparacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblInformacoesResumoSeparacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblPorcentagemResumoSeparacao" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane6" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Component id="jScrollPane5" alignment="0" min="-2" pref="259" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                               <Component id="barraSeparacao" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel48" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblNumeroSeparados" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -962,25 +1294,19 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="lblNumeroAguardando" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="jScrollPane5" min="-2" pref="289" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jScrollPane6" min="-2" pref="255" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnVisualizarPedido" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnImprimirListaSeparacao" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnMarcarSeparado" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnVoltar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+                      <EmptySpace min="177" pref="243" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -988,21 +1314,56 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblPeriodoSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Per&#xed;do de separa&#xe7;&#xe3;o"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfPeriodoSeparacao">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status da Separa&#xe7;&#xe3;o"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftPeriodoSeparacao">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cbStatusSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
                     <StringItem index="0" value="Em separa&#xe7;&#xe3;o"/>
@@ -1019,20 +1380,49 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteSeparacao">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNumeroPedidoSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNumeroPedidoSeparacao">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnPesquisarSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
@@ -1045,6 +1435,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblPedidoSeparacao">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="5" rowCount="5">
                         <Column editable="true" title="N&#xba; Pedido" type="java.lang.Object"/>
@@ -1064,6 +1457,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblItensPedidoConsulta">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
                         <Column editable="true" title="Produto" type="java.lang.Object"/>
@@ -1106,53 +1502,95 @@
             <Component class="javax.swing.JLabel" name="lblTituloDetalhesSeparacao">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Detalhes para Separa&#xe7;&#xe3;o"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteDetalhes">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacoesNome">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nome"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataPedidoDetalhes">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacoesData">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="data"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNumeroPedidoDetalhes">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacoesNumero">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="numero"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusSeparacaoDetalhes">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="20" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="a0" green="22" red="27" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status da Separa&#xe7;&#xe3;o"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacoesStatus">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="status"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel11">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
@@ -1167,12 +1605,23 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                        <BevelBorder/>
+                      </Border>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="lblResumoSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Resumo da Separa&#xe7;&#xe3;o"/>
               </Properties>
             </Component>
@@ -1185,67 +1634,108 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacoesResumoSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPorcentagemResumoSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="porcentagem"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel48">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Separados"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel49">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pendente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel50">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Aguardando"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNumeroSeparados">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba;"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNumeroPendente">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba;"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNumeroAguardando">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba;"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnVisualizarPedido">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Visualizar Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnImprimirListaSeparacao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Imprimir lista"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnMarcarSeparado">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Marcar como Separado"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnVoltar">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="conferencia">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ec" green="ec" red="ec" type="rgb"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Confer&#xea;ncia">
@@ -1267,22 +1757,22 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="ftfDataPedidoConferencia" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+                                  <Component id="lblDataPedidoConferencia" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtClienteConferencia" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                                  <Component id="lblClienteConferencia" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="lblDataPedidoConferencia" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                      <Component id="lblClienteConferencia" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="192" max="-2" attributes="0"/>
-                                      <Component id="lblStatusConferencia" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="ftfDataPedidoConferencia" min="-2" pref="135" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="txtClienteConferencia" min="-2" pref="211" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="cbStatusConferencia" min="-2" pref="149" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="cbStatusConferencia" min="-2" pref="155" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="btnPesquisarConferencia" min="-2" pref="132" max="-2" attributes="0"/>
                                   </Group>
+                                  <Component id="lblStatusConferencia" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -1291,33 +1781,35 @@
                                   <Component id="jScrollPane8" alignment="0" min="-2" pref="520" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="lblTituloPedidoConferencia" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblConferenteConferencia" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtConferente" alignment="0" min="-2" pref="213" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="lblTituloPedidoConferencia" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lblConferenteConferencia" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtConferente" alignment="0" min="-2" pref="213" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lblDataConferencia" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ftfDataConferencia" min="-2" pref="173" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblDataConferencia" min="-2" max="-2" attributes="0"/>
-                                          <Component id="ftfDataConferencia" min="-2" pref="173" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="lblObservacaoConferencia" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane9" alignment="0" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="lblObservacaoConferencia" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="btnConfirmarConferencia" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="btnImprimirListaConferencia" max="32767" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnVerDetalhesConferencia" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <Component id="btnVerDetalhesConferencia" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jScrollPane9" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jScrollPane7" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="944" max="32767" attributes="0"/>
+                      <EmptySpace pref="811" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1336,8 +1828,8 @@
                           <Component id="txtNumeroPedidoConferencia" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="ftfDataPedidoConferencia" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtClienteConferencia" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbStatusConferencia" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnPesquisarConferencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbStatusConferencia" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane7" min="-2" max="-2" attributes="0"/>
@@ -1371,7 +1863,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="267" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1379,47 +1871,81 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblNumeroPedidoConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNumeroPedidoConferencia">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataPedidoConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfDataPedidoConferencia">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteConferencia">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status da Confer&#xea;ncia"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="cbStatusConferencia">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Todos"/>
-                    <StringItem index="1" value="Pendente"/>
-                    <StringItem index="2" value="Conferido"/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JButton" name="btnPesquisarConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
@@ -1432,6 +1958,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblPedidosConferencia">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
                         <Column editable="true" title="N&#xba; Pedido" type="java.lang.Object"/>
@@ -1447,7 +1976,10 @@
             <Component class="javax.swing.JLabel" name="lblTituloItensConferencia">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Itens do Pedido"/>
               </Properties>
@@ -1461,6 +1993,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblItensConferencia">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
                         <Column editable="true" title="Produto" type="java.lang.Object"/>
@@ -1476,27 +2011,62 @@
             <Component class="javax.swing.JLabel" name="lblTituloPedidoConferencia">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Confer&#xea;ncia do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblConferenteConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Conferente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtConferente">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data da Confer&#xea;ncia"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfDataConferencia">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblObservacaoConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xe3;o"/>
               </Properties>
             </Component>
@@ -1511,28 +2081,64 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                        <BevelBorder/>
+                      </Border>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="btnConfirmarConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Confirmar Confer&#xea;ncia"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnImprimirListaConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Imprimir Lista"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnVerDetalhesConferencia">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Ver Detalhes"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbStatusConferencia">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="3">
+                    <StringItem index="0" value="Todos"/>
+                    <StringItem index="1" value="Pendente"/>
+                    <StringItem index="2" value="Conferido"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="alteracaoStatus">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ec" green="ec" red="ec" type="rgb"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Altera&#xe7;&#xe3;o de Status">
@@ -1559,69 +2165,63 @@
                               </Group>
                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="lblClienteAlteracao" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
-                                      <Component id="lblStatusAlteracao" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="txtClienteAlteracao" min="-2" pref="211" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="cbStatusAlteracao" min="-2" pref="136" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnPesquisarAlteracao" min="-2" pref="105" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="txtClienteAlteracao" alignment="0" min="-2" pref="211" max="-2" attributes="0"/>
+                                  <Component id="lblClienteAlteracao" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="cbStatusAlteracao" min="-2" pref="197" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnPesquisarAlteracao" min="-2" pref="115" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="lblStatusAlteracao" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="994" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jScrollPane10" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="lblTituloAlteracao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="lblPedidoSelecionadoAlteracao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                              <Component id="txtValorTotalAlteracao" alignment="0" pref="118" max="32767" attributes="0"/>
-                                                              <Component id="txtClienteAlteracaoStatus" alignment="0" max="32767" attributes="0"/>
-                                                              <Component id="txtPedidoSelecionadoAlteracao" alignment="0" max="32767" attributes="0"/>
-                                                          </Group>
-                                                          <Component id="lblClienteAlteracaoStatus" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="lblValorTotalAlteracao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                          <Component id="lblObservacoesAlteracao" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="lblNovoStatusAlteracao" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="lblStatusAtualAlteracao" max="32767" attributes="0"/>
-                                                          <Group type="102" attributes="0">
-                                                              <Component id="cbStatusAtualAlteracao" min="-2" pref="165" max="-2" attributes="0"/>
-                                                              <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="jLabel30" max="32767" attributes="0"/>
-                                                          </Group>
-                                                          <Component id="cbNovoStatusAlteracao" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="jScrollPane11" alignment="0" pref="226" max="32767" attributes="0"/>
-                                                      </Group>
-                                                  </Group>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblTituloAlteracao" alignment="0" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="btnSalvarAlteracao" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="lblPedidoSelecionadoAlteracao" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                                      <Component id="txtValorTotalAlteracao" alignment="0" pref="118" max="32767" attributes="0"/>
+                                                      <Component id="txtPedidoSelecionadoAlteracao" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="lblClienteAlteracaoStatus" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lblValorTotalAlteracao" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="txtClienteAlteracaoStatus" min="-2" pref="165" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="lblObservacoesAlteracao" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lblNovoStatusAlteracao" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lblStatusAtualAlteracao" max="32767" attributes="0"/>
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="cbStatusAtualAlteracao" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace max="-2" attributes="0"/>
+                                                          <Component id="jLabel30" pref="39" max="32767" attributes="0"/>
+                                                      </Group>
+                                                      <Component id="cbNovoStatusAlteracao" alignment="0" max="32767" attributes="0"/>
+                                                  </Group>
+                                                  <Component id="jScrollPane11" min="-2" pref="246" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
+                                          <Component id="btnSalvarAlteracao" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="lblTituloHistoricoAlteracao" min="-2" max="-2" attributes="0"/>
                                           <Component id="jScrollPane12" min="-2" pref="626" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="827" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="817" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -1640,10 +2240,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtNumeroPedidoAlteracao" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ftfDataPedidoAlteracao" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtClienteAlteracao" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPesquisarAlteracao" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="ftfDataPedidoAlteracao" alignment="1" max="32767" attributes="0"/>
                           <Component id="cbStatusAlteracao" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnPesquisarAlteracao" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane10" min="-2" pref="359" max="-2" attributes="0"/>
@@ -1652,7 +2252,7 @@
                           <Component id="lblTituloAlteracao" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblTituloHistoricoAlteracao" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -1685,15 +2285,17 @@
                                   <Component id="txtValorTotalAlteracao" min="-2" max="-2" attributes="0"/>
                                   <Component id="jScrollPane11" min="-2" pref="117" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="btnSalvarAlteracao" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               <Component id="jScrollPane12" min="-2" pref="309" max="-2" attributes="0"/>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
+                              <Component id="btnSalvarAlteracao" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="257" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1701,52 +2303,84 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblNumeroPedidoAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lbldataPedidoAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNumeroPedidoAlteracao">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfDataPedidoAlteracao">
               <Properties>
-                <Property name="text" type="java.lang.String" value=" "/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente "/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteAlteracao">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status Atual"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="cbStatusAlteracao">
-              <Properties>
-                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="5">
-                    <StringItem index="0" value="Todos"/>
-                    <StringItem index="1" value="Aguardando pagamento"/>
-                    <StringItem index="2" value="Em separa&#xe7;&#xe3;o"/>
-                    <StringItem index="3" value="Conclu&#xed;do"/>
-                    <StringItem index="4" value=" "/>
-                  </StringArray>
-                </Property>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-              </AuxValues>
-            </Component>
             <Component class="javax.swing.JButton" name="btnPesquisarAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="null"/>
+                </Property>
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane10">
@@ -1758,6 +2392,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblStatusPedidoAlteracao">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
                         <Column editable="true" title="N&#xba; Pedido" type="java.lang.Object"/>
@@ -1805,34 +2442,79 @@
             <Component class="javax.swing.JLabel" name="lblTituloAlteracao">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Altera&#xe7;&#xe3;o de Status"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPedidoSelecionadoAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pedido Selecionado"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtPedidoSelecionadoAlteracao">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteAlteracaoStatus">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteAlteracaoStatus">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblValorTotalAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Valor Total"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtValorTotalAlteracao">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblStatusAtualAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Status Atual"/>
               </Properties>
             </Component>
@@ -1840,6 +2522,9 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="cbStatusAtualAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="16" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="3">
                     <StringItem index="0" value="Aguardando pagamento"/>
@@ -1854,11 +2539,17 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblNovoStatusAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Novo Status"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cbNovoStatusAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="16" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
                     <StringItem index="0" value="Em Separa&#xe7;&#xe3;o"/>
@@ -1872,6 +2563,9 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblObservacoesAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xf5;es(opcional)"/>
               </Properties>
             </Component>
@@ -1886,6 +2580,11 @@
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                        <BevelBorder/>
+                      </Border>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1893,7 +2592,10 @@
             <Component class="javax.swing.JLabel" name="lblTituloHistoricoAlteracao">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hist&#xf3;rico de Altera&#xe7;&#xf5;es"/>
               </Properties>
@@ -1907,6 +2609,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblHistoricoAlteracao">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="5" rowCount="5">
                         <Column editable="true" title="Data e Hora" type="java.lang.Object"/>
@@ -1922,12 +2627,39 @@
             </Container>
             <Component class="javax.swing.JButton" name="btnSalvarAlteracao">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar Altera&#xe7;&#xe3;o"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="cbStatusAlteracao">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="Todos"/>
+                    <StringItem index="1" value="Aguardando pagamento"/>
+                    <StringItem index="2" value="Em separa&#xe7;&#xe3;o"/>
+                    <StringItem index="3" value="Conclu&#xed;do"/>
+                    <StringItem index="4" value=" "/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="cancelamento">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ec" green="ec" red="ec" type="rgb"/>
+            </Property>
+          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Cancelamento">
@@ -1942,14 +2674,13 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane13" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lblPeriodoCancelamento" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="ftfPeriodoCancelamento" min="-2" pref="144" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="ftfPeriodoCancelaments" min="-2" pref="144" max="-2" attributes="0"/>
+                                      <Component id="ftfPeriodoCancelamento" min="-2" pref="159" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="ftfPeriodoCancelaments" min="-2" pref="161" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -1963,11 +2694,16 @@
                                   <Group type="102" attributes="0">
                                       <Component id="cbMotivoCancelamento" min="-2" pref="184" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="btnPesquisarCancelamento" min="-2" pref="123" max="-2" attributes="0"/>
+                                      <Component id="btnPesquisarCancelamento" min="-2" pref="143" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
+                              <Component id="btnImprimirComprovanteCancelamento" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="btnVoltarCancelamento" min="-2" pref="121" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1985,34 +2721,32 @@
                                       <Component id="jScrollPane14" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="lblPedidoDetalhesCancelado" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTituloDetalhesCancelamento" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cbInformacoesMotivo" max="32767" attributes="0"/>
-                                  <Component id="ftfInformacoesDataCancelamento" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblInformacoesMotivo" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblInformacoesDataCancelamento" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblObservacoesCancelamento" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblTituloInformacoesCancelamento" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cbInformacoesMotivo" max="32767" attributes="0"/>
+                                      <Component id="ftfInformacoesDataCancelamento" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lblInformacoesMotivo" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblInformacoesDataCancelamento" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblObservacoesCancelamento" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane15" alignment="0" pref="458" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jScrollPane15" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lblTituloDetalhesCancelamento" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="440" max="-2" attributes="0"/>
-                              <Component id="lblTituloInformacoesCancelamento" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="btnImprimirComprovanteCancelamento" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="btnVoltarCancelamento" min="-2" pref="121" max="-2" attributes="0"/>
-                          </Group>
                       </Group>
-                      <EmptySpace pref="988" max="32767" attributes="0"/>
+                      <EmptySpace pref="773" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane13" min="-2" pref="938" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2031,16 +2765,16 @@
                           <Component id="ftfPeriodoCancelaments" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtClienteCancelamento" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cbMotivoCancelamento" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnPesquisarCancelamento" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnPesquisarCancelamento" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jScrollPane13" min="-2" pref="315" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblTituloDetalhesCancelamento" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblTituloInformacoesCancelamento" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="lblPedidoDetalhesCancelado" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lblInformacoesMotivo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2080,7 +2814,7 @@
                           <Component id="btnImprimirComprovanteCancelamento" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnVoltarCancelamento" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="295" max="32767" attributes="0"/>
+                      <EmptySpace pref="272" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2088,27 +2822,75 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblPeriodoCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Per&#xed;odo de Cancelamento"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfPeriodoCancelamento">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfPeriodoCancelaments">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteCancelamento">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblMotivoCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Motivo do Cancelamento"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cbMotivoCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="6">
                     <StringItem index="0" value="Todos"/>
@@ -2126,6 +2908,9 @@
             </Component>
             <Component class="javax.swing.JButton" name="btnPesquisarCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
@@ -2138,6 +2923,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblPedidosCancelados">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="6" rowCount="6">
                         <Column editable="true" title="N&#xba; Pedido" type="java.lang.Object"/>
@@ -2155,38 +2943,96 @@
             <Component class="javax.swing.JLabel" name="lblTituloDetalhesCancelamento">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Detalhes do Pedido Cancelado"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPedidoDetalhesCancelado">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="N&#xba; Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtPedidoDetalhesCancelado">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblDataPedidoCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data do Pedido"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfDataPedidoCancelamento">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClienteDetalhesCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cliente"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtClienteDetalhesCancelamento">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblValorTotalCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Valor Total"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="txtValorTotalCancelamento">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+              </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane14">
               <AuxValues>
@@ -2197,6 +3043,9 @@
               <SubComponents>
                 <Component class="javax.swing.JTable" name="tblDetalhesCancelamento">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="4" rowCount="4">
                         <Column editable="true" title="Produto" type="java.lang.Object"/>
@@ -2212,18 +3061,27 @@
             <Component class="javax.swing.JLabel" name="lblTituloInformacoesCancelamento">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Arial" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="8a" green="4" red="a" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xf5;es do Cancelamento"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacoesMotivo">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Motivo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="cbInformacoesMotivo">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="5">
                     <StringItem index="0" value="Cliente desistiu da compra"/>
@@ -2240,13 +3098,32 @@
             </Component>
             <Component class="javax.swing.JLabel" name="lblInformacoesDataCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Data do Cancelamento"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JFormattedTextField" name="ftfInformacoesDataCancelamento">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                    <BevelBorder/>
+                  </Border>
+                </Property>
+                <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor" preCode="try {" postCode="} catch (java.text.ParseException ex) {&#xa;ex.printStackTrace();&#xa;}">
+                  <Format format="##/##/####" subtype="-1" type="5"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblObservacoesCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Narrow" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xf5;es"/>
               </Properties>
             </Component>
@@ -2260,18 +3137,32 @@
                 <Component class="javax.swing.JTextArea" name="txtaObservacoesCancelamento">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Arial Narrow" size="18" style="0"/>
+                    </Property>
                     <Property name="rows" type="int" value="5"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
+                        <BevelBorder/>
+                      </Border>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="btnImprimirComprovanteCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Imprimir Comprovante"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btnVoltarCancelamento">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial Rounded MT Bold" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
