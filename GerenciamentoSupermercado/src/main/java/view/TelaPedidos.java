@@ -4,6 +4,9 @@
  */
 package view;
 
+import View.MenuPadrao;
+import View.Usuario;
+
 /**
  *
  * @author SamaraTavares
@@ -15,8 +18,18 @@ public class TelaPedidos extends javax.swing.JFrame {
     /**
      * Creates new form TelaPedidos
      */
-    public TelaPedidos() {
+    public TelaPedidos(Usuario usuario) {
         initComponents();
+        MenuPadrao.instalar(
+        this,
+        usuario,
+        "clientes",
+        id -> {
+            // Aqui será definida a navegação entre as telas.
+            // Por enquanto, o formulário atual é preservado.
+        },
+        this::dispose
+    );
     }
 
     /**
@@ -1456,6 +1469,7 @@ public class TelaPedidos extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+          Usuario usuario = new Usuario("Samara", "Administradora", null);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -1474,7 +1488,7 @@ public class TelaPedidos extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new TelaPedidos().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TelaPedidos(usuario).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

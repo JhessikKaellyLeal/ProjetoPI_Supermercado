@@ -4,6 +4,9 @@
  */
 package view;
 
+import View.MenuPadrao;
+import View.Usuario;
+
 /**
  *
  * @author SamaraTavares
@@ -15,9 +18,18 @@ public class TelaEntregas extends javax.swing.JFrame {
     /**
      * Creates new form Pedidos
      */
-    public TelaEntregas() {
+    public TelaEntregas(Usuario usuario) {
         initComponents();
-              
+            MenuPadrao.instalar(
+        this,
+        usuario,
+        "clientes",
+        id -> {
+            // Aqui será definida a navegação entre as telas.
+            // Por enquanto, o formulário atual é preservado.
+        },
+        this::dispose
+    );  
     }
 
     /**
@@ -2838,6 +2850,7 @@ public class TelaEntregas extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+          Usuario usuario = new Usuario("samara", "Administradora", null);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -2857,7 +2870,7 @@ public class TelaEntregas extends javax.swing.JFrame {
       //  Usuario usuario = new Usuario("", "", null);
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new TelaEntregas().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TelaEntregas(usuario).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
