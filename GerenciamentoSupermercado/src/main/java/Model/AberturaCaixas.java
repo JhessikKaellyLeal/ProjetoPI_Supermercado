@@ -4,16 +4,17 @@
  */
 package Model;
 
+/**
+ *
+ * @author AntônioVieira
+ */
 public class AberturaCaixas {
- private int  idaberturaCaixa, caixas_idcaixas, Funcionario_idFuncionario, 
-         Funcionario_cargos_idcargos, Funcionario_setores_idsetores, Funcionario_turnos_idturnos;
+ private int  idaberturaCaixa, caixas_idcaixas, Funcionario_idFuncionario, Funcionario_cargos_idcargos, Funcionario_setores_idsetores, Funcionario_turnos_idturnos;
  private String dataAbertura, horarioAbertura;
  private double valorInicial;
 
     public AberturaCaixas() {
     }
-    
-    
 
     public int getIdaberturaCaixa() {
         return idaberturaCaixa;
