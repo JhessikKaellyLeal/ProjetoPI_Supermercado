@@ -48,6 +48,35 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
         jComboBox17 = new javax.swing.JComboBox<>();
         jLabel18 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jFormattedTextField15 = new javax.swing.JFormattedTextField();
+        jFormattedTextField16 = new javax.swing.JFormattedTextField();
+        jFormattedTextField17 = new javax.swing.JFormattedTextField();
+        jFormattedTextField18 = new javax.swing.JFormattedTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jComboBox18 = new javax.swing.JComboBox<>();
+        jLabel24 = new javax.swing.JLabel();
+        jComboBox19 = new javax.swing.JComboBox<>();
+        jLabel25 = new javax.swing.JLabel();
+        jFormattedTextField19 = new javax.swing.JFormattedTextField();
+        jLabel26 = new javax.swing.JLabel();
+        jFormattedTextField20 = new javax.swing.JFormattedTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel99 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel100 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jLabel101 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
         pnlContatos = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -207,7 +236,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
         );
         pnlCadastroLayout.setVerticalGroup(
             pnlCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1131, Short.MAX_VALUE)
+            .addGap(0, 1277, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Contatos", pnlCadastro);
@@ -220,7 +249,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
         );
         pnlCategoriasLayout.setVerticalGroup(
             pnlCategoriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1131, Short.MAX_VALUE)
+            .addGap(0, 1277, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Categorias ", pnlCategorias);
@@ -233,7 +262,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
         );
         pnlContratosLayout.setVerticalGroup(
             pnlContratosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1131, Short.MAX_VALUE)
+            .addGap(0, 1277, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Contratos", pnlContratos);
@@ -246,7 +275,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
         );
         pnlDocumentosLayout.setVerticalGroup(
             pnlDocumentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1131, Short.MAX_VALUE)
+            .addGap(0, 1277, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Documentos", pnlDocumentos);
@@ -279,6 +308,82 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
 
         jLabel20.setText("Proxima avaliacao");
 
+        jFormattedTextField15.setText("jFormattedTextField15");
+
+        jFormattedTextField16.setText("jFormattedTextField16");
+
+        jFormattedTextField17.setText("jFormattedTextField17");
+
+        jFormattedTextField18.setText("jFormattedTextField18");
+
+        jLabel21.setText("Criterios de avaliacao");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "#", "Criterio", "Descricao", "Peso(%)", "Nota(0 a 10)", "Pontuacao"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel22.setText("Resultado da avaliacao");
+
+        jLabel23.setText("Pontuacao final (0 a 10)");
+
+        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel24.setText("Clasificacao");
+
+        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel25.setText("Parecer do avaliador");
+
+        jFormattedTextField19.setText("jFormattedTextField19");
+
+        jLabel26.setText("Plano de ação/ Recomendaçoes");
+
+        jFormattedTextField20.setText("jFormattedTextField20");
+
+        jLabel27.setText("situaçao");
+
+        jLabel28.setText("Percentual limpo");
+
+        jLabel29.setText("Mensagens e Status");
+
+        jLabel30.setText("Avaliaçao slva com sucesso");
+
+        jTextField9.setText("jTextField9");
+
+        jLabel99.setText("Avaliaçao concluida");
+
+        jTextField10.setText("jTextField10");
+
+        jLabel100.setText("Avaliaçao aprovada");
+
+        jTextField11.setText("jTextField11");
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Data avaliaçao", "Periodo avaliado", "Nome Avaliador", "Pontuaçao", "Classificaçao", "Situaçao", "Proxima Avaliaçao"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        jLabel101.setText("Historico de Avaliaçoes");
+
+        jLabel103.setText("Exibindo 1 a 5 de 12 registros");
+
         javax.swing.GroupLayout pnlAvaliacoesLayout = new javax.swing.GroupLayout(pnlAvaliacoes);
         pnlAvaliacoes.setLayout(pnlAvaliacoesLayout);
         pnlAvaliacoesLayout.setHorizontalGroup(
@@ -286,6 +391,11 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
             .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                        .addComponent(jLabel22)
+                        .addGap(562, 562, 562)
+                        .addComponent(jLabel29))
+                    .addComponent(jLabel21)
                     .addComponent(jLabel94)
                     .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
                         .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,23 +404,61 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel95)
-                            .addComponent(jLabel96))
+                            .addComponent(jLabel96)
+                            .addComponent(jFormattedTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(108, 108, 108)
                         .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel97)
                             .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel98))
-                        .addGap(102, 102, 102)
+                            .addComponent(jLabel98)
+                            .addComponent(jFormattedTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(74, 74, 74)
                         .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel16)
                             .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18))
-                        .addGap(131, 131, 131)
+                            .addComponent(jLabel18)
+                            .addComponent(jFormattedTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(106, 106, 106)
                         .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jFormattedTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel20)
                             .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17))))
-                .addContainerGap(795, Short.MAX_VALUE))
+                            .addComponent(jLabel17)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 862, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                        .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                                .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel23)
+                                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(59, 59, 59)
+                                .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                                        .addComponent(jLabel24)
+                                        .addGap(78, 78, 78)
+                                        .addComponent(jLabel27)
+                                        .addGap(82, 82, 82)
+                                        .addComponent(jLabel28))))
+                            .addComponent(jLabel25)
+                            .addComponent(jFormattedTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(173, 173, 173)
+                        .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel99)
+                            .addComponent(jLabel30)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel100)))
+                    .addComponent(jFormattedTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel101)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 935, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(639, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAvaliacoesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel103)
+                .addGap(606, 606, 606))
         );
         pnlAvaliacoesLayout.setVerticalGroup(
             pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -336,7 +484,63 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
                     .addComponent(jLabel98)
                     .addComponent(jLabel18)
                     .addComponent(jLabel20))
-                .addContainerGap(948, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jFormattedTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addComponent(jLabel21)
+                .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(79, 79, 79)
+                        .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel22)
+                            .addComponent(jLabel29))
+                        .addGap(23, 23, 23)
+                        .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel24)
+                            .addComponent(jLabel27)
+                            .addComponent(jLabel28))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                        .addGap(352, 352, 352)
+                        .addComponent(jLabel30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(pnlAvaliacoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                        .addComponent(jLabel99)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel100)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(122, 122, 122))
+                    .addGroup(pnlAvaliacoesLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jLabel25)
+                        .addGap(18, 18, 18)
+                        .addComponent(jFormattedTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jFormattedTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(jLabel101)))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jLabel103)
+                .addGap(155, 155, 155))
         );
 
         jTabbedPane1.addTab("Avaliações ", pnlAvaliacoes);
@@ -1193,9 +1397,8 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
                         .addComponent(jLabel82)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel91)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addComponent(jLabel66)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlConddepagamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlConddepagamentosLayout.createSequentialGroup()
                         .addGroup(pnlConddepagamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1217,7 +1420,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
                         .addComponent(jButton20)))
                 .addGap(26, 26, 26)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addComponent(jLabel93)
                 .addGap(18, 18, 18)
                 .addGroup(pnlConddepagamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1245,7 +1448,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
         );
         pnlOcorrenciasLayout.setVerticalGroup(
             pnlOcorrenciasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1131, Short.MAX_VALUE)
+            .addGap(0, 1277, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Ocorrencias", pnlOcorrencias);
@@ -1258,7 +1461,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
         );
         pnlHistoricoLayout.setVerticalGroup(
             pnlHistoricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1131, Short.MAX_VALUE)
+            .addGap(0, 1277, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Historico", pnlHistorico);
@@ -1356,6 +1559,8 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox15;
     private javax.swing.JComboBox<String> jComboBox16;
     private javax.swing.JComboBox<String> jComboBox17;
+    private javax.swing.JComboBox<String> jComboBox18;
+    private javax.swing.JComboBox<String> jComboBox19;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
@@ -1370,7 +1575,13 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField jFormattedTextField12;
     private javax.swing.JFormattedTextField jFormattedTextField13;
     private javax.swing.JFormattedTextField jFormattedTextField14;
+    private javax.swing.JFormattedTextField jFormattedTextField15;
+    private javax.swing.JFormattedTextField jFormattedTextField16;
+    private javax.swing.JFormattedTextField jFormattedTextField17;
+    private javax.swing.JFormattedTextField jFormattedTextField18;
+    private javax.swing.JFormattedTextField jFormattedTextField19;
     private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JFormattedTextField jFormattedTextField20;
     private javax.swing.JFormattedTextField jFormattedTextField3;
     private javax.swing.JFormattedTextField jFormattedTextField4;
     private javax.swing.JFormattedTextField jFormattedTextField5;
@@ -1380,6 +1591,9 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField jFormattedTextField9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -1391,7 +1605,17 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
@@ -1466,12 +1690,19 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
     private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
@@ -1480,6 +1711,7 @@ public class FornecedoreseTerceirizados extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private javax.swing.JPanel pnlAvaliacoes;
