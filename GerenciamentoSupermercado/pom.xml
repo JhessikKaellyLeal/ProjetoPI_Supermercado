@@ -19,5 +19,12 @@
     <version>RELEASE260</version>
 </dependency>
 
+  <!-- Driver JDBC para conectar ao MySQL -->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>8.4.0</version>
+            </dependency>
+
     </dependencies>
 </project>
