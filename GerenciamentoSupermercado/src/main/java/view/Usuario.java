@@ -1,5 +1,7 @@
 package View;
 
+
+
 import javax.swing.ImageIcon;
 
 // Guarda os dados de quem entrou no sistema. Repasse este objeto às telas.

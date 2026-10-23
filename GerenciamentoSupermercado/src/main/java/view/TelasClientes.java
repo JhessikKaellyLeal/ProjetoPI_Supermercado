@@ -4,6 +4,9 @@
  */
 package view;
 
+import View.MenuPadrao;
+import View.Usuario;
+
 /**
  *
  * @author User
@@ -13,9 +16,18 @@ public class TelasClientes extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelasClientes.class.getName());
 
 
-    public TelasClientes() {
+    public TelasClientes(Usuario usuario) {
         initComponents();
-      
+         MenuPadrao.instalar(
+        this,
+        usuario,
+        "clientes",
+        id -> {
+            // Aqui será definida a navegação entre as telas.
+            // Por enquanto, o formulário atual é preservado.
+        },
+        this::dispose
+    );  
         
     }
 
@@ -29,10 +41,6 @@ public class TelasClientes extends javax.swing.JFrame {
     private void initComponents() {
 
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
-        painelTopo = new javax.swing.JPanel();
-        lblNomeSupermercado = new javax.swing.JLabel();
-        lblSlogan = new javax.swing.JLabel();
-        lblUsuario = new javax.swing.JLabel();
         painelConteudo = new javax.swing.JPanel();
         abasClientes = new javax.swing.JTabbedPane();
         painelCadastro = new javax.swing.JPanel();
@@ -161,6 +169,11 @@ public class TelasClientes extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnGerarRelatorio = new javax.swing.JButton();
         jComboBox1 = new javax.swing.JComboBox<>();
+        lbMesRelatorio = new javax.swing.JLabel();
+        lbPeriodoRelatorio = new javax.swing.JLabel();
+        lbAnoRelatorio = new javax.swing.JLabel();
+        cbAnoRelatorio = new javax.swing.JComboBox<>();
+        cbMesRelatorio = new javax.swing.JComboBox<>();
         cbTipoRelatorio = new javax.swing.JComboBox<>();
         lblTituloGerarRelatorio = new javax.swing.JLabel();
 
@@ -168,45 +181,6 @@ public class TelasClientes extends javax.swing.JFrame {
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        painelTopo.setBackground(new java.awt.Color(0, 0, 0));
-
-        lblNomeSupermercado.setForeground(new java.awt.Color(255, 255, 255));
-        lblNomeSupermercado.setText("SUPERMERCADO");
-
-        lblSlogan.setForeground(new java.awt.Color(255, 255, 255));
-        lblSlogan.setText("Qualidade e economia todos os dias!");
-
-        lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        lblUsuario.setText("Usuário: admin");
-
-        javax.swing.GroupLayout painelTopoLayout = new javax.swing.GroupLayout(painelTopo);
-        painelTopo.setLayout(painelTopoLayout);
-        painelTopoLayout.setHorizontalGroup(
-            painelTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelTopoLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(painelTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelTopoLayout.createSequentialGroup()
-                        .addComponent(lblSlogan)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(painelTopoLayout.createSequentialGroup()
-                        .addComponent(lblNomeSupermercado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblUsuario)
-                        .addGap(599, 599, 599))))
-        );
-        painelTopoLayout.setVerticalGroup(
-            painelTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelTopoLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(painelTopoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNomeSupermercado)
-                    .addComponent(lblUsuario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblSlogan)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
 
         painelConteudo.setLayout(new java.awt.BorderLayout());
 
@@ -1185,12 +1159,9 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelpedidosTituloLayout.createSequentialGroup()
                         .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelpedidosTituloLayout.createSequentialGroup()
-                                .addComponent(lblPesquisaClienteRelatorio)
-                                .addGap(216, 216, 216))
-                            .addGroup(painelpedidosTituloLayout.createSequentialGroup()
-                                .addComponent(txtPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(47, 47, 47)))
+                            .addComponent(lblPesquisaClienteRelatorio)
+                            .addComponent(txtPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(47, 47, 47)
                         .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblStatusRelatorio)
                             .addComponent(cbStatusRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1388,67 +1359,104 @@ public class TelasClientes extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel1.setText("Formato");
 
+        btnGerarRelatorio.setBackground(new java.awt.Color(10, 4, 138));
         btnGerarRelatorio.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        btnGerarRelatorio.setForeground(new java.awt.Color(255, 255, 255));
         btnGerarRelatorio.setText("Gerar relatório");
-        btnGerarRelatorio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnGerarRelatorio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         btnGerarRelatorio.setPreferredSize(new java.awt.Dimension(109, 40));
 
         jComboBox1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PDF ", "CSV", " " }));
         jComboBox1.setPreferredSize(new java.awt.Dimension(77, 35));
 
+        lbMesRelatorio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbMesRelatorio.setText("Mês");
+
+        lbPeriodoRelatorio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbPeriodoRelatorio.setText("Período do relatório");
+
+        lbAnoRelatorio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lbAnoRelatorio.setText("Ano");
+
+        cbAnoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        cbAnoRelatorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2025", "2026", "2027", " " }));
+        cbAnoRelatorio.setPreferredSize(new java.awt.Dimension(76, 35));
+
+        cbMesRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        cbMesRelatorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" }));
+        cbMesRelatorio.setPreferredSize(new java.awt.Dimension(111, 35));
+        cbMesRelatorio.addActionListener(this::cbMesRelatorioActionPerformed);
+
         cbTipoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbTipoRelatorio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clientes cadastrados ", "Histórico de compras", "Histórico de pagamentos", "Pedidos por período" }));
         cbTipoRelatorio.setPreferredSize(new java.awt.Dimension(201, 35));
         cbTipoRelatorio.addActionListener(this::cbTipoRelatorioActionPerformed);
 
-        lblTituloGerarRelatorio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTituloGerarRelatorio.setFont(new java.awt.Font("Arial", 1, 22)); // NOI18N
         lblTituloGerarRelatorio.setText("Gerar Relatório");
 
         javax.swing.GroupLayout painelGerarRelatorioLayout = new javax.swing.GroupLayout(painelGerarRelatorio);
         painelGerarRelatorio.setLayout(painelGerarRelatorioLayout);
         painelGerarRelatorioLayout.setHorizontalGroup(
             painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(lblTituloGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelGerarRelatorioLayout.createSequentialGroup()
-                .addGap(0, 77, Short.MAX_VALUE)
-                .addComponent(btnGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51))
-            .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(cbTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
-            .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(lblTipoRelatorio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(186, 186, 186))
+                .addGap(30, 30, 30)
+                .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelGerarRelatorioLayout.createSequentialGroup()
+                        .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
+                                .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(lbMesRelatorio))
+                                    .addComponent(cbMesRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbAnoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbAnoRelatorio)))
+                            .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
+                                .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(btnGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(51, 51, 51))
+                    .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTituloGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbPeriodoRelatorio)
+                            .addComponent(lblTipoRelatorio)
+                            .addComponent(cbTipoRelatorio, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(65, 65, 65))))
         );
         painelGerarRelatorioLayout.setVerticalGroup(
             painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelGerarRelatorioLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(40, 40, 40)
                 .addComponent(lblTituloGerarRelatorio)
+                .addGap(24, 24, 24)
+                .addComponent(lblTipoRelatorio)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cbTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(lbPeriodoRelatorio)
                 .addGap(18, 18, 18)
                 .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTipoRelatorio)
-                    .addComponent(jLabel1))
+                    .addComponent(lbMesRelatorio)
+                    .addComponent(lbAnoRelatorio))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
-                        .addComponent(cbTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                        .addComponent(btnGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24))
-                    .addGroup(painelGerarRelatorioLayout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGroup(painelGerarRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbMesRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbAnoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15)
+                .addComponent(btnGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         javax.swing.GroupLayout painelPedidosRelatorioLayout = new javax.swing.GroupLayout(painelPedidosRelatorio);
@@ -1460,18 +1468,15 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelpedidosTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
-                            .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
-                                    .addGap(9, 9, 9)
-                                    .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
-                                    .addComponent(painelTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(263, 263, 263)
-                                    .addComponent(painelPedidospendetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGap(268, 268, 268)
-                            .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(painelPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(painelPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
+                                .addComponent(painelTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(263, 263, 263)
+                                .addComponent(painelPedidospendetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(268, 268, 268)
+                                .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(1702, Short.MAX_VALUE))
         );
         painelPedidosRelatorioLayout.setVerticalGroup(
@@ -1486,9 +1491,9 @@ public class TelasClientes extends javax.swing.JFrame {
                     .addComponent(painelTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelPedidospendetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
+                .addGap(53, 53, 53)
                 .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1644, Short.MAX_VALUE))
+                .addContainerGap(1399, Short.MAX_VALUE))
         );
 
         abasClientes.addTab("Pedidos e Relatório", painelPedidosRelatorio);
@@ -1497,23 +1502,19 @@ public class TelasClientes extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(painelTopo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(2167, 2167, 2167)
-                .addComponent(painelConteudo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(painelConteudo, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
                 .addComponent(abasClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(painelTopo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(abasClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 2713, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(118, 118, 118)
                 .addComponent(painelConteudo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1545,10 +1546,15 @@ public class TelasClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cbTipoRelatorioActionPerformed
 
+    private void cbMesRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMesRelatorioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbMesRelatorioActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+           Usuario usuario = new Usuario("cleiciane", "Administradora", null);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -1569,7 +1575,7 @@ public class TelasClientes extends javax.swing.JFrame {
        //  Usuario usuario = new Usuario("Cleiciane", "administradora",null);
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new TelasClientes().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TelasClientes(usuario).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1592,6 +1598,8 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JButton btnSalvarAlteracoes;
     private javax.swing.JButton btnVisualizarDetalhes;
+    private javax.swing.JComboBox<String> cbAnoRelatorio;
+    private javax.swing.JComboBox<String> cbMesRelatorio;
     private javax.swing.JComboBox<String> cbPeriodoRelatorio;
     private javax.swing.JComboBox<String> cbStatusConsulta;
     private javax.swing.JComboBox<String> cbStatusEdicao;
@@ -1612,7 +1620,10 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lBsubValorPendente;
     private javax.swing.JLabel lBtotalPago;
     private javax.swing.JLabel lBvalorPendente;
+    private javax.swing.JLabel lbAnoRelatorio;
     private javax.swing.JLabel lbGerarComprovante;
+    private javax.swing.JLabel lbMesRelatorio;
+    private javax.swing.JLabel lbPeriodoRelatorio;
     private javax.swing.JLabel lbValortotalCompras;
     private javax.swing.JLabel lblCPF;
     private javax.swing.JLabel lblCPFCdicao;
@@ -1630,7 +1641,6 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lblMensagemConsulta;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblNomeEdicao;
-    private javax.swing.JLabel lblNomeSupermercado;
     private javax.swing.JLabel lblPedidosPendentesRelatorio;
     private javax.swing.JLabel lblPeriodoRelatorio;
     private javax.swing.JLabel lblPesquisaCliente;
@@ -1639,7 +1649,6 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lblQuantidadePedidosRelatorio;
     private javax.swing.JLabel lblQuantidadePendentesRelatorio;
     private javax.swing.JLabel lblRGEdicao;
-    private javax.swing.JLabel lblSlogan;
     private javax.swing.JLabel lblStatusConsulta;
     private javax.swing.JLabel lblStatusEdicao;
     private javax.swing.JLabel lblStatusRelatorio;
@@ -1658,7 +1667,6 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lblTituloTabelaPedidos;
     private javax.swing.JLabel lblTotalPedidosRelatorio;
     private javax.swing.JLabel lblTotalValorPedidosRelatorio;
-    private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lblValorPedidosRelatorio;
     private javax.swing.JLabel lbpesquisarcliente;
     private javax.swing.JLabel lbsaldopendente1;
@@ -1678,7 +1686,6 @@ public class TelasClientes extends javax.swing.JFrame {
     private javax.swing.JPanel painelPedidosClientes;
     private javax.swing.JPanel painelPedidosRelatorio;
     private javax.swing.JPanel painelPedidospendetes;
-    private javax.swing.JPanel painelTopo;
     private javax.swing.JPanel painelTotalCompras;
     private javax.swing.JPanel painelTotalPago;
     private javax.swing.JPanel painelTotalPedidos;
