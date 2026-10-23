@@ -9,8 +9,8 @@ import java.util.Vector;
 
 /**
  * Tela principal de gestão (interface Swing).
- * As operações de tabela funcionam localmente nesta tela; integração com banco de dados
- * depende das classes/DAO do projeto original.
+ * Módulo isolado das telas de gestão. A interface inclui formulários, tabelas, pesquisa,
+ * ações locais e painéis laterais. Persistência deve ser ligada aos DAO do projeto da equipe.
  */
 public class Lionelmessi extends JFrame {
     private final Color navy = new Color(28, 43, 67);
@@ -20,14 +20,13 @@ public class Lionelmessi extends JFrame {
     private JTabbedPane tabs;
 
     public Lionelmessi() {
-        setTitle("Gestão • Painel de cadastros");
+        setTitle("Módulo de Gestão");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setSize(1180, 760);
-        setMinimumSize(new Dimension(900, 620));
+        setSize(1360, 820);
+        setMinimumSize(new Dimension(1080, 680));
         setLocationRelativeTo(null);
         getContentPane().setBackground(bg);
         setLayout(new BorderLayout());
-        add(buildTop(), BorderLayout.NORTH);
         tabs = new JTabbedPane();
         tabs.setFont(new Font("SansSerif", Font.BOLD, 13));
         tabs.setBackground(Color.WHITE);
