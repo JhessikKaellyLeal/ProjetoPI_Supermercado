@@ -453,7 +453,9 @@ public class TelaEntregas extends javax.swing.JFrame {
         lblStatusEntregadores.setText("Status");
 
         txtNome.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNome.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        ftfCpf.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         try {
             ftfCpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
         } catch (java.text.ParseException ex) {
@@ -461,6 +463,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         }
         ftfCpf.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
 
+        ftfDataNascimento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         try {
             ftfDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -468,6 +471,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         }
         ftfDataNascimento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
 
+        ftfTelefone.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         try {
             ftfTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
         } catch (java.text.ParseException ex) {
@@ -485,26 +489,31 @@ public class TelaEntregas extends javax.swing.JFrame {
         lblRua.setText("Rua / Avenida");
 
         txtRua.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtRua.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblNumero.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumero.setText("Número");
 
         txtNumero.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumero.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         labBairro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         labBairro.setText("Bairro");
 
         txtBairro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtBairro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblCidade.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCidade.setText("Cidade");
 
         txtCidade.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtCidade.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblCep.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCep.setText("CEP");
 
         txtCep.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtCep.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnNovoEntregadores.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoEntregadores.setText("Novo");
@@ -522,11 +531,13 @@ public class TelaEntregas extends javax.swing.JFrame {
         jLabel2.setText("Código");
 
         jTextField1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        jTextField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblVeiculoEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblVeiculoEntregadores.setText("Veículo");
 
         txtVeiculoEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtVeiculoEntregadores.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         tblEntregadores.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblEntregadores.setModel(new javax.swing.table.DefaultTableModel(
@@ -551,6 +562,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         lblDataContratacao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataContratacao.setText("Data de Contratação");
 
+        ftfDataContratacao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         try {
             ftfDataContratacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -693,51 +705,99 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnExcluirEntregadores))
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(184, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Entregadores", entregadores);
 
         veiculos.setBackground(new java.awt.Color(236, 236, 236));
 
-        tituloVeiculo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tituloVeiculo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         tituloVeiculo.setText("Cadastro de Veículo");
 
+        lblPlaca.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPlaca.setText("Placa");
 
+        txtPlaca.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtPlaca.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblTipoVeiculo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTipoVeiculo.setText("Tipo de Veículo");
 
+        txtTipoVeiculo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtTipoVeiculo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblMarca.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblMarca.setText("Marca");
 
+        txtMarca.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtMarca.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblModelo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblModelo.setText("Modelo");
 
+        txtModelo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtModelo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblAno.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblAno.setText("Ano");
 
+        ftfAno.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ftfAno.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblCor.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCor.setText("Cor");
 
+        txt.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblCarga.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCarga.setText("Capacidade de Carga");
 
+        ftfCarga.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ftfCarga.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter()));
+        ftfCarga.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblMotorista.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblMotorista.setText("Motorista");
 
-        lblDocumentacao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cdMotorista.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        cdMotorista.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblDocumentacao.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblDocumentacao.setText("Documentação");
 
+        lblCnh.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCnh.setText("CNH");
 
+        ftfCnh.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ftfCnh.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblVencimentoCnh.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblVencimentoCnh.setText("Vencimento da CNH");
 
+        ftfVencimentoCnh.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        ftfVencimentoCnh.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        btnNovoVeiculos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoVeiculos.setText("Novo");
 
+        btnSalvarVeiculos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvarVeiculos.setText("Salvar");
 
+        btnAlterarVeiculos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarVeiculos.setText("Alterar");
 
+        btnExcluirVeiculos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirVeiculos.setText("Excluir");
 
+        lblStatusVeiculos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusVeiculos.setText("Status");
 
+        cbStatusVeiculos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusVeiculos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ativo", "Inativo" }));
 
+        tblVeiculos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblVeiculos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -878,35 +938,51 @@ public class TelaEntregas extends javax.swing.JFrame {
                         .addComponent(btnExcluirVeiculos)))
                 .addGap(39, 39, 39)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(299, Short.MAX_VALUE))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Veículos", veiculos);
 
         regiao.setBackground(new java.awt.Color(236, 236, 236));
 
-        tituloRegiao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tituloRegiao.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         tituloRegiao.setText("Cadastro de Regiões");
 
+        lblNomeRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNomeRegiao.setText("Nome da Região");
 
+        txtNomeRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNomeRegiao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblTipoRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTipoRegiao.setText("Tipo de Região");
 
+        jComboBox1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o tipo", "Rural", "Urbano", " " }));
         jComboBox1.addActionListener(this::jComboBox1ActionPerformed);
 
+        lblCodigoRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCodigoRegiao.setText("Código da Região");
 
+        lblValorTaxaRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblValorTaxaRegiao.setText("Valor da Taxa de Entrega");
 
+        jComboBox2.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o Estado", "AC - Acre", "AL - Alagoas", "AM - Amazonas", "AP - Amapá", "BA - Bahia", "CE - Ceará", "DF - Distrito Federal", "ES - Espírito Santo", "GO - Goiás", "MA - Maranhão", "MG - Minas Gerais", "MS - Mato Grosso do Sul", "MT - Mato Grosso", "PA - Pará", "PB - Paraíba", "PE - Pernambuco", "PI - Piauí", "PR - Paraná", "RJ - Rio de Janeiro", "RN - Rio Grande do Norte", "RO - Rondônia", "RR - Roraima", "RS - Rio Grande do Sul", "SC - Santa Catarina", "SE - Sergipe", "SP - São Paulo", "TO - Tocantins" }));
 
+        txtValorTaxaRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtValorTaxaRegiao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblBairroRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblBairroRegiao.setText("Bairro(s) Atendido(s)");
 
         txtaBairroRegiao.setColumns(20);
+        txtaBairroRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaBairroRegiao.setRows(5);
+        txtaBairroRegiao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane3.setViewportView(txtaBairroRegiao);
 
+        tblRegioes.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblRegioes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -922,18 +998,25 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(tblRegioes);
 
+        lblObservacoesRegioes.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacoesRegioes.setText("Observações");
 
         txtaObservacoesRegiao.setColumns(20);
+        txtaObservacoesRegiao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaObservacoesRegiao.setRows(5);
+        txtaObservacoesRegiao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane5.setViewportView(txtaObservacoesRegiao);
 
+        btnNovoRegioes.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoRegioes.setText("Novo");
 
+        btnSalvarRegioes.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvarRegioes.setText("Salvar");
 
+        btnAlterarRegioes.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarRegioes.setText("Alterar");
 
+        btnExcluirRegioes.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirRegioes.setText("Excluir");
 
         javax.swing.GroupLayout regiaoLayout = new javax.swing.GroupLayout(regiao);
@@ -1012,50 +1095,75 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnExcluirRegioes))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(253, Short.MAX_VALUE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Regiões", regiao);
 
         taxas.setBackground(new java.awt.Color(236, 236, 236));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setText("Cadastro de Taxas");
 
+        lblCodigoTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCodigoTaxas.setText("Código da Taxa");
 
+        txtCodigoTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtCodigoTaxas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblRegiaoTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblRegiaoTaxas.setText("Região");
 
+        cbRegiaoTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbRegiaoTaxas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a Região", "Região Norte", "Região Nordeste", "Região Centro-Oeste", "Região Sudeste", "Região Sul" }));
 
+        lblTipoTaxa.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTipoTaxa.setText("Tipo de Taxa");
 
+        cbTipoTaxa.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbTipoTaxa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o Tipo", "Fixa", "Percentual" }));
 
+        lblValorTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblValorTaxas.setText("Valor da Taxa");
 
+        lblFaixaValor.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblFaixaValor.setText("Faixa da Valor do Pedido");
 
+        lblValorMinimo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblValorMinimo.setText("Valor Mínimo do Pedido");
 
+        txtValorTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtValorTaxas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        cbFaixaValor.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbFaixaValor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a Faixa", "Até R$ 100,00", "Acima de R$ 100,00" }));
 
+        txtValorMinimo.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtValorMinimo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         txtValorMinimo.addActionListener(this::txtValorMinimoActionPerformed);
 
+        lblObservacoesTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacoesTaxas.setText("Observações");
 
         txtaObservacoesTaxas.setColumns(20);
+        txtaObservacoesTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaObservacoesTaxas.setRows(5);
+        txtaObservacoesTaxas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane6.setViewportView(txtaObservacoesTaxas);
 
+        btnNovoTaxas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoTaxas.setText("Novo");
 
+        btnSalvarTaxas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvarTaxas.setText("Salvar");
 
+        btnAlterarTaxas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarTaxas.setText("Alterar");
 
+        btnExcluirTaxas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirTaxas.setText("Excluir");
 
+        tblListaTaxas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblListaTaxas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -1148,28 +1256,44 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnExcluirTaxas))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Taxas", taxas);
 
         endereço.setBackground(new java.awt.Color(236, 236, 236));
 
-        lblTituloEntrega.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloEntrega.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblTituloEntrega.setText("Endereços de Entrega");
 
+        lblPedidoEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPedidoEnderecos.setText("Pedido");
 
+        lblClienteEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteEnderecos.setText("Cliente");
 
+        txtPedidoEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtPedidoEnderecos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        txtClienteEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteEnderecos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblCepEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCepEnderecos.setText("CEP");
 
+        txtCepEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtCepEnderecos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblRegiãoEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblRegiãoEnderecos.setText("Região");
 
+        jComboBox3.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a Região", "Região Norte", "Região Nordeste", "Região Centro-Oeste", "Região Sudeste", "Região Sul" }));
 
+        btnPesquisarEnderecos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarEnderecos.setText("Pesquisar");
 
+        tblListaEnderecos.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblListaEnderecos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
@@ -1187,10 +1311,13 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane8.setViewportView(tblListaEnderecos);
 
+        btnNovoEnderecos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoEnderecos.setText("Novo");
 
+        btnAlterarEndercos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarEndercos.setText("Alterar");
 
+        btnExcluirEnderecos.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirEnderecos.setText("Excluir");
 
         javax.swing.GroupLayout endereçoLayout = new javax.swing.GroupLayout(endereço);
@@ -1202,25 +1329,26 @@ public class TelaEntregas extends javax.swing.JFrame {
                 .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(lblTituloEntrega)
+                        .addComponent(jScrollPane8)
                         .addGroup(endereçoLayout.createSequentialGroup()
-                            .addComponent(lblPedidoEnderecos)
-                            .addGap(189, 189, 189)
-                            .addComponent(lblClienteEnderecos)
-                            .addGap(221, 221, 221)
-                            .addComponent(lblCepEnderecos)
-                            .addGap(189, 189, 189)
-                            .addComponent(lblRegiãoEnderecos))
-                        .addGroup(endereçoLayout.createSequentialGroup()
-                            .addComponent(txtPedidoEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtPedidoEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblPedidoEnderecos))
                             .addGap(18, 18, 18)
-                            .addComponent(txtClienteEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtClienteEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblClienteEnderecos))
                             .addGap(18, 18, 18)
-                            .addComponent(txtCepEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtCepEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblCepEnderecos))
                             .addGap(18, 18, 18)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnPesquisarEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jScrollPane8))
+                            .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(endereçoLayout.createSequentialGroup()
+                                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btnPesquisarEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblRegiãoEnderecos))))
                     .addGroup(endereçoLayout.createSequentialGroup()
                         .addComponent(btnNovoEnderecos)
                         .addGap(18, 18, 18)
@@ -1235,11 +1363,12 @@ public class TelaEntregas extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(lblTituloEntrega)
                 .addGap(18, 18, 18)
-                .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPedidoEnderecos)
-                    .addComponent(lblClienteEnderecos)
-                    .addComponent(lblCepEnderecos)
-                    .addComponent(lblRegiãoEnderecos))
+                .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRegiãoEnderecos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblPedidoEnderecos)
+                        .addComponent(lblClienteEnderecos)
+                        .addComponent(lblCepEnderecos)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(endereçoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPedidoEnderecos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1254,72 +1383,128 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnNovoEnderecos)
                     .addComponent(btnAlterarEndercos)
                     .addComponent(btnExcluirEnderecos))
-                .addContainerGap(450, Short.MAX_VALUE))
+                .addContainerGap(432, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Endereços", endereço);
 
         entregas.setBackground(new java.awt.Color(236, 236, 236));
 
-        lbltituloEntregas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbltituloEntregas.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lbltituloEntregas.setText("Consulta de Entregas");
 
+        lblNumeroEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroEntregas.setText("Nº da Entrega");
 
+        txtNumeroEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtNumeroEntregas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblDataEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataEntregas.setText("Data da Entrega");
 
+        ftfDataEntregas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataEntregas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblEnderecoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEnderecoEntregas.setText("Endereço");
 
         txtaEnderecoEntregas.setColumns(20);
+        txtaEnderecoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaEnderecoEntregas.setRows(5);
+        txtaEnderecoEntregas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane9.setViewportView(txtaEnderecoEntregas);
 
+        lblTaxaEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTaxaEntregas.setText("Taxa de Entrega");
 
+        txtEnderecoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtEnderecoEntregas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblClienteEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteEntregas.setText("Cliente");
 
+        txtClienteEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteEntregas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblEntregadorEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEntregadorEntregas.setText("Entregador");
 
+        cbEntregadorEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblObservacoesEntegas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacoesEntegas.setText("Observações");
 
         txtaObservacoesEntregas.setColumns(20);
+        txtaObservacoesEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaObservacoesEntregas.setRows(5);
+        txtaObservacoesEntregas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane10.setViewportView(txtaObservacoesEntregas);
 
+        lblStatusEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusEntregas.setText("Status");
 
+        cbStatusEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusEntregas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o status", "Entregue", "Concluído", "Em Separação", "Saiu para entrega", "Enviado" }));
 
+        lblVeiculoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblVeiculoEntregas.setText("Veículo");
 
+        cbVeiculoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbVeiculoEntregas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o veículo", " " }));
 
+        lblConfirmacaoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblConfirmacaoEntregas.setText("Confirmação");
 
+        cbConfirmacaoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbConfirmacaoEntregas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "Confirmada", "Aguardando", "Não Confirmada" }));
 
+        lblTentativasEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblTentativasEntregas.setText("Tentativas");
 
+        cbTentativasEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbTentativasEntregas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "1º", "2º", "3º", "4º", "5º", "6º", "7º", "8º", "9º", "10º", " " }));
 
+        lblRegiaoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblRegiaoEntregas.setText("Região");
 
+        cbRegiaoEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbRegiaoEntregas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a região", "Região Norte", "Região Nordeste", "Região Centro-Oeste", "Região Sudeste", "Região Sul" }));
 
+        lblHoraEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblHoraEntregas.setText("Hora da Entrega");
 
+        ftfHoraEntregas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfHoraEntregas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfHoraEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        btnNovoEntregas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoEntregas.setText("Novo");
 
+        btnSalvarEntregas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvarEntregas.setText("Salvar");
 
+        btnAlterarEntregas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarEntregas.setText("Alterar");
 
+        btnExcluirEntregas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirEntregas.setText("Excluir");
 
+        btnPesquisarEntregas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarEntregas.setText("Pesquisar");
 
+        btnVoltarEntregas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarEntregas.setText("Voltar");
 
+        tblEntregas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblEntregas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -1413,7 +1598,7 @@ public class TelaEntregas extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnVoltarEntregas, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane11))
-                .addContainerGap(992, Short.MAX_VALUE))
+                .addContainerGap(902, Short.MAX_VALUE))
         );
         entregasLayout.setVerticalGroup(
             entregasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1473,33 +1658,72 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnPesquisarEntregas)
                     .addComponent(btnVoltarEntregas))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(262, Short.MAX_VALUE))
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(225, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Entregas", entregas);
 
         dataHorario.setBackground(new java.awt.Color(236, 236, 236));
 
-        lbltituloDataHorario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbltituloDataHorario.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lbltituloDataHorario.setText("Filtros de Consulta");
 
+        lblDataInicial.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataInicial.setText("Data Inicial");
 
+        ftfDataInicial.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataInicial.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        lblDataFinal.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataFinal.setText("Data Final");
 
+        ftfDataFinal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataFinal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        lblHorarioInicial.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblHorarioInicial.setText("Horário Inicial");
 
+        ftfHorarioInicial.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfHorarioInicial.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfHorarioInicial.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblHorarioFinal.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblHorarioFinal.setText("Horário Final");
 
+        txtHorarioFinal.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            txtHorarioFinal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtHorarioFinal.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblEntregadorDataHorario.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEntregadorDataHorario.setText("Entregador");
 
+        cbEntregadorDataHorario.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbEntregadorDataHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", " " }));
 
+        lblStatusDataHorario.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusDataHorario.setText("Status");
 
+        cbStatusDataHorario.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusDataHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", " " }));
 
+        btnPesquisarDataHorario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarDataHorario.setText("Pesquisar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1513,28 +1737,40 @@ public class TelaEntregas extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        lblEntregasDiaDH.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblEntregasDiaDH.setText("Total de entregas agendadas");
 
+        lblNumeroEntregasDiaDH.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroEntregasDiaDH.setText("Nº");
 
+        lblIconeEntregasDia.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeEntregasDia.setText("Icone");
 
+        lblTotalEntregasDH1.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblTotalEntregasDH1.setText("Total de entregas agendadas");
 
+        lblNumeroTotalDH1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroTotalDH1.setText("Nº");
 
+        lblIconeTotalEntregas1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeTotalEntregas1.setText("Icone");
 
+        lblAndamento.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblAndamento.setText("Em andamento");
 
+        lblIconeAndamento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeAndamento.setText("Icone");
 
+        lnlNumeroAndamento.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lnlNumeroAndamento.setText("Nº");
 
+        lblIconeConcluidas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeConcluidas.setText("Icone");
 
+        lblConcluidas.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblConcluidas.setText("Concluídas");
 
+        lblNumeroConcluidas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroConcluidas.setText("Nº");
 
         tblAgendaEntregas.setModel(new javax.swing.table.DefaultTableModel(
@@ -1555,12 +1791,16 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane12.setViewportView(tblAgendaEntregas);
 
+        btnNovoDataHorario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoDataHorario.setText("Novo");
 
+        btnAlterarDataHorario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarDataHorario.setText("Alterar");
 
+        btnExcluirDataHorario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirDataHorario.setText("Excluir");
 
+        btnVoltarDataHorario.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarDataHorario.setText("Voltar");
 
         javax.swing.GroupLayout dataHorarioLayout = new javax.swing.GroupLayout(dataHorario);
@@ -1568,7 +1808,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         dataHorarioLayout.setHorizontalGroup(
             dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(dataHorarioLayout.createSequentialGroup()
-                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dataHorarioLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1576,14 +1816,17 @@ public class TelaEntregas extends javax.swing.JFrame {
                             .addGroup(dataHorarioLayout.createSequentialGroup()
                                 .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, dataHorarioLayout.createSequentialGroup()
-                                        .addGap(8, 8, 8)
+                                        .addGap(14, 14, 14)
                                         .addComponent(lblIconeTotalEntregas1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblTotalEntregasDH1)
-                                            .addComponent(lblNumeroTotalDH1))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                                        .addComponent(lblIconeEntregasDia)
+                                            .addGroup(dataHorarioLayout.createSequentialGroup()
+                                                .addComponent(lblTotalEntregasDH1)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                                                .addComponent(lblIconeEntregasDia))
+                                            .addGroup(dataHorarioLayout.createSequentialGroup()
+                                                .addComponent(lblNumeroTotalDH1)
+                                                .addGap(0, 0, Short.MAX_VALUE)))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(lblEntregasDiaDH)
@@ -1599,55 +1842,56 @@ public class TelaEntregas extends javax.swing.JFrame {
                                         .addGap(25, 25, 25)
                                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(lblHorarioInicial)
-                                            .addComponent(ftfHorarioInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(ftfHorarioInicial, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(42, 42, 42)
+                                        .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtHorarioFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lblHorarioFinal))))
                                 .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(dataHorarioLayout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblHorarioFinal)
-                                            .addComponent(txtHorarioFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(24, 24, 24)
-                                        .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(dataHorarioLayout.createSequentialGroup()
-                                                .addComponent(lblEntregadorDataHorario)
-                                                .addGap(141, 141, 141)
-                                                .addComponent(lblStatusDataHorario))
-                                            .addGroup(dataHorarioLayout.createSequentialGroup()
-                                                .addComponent(cbEntregadorDataHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(cbStatusDataHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(32, 32, 32)
-                                                .addComponent(btnPesquisarDataHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(dataHorarioLayout.createSequentialGroup()
-                                        .addGap(56, 56, 56)
+                                        .addGap(62, 62, 62)
                                         .addComponent(lblIconeAndamento)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblAndamento)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataHorarioLayout.createSequentialGroup()
-                                                .addComponent(lnlNumeroAndamento)
-                                                .addGap(122, 122, 122)))
-                                        .addComponent(lblIconeConcluidas)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addGroup(dataHorarioLayout.createSequentialGroup()
+                                                .addComponent(lblAndamento)
+                                                .addGap(91, 91, 91)
+                                                .addComponent(lblIconeConcluidas))
+                                            .addComponent(lnlNumeroAndamento))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblConcluidas)
-                                            .addComponent(lblNumeroConcluidas)))))))
-                    .addGroup(dataHorarioLayout.createSequentialGroup()
-                        .addGap(509, 509, 509)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(lblNumeroConcluidas)
+                                            .addComponent(lblConcluidas)))
+                                    .addGroup(dataHorarioLayout.createSequentialGroup()
+                                        .addGap(497, 497, 497)
+                                        .addComponent(btnVoltarDataHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataHorarioLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(lblStatusDataHorario)
+                                            .addComponent(cbStatusDataHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(175, 175, 175)
+                                        .addComponent(btnPesquisarDataHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(dataHorarioLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane12))
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 1331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(dataHorarioLayout.createSequentialGroup()
+                        .addGap(509, 509, 509)
+                        .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblEntregadorDataHorario)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(dataHorarioLayout.createSequentialGroup()
+                                .addGap(108, 108, 108)
+                                .addComponent(cbEntregadorDataHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(dataHorarioLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnNovoDataHorario)
                         .addGap(18, 18, 18)
                         .addComponent(btnAlterarDataHorario)
                         .addGap(18, 18, 18)
-                        .addComponent(btnExcluirDataHorario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnVoltarDataHorario)))
-                .addContainerGap(934, Short.MAX_VALUE))
+                        .addComponent(btnExcluirDataHorario)))
+                .addContainerGap(673, Short.MAX_VALUE))
         );
         dataHorarioLayout.setVerticalGroup(
             dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1675,98 +1919,122 @@ public class TelaEntregas extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dataHorarioLayout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addGap(21, 21, 21)
                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblIconeTotalEntregas1)
-                            .addComponent(lblIconeEntregasDia)
-                            .addComponent(lblIconeAndamento)
-                            .addComponent(lblIconeConcluidas)))
-                    .addGroup(dataHorarioLayout.createSequentialGroup()
+                            .addComponent(lblTotalEntregasDH1)
+                            .addComponent(lblIconeTotalEntregas1)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataHorarioLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dataHorarioLayout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(lblTotalEntregasDH1))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataHorarioLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lblEntregasDiaDH)
+                                    .addComponent(lblIconeEntregasDia))
+                                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lblAndamento)
-                                    .addComponent(lblConcluidas))))
-                        .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(dataHorarioLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblNumeroTotalDH1)
-                                    .addComponent(lblNumeroEntregasDiaDH)))
-                            .addGroup(dataHorarioLayout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(lnlNumeroAndamento))
-                            .addGroup(dataHorarioLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(lblNumeroConcluidas)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(lblIconeAndamento)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dataHorarioLayout.createSequentialGroup()
+                                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblConcluidas)
+                                    .addComponent(lblIconeConcluidas))
+                                .addGap(4, 4, 4)))))
+                .addGap(31, 31, 31)
+                .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNumeroTotalDH1)
+                    .addComponent(lnlNumeroAndamento, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNumeroEntregasDiaDH)
+                    .addComponent(lblNumeroConcluidas))
+                .addGap(64, 64, 64)
                 .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(dataHorarioLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(dataHorarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnNovoDataHorario)
                             .addComponent(btnAlterarDataHorario)
                             .addComponent(btnExcluirDataHorario)))
                     .addGroup(dataHorarioLayout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addGap(26, 26, 26)
                         .addComponent(btnVoltarDataHorario)))
-                .addGap(374, 374, 374))
+                .addGap(298, 298, 298))
         );
 
         jTabbedPane1.addTab("Data e Horário", dataHorario);
 
         agenda.setBackground(new java.awt.Color(236, 236, 236));
 
-        lblTituloAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloAgenda.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblTituloAgenda.setText("Agenda de Entregas");
 
+        lblDataAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataAgenda.setText("Data");
 
+        ftfDataAgenda.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataAgenda.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfDataAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblEntregadorAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEntregadorAgenda.setText("Entregador");
 
+        cbEntregadorAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbEntregadorAgenda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o entregador", " " }));
 
+        lblVeiculoAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblVeiculoAgenda.setText("Veículo");
 
+        cbVeiculoAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbVeiculoAgenda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o veículo", " " }));
 
+        lblRegiãoAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblRegiãoAgenda.setText("Região");
 
+        cbRegiaoAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbRegiaoAgenda.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a região", "Região Norte", "Região Nordeste", "Região Centro-Oeste", "Região Sudeste", "Região Sul" }));
 
+        btnPesquisarAgenda.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarAgenda.setText("Pesquisar");
 
+        lblTotalEntregasAgenda.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblTotalEntregasAgenda.setText("Total de Entregas");
 
+        lblIconeEntregasAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeEntregasAgenda.setText("Icone");
 
+        lblNumeroEntregasAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroEntregasAgenda.setText("Nº");
 
+        lblIconeAndamentoAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeAndamentoAgenda.setText("Icone");
 
+        lblAndamentoAgenda.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblAndamentoAgenda.setText("Em andamento");
 
+        lblNUmeroAndamentoAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNUmeroAndamentoAgenda.setText("Nº");
 
+        lblIconrPendentesAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconrPendentesAgenda.setText("Icone");
 
+        lblPendentesAgenda.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblPendentesAgenda.setText("Pendentes");
 
+        lblNumeroPendentesAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblNumeroPendentesAgenda.setText("Nº");
 
+        lblIconeConcluidasAgenda.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeConcluidasAgenda.setText("Icone");
 
+        lblConcluidasAgenda.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblConcluidasAgenda.setText("Concluídas");
 
+        lblNumeroConcluidasAgenda.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroConcluidasAgenda.setText("Nº");
 
-        lblCalendarioAgenda.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCalendarioAgenda.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         lblCalendarioAgenda.setText("Calendário");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -1786,6 +2054,7 @@ public class TelaEntregas extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jTable1.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -1801,12 +2070,16 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane13.setViewportView(jTable1);
 
+        btnNovoAgenda.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoAgenda.setText("Novo");
 
+        btnAlterarAgenda.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarAgenda.setText("Alterar");
 
+        btnExcluirAgenda.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirAgenda.setText("Excluir");
 
+        btnVoltarAgenda.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarAgenda.setText("Voltar");
 
         javax.swing.GroupLayout agendaLayout = new javax.swing.GroupLayout(agenda);
@@ -1816,26 +2089,22 @@ public class TelaEntregas extends javax.swing.JFrame {
             .addGroup(agendaLayout.createSequentialGroup()
                 .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(agendaLayout.createSequentialGroup()
+                        .addGap(56, 56, 56)
                         .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(agendaLayout.createSequentialGroup()
-                                .addGap(47, 47, 47)
-                                .addComponent(lblTotalEntregasAgenda))
-                            .addGroup(agendaLayout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addComponent(lblNumeroEntregasAgenda)))
-                        .addGap(101, 101, 101)
+                            .addComponent(lblNumeroEntregasAgenda)
+                            .addComponent(lblTotalEntregasAgenda))
+                        .addGap(104, 104, 104)
                         .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblAndamentoAgenda)
                             .addComponent(lblNUmeroAndamentoAgenda))
-                        .addGap(96, 96, 96)
+                        .addGap(91, 91, 91)
                         .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblNumeroPendentesAgenda)
-                            .addGroup(agendaLayout.createSequentialGroup()
-                                .addComponent(lblPendentesAgenda)
-                                .addGap(107, 107, 107)
-                                .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblNumeroConcluidasAgenda)
-                                    .addComponent(lblConcluidasAgenda)))))
+                            .addComponent(lblPendentesAgenda)
+                            .addComponent(lblNumeroPendentesAgenda))
+                        .addGap(108, 108, 108)
+                        .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblConcluidasAgenda)
+                            .addComponent(lblNumeroConcluidasAgenda)))
                     .addGroup(agendaLayout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1844,37 +2113,41 @@ public class TelaEntregas extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(agendaLayout.createSequentialGroup()
-                                .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(agendaLayout.createSequentialGroup()
-                                        .addComponent(lblIconeEntregasAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(144, 144, 144)
-                                        .addComponent(lblIconeAndamentoAgenda)
-                                        .addGap(143, 143, 143)
-                                        .addComponent(lblIconrPendentesAgenda))
+                                .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(agendaLayout.createSequentialGroup()
                                         .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(lblTituloAgenda)
-                                            .addComponent(lblDataAgenda)
-                                            .addComponent(ftfDataAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(31, 31, 31)
+                                            .addGroup(agendaLayout.createSequentialGroup()
+                                                .addComponent(lblDataAgenda)
+                                                .addGap(162, 162, 162)
+                                                .addComponent(lblEntregadorAgenda))
+                                            .addGroup(agendaLayout.createSequentialGroup()
+                                                .addComponent(ftfDataAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(50, 50, 50)
+                                                .addComponent(cbEntregadorAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(57, 57, 57)
                                         .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cbEntregadorAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(lblEntregadorAgenda))
-                                        .addGap(35, 35, 35)
-                                        .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cbVeiculoAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(lblVeiculoAgenda))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(lblVeiculoAgenda)
+                                            .addComponent(cbVeiculoAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(agendaLayout.createSequentialGroup()
+                                        .addComponent(lblIconeEntregasAgenda)
+                                        .addGap(217, 217, 217)
+                                        .addComponent(lblIconeAndamentoAgenda)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 198, Short.MAX_VALUE)
+                                        .addComponent(lblIconrPendentesAgenda)
+                                        .addGap(60, 60, 60)))
                                 .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblIconeConcluidasAgenda)
                                     .addGroup(agendaLayout.createSequentialGroup()
                                         .addGap(21, 21, 21)
                                         .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(lblRegiãoAgenda)
                                             .addGroup(agendaLayout.createSequentialGroup()
                                                 .addComponent(cbRegiaoAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(49, 49, 49)
-                                                .addComponent(btnPesquisarAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                                .addGap(38, 38, 38)
+                                                .addComponent(btnPesquisarAgenda))))
+                                    .addGroup(agendaLayout.createSequentialGroup()
+                                        .addGap(104, 104, 104)
+                                        .addComponent(lblIconeConcluidasAgenda))))
                             .addGroup(agendaLayout.createSequentialGroup()
                                 .addComponent(btnNovoAgenda)
                                 .addGap(18, 18, 18)
@@ -1883,7 +2156,7 @@ public class TelaEntregas extends javax.swing.JFrame {
                                 .addComponent(btnExcluirAgenda)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnVoltarAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(1086, Short.MAX_VALUE))
+                .addContainerGap(1032, Short.MAX_VALUE))
         );
         agendaLayout.setVerticalGroup(
             agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1891,18 +2164,20 @@ public class TelaEntregas extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addComponent(lblTituloAgenda)
                 .addGap(18, 18, 18)
-                .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDataAgenda)
-                    .addComponent(lblEntregadorAgenda)
-                    .addComponent(lblVeiculoAgenda)
-                    .addComponent(lblRegiãoAgenda))
+                .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblDataAgenda)
+                        .addComponent(lblRegiãoAgenda)
+                        .addComponent(lblEntregadorAgenda))
+                    .addComponent(lblVeiculoAgenda))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ftfDataAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbEntregadorAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cbVeiculoAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbRegiaoAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisarAgenda))
+                    .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(ftfDataAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbEntregadorAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbRegiaoAgenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPesquisarAgenda)))
                 .addGap(35, 35, 35)
                 .addGroup(agendaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTotalEntregasAgenda)
@@ -1931,62 +2206,107 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnAlterarAgenda)
                     .addComponent(btnExcluirAgenda)
                     .addComponent(btnVoltarAgenda))
-                .addContainerGap(345, Short.MAX_VALUE))
+                .addContainerGap(301, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Agenda", agenda);
 
         distribuicao.setBackground(new java.awt.Color(236, 236, 236));
 
-        lblTituloDistribuicao.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloDistribuicao.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblTituloDistribuicao.setText("Distribuição/ Controle de Entregas");
 
+        lblPedidoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPedidoDistribuicao.setText("Pedido/Código");
 
+        txtPedidoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtPedidoDistribuicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblClienteDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteDistribuicao.setText("Cliente");
 
+        txtClienteDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteDistribuicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblEnderecoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEnderecoDistribuicao.setText("Endereço de Entrega");
 
         txtaEnderecoDistribuicao.setColumns(20);
+        txtaEnderecoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaEnderecoDistribuicao.setRows(5);
+        txtaEnderecoDistribuicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane14.setViewportView(txtaEnderecoDistribuicao);
 
+        lblRegiaoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblRegiaoDistribuicao.setText("Região");
 
+        cbRegiaoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbRegiaoDistribuicao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione a região", "Região Norte", "Região Nordeste", "Região Centro-Oeste", "Região Sudeste", "Região Sul" }));
 
+        lblEntregadorDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEntregadorDistribuicao.setText("Entregador");
 
+        cbEntregadorDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbEntregadorDistribuicao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o entregador", " " }));
 
+        lblVeiculoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblVeiculoDistribuicao.setText("Veículo");
 
+        cbVeiculoDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbVeiculoDistribuicao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o veículo", " " }));
 
+        lblDataDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblDataDistribuicao.setText("Data da Distribuição");
 
+        ftfDataDistribuicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfDataDistribuicao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        lblHorarioEntregaDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblHorarioEntregaDistribuicao.setText("Horário da Entrega");
 
+        ftfHorarioDistribuicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfHorarioDistribuicao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfHorarioDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblStatusDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusDistribuicao.setText("Status da Distribuição");
 
+        cbStatusDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusDistribuicao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o status", "Programada", "Em andamento", "Em rota", "Concluída" }));
 
+        lblObservacoesDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblObservacoesDistribuicao.setText("Observações");
 
         txtaObservacoesDistribuicao.setColumns(20);
+        txtaObservacoesDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         txtaObservacoesDistribuicao.setRows(5);
+        txtaObservacoesDistribuicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jScrollPane15.setViewportView(txtaObservacoesDistribuicao);
 
+        btnNovoDistribuicao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoDistribuicao.setText("Novo");
 
+        btnSalvarDistribuicao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnSalvarDistribuicao.setText("Salvar");
 
+        btnAlterarDistribuicao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarDistribuicao.setText("Alterar");
 
+        btnExcluirDistribuicao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirDistribuicao.setText("Excluir");
 
+        btnVoltarDistribuicao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarDistribuicao.setText("Voltar");
 
+        tblListaDistribuicao.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblListaDistribuicao.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -2122,57 +2442,93 @@ public class TelaEntregas extends javax.swing.JFrame {
 
         status.setBackground(new java.awt.Color(236, 236, 236));
 
-        lblTituloStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloStatus.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblTituloStatus.setText("Status das Entregas");
 
+        lblPeriodoStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPeriodoStatus.setText("Período");
 
+        ftfPeriodoStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfPeriodoStatus.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfPeriodoStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+
+        lblStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatus.setText("Status");
 
+        cbStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o status", "Prontos", "Em separação", "Enviados", "Aguardando Pagamento", "Concluídos", "Cancelados" }));
 
+        lblEntregadorStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEntregadorStatus.setText("Entregador");
 
+        cbEntregadorStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbEntregadorStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o entregador" }));
 
+        lblCliente.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblCliente.setText("Cliente");
 
+        txtClienteStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteStatus.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblIconePagamentoStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconePagamentoStatus.setText("Icone");
 
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         jLabel4.setText("Aguardando pagamento");
 
+        lblNumeroPagamentoStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroPagamentoStatus.setText("Nº");
 
+        lblIconeSeparacaoStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeSeparacaoStatus.setText("Icone");
 
+        lblSeparacaoStatus.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblSeparacaoStatus.setText("Em separação");
 
+        lblNumeroSeparacaoStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroSeparacaoStatus.setText("Nº");
 
+        lblIconeProntosStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeProntosStatus.setText("Icone");
 
+        lblProntosStatus.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblProntosStatus.setText("Prontos");
 
+        lblNumeroProntosStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroProntosStatus.setText("Nº");
 
+        lblIconeEnviadosStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeEnviadosStatus.setText("Icone");
 
+        lblEnviadosStatus.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblEnviadosStatus.setText("Enviados");
 
+        lblNumeroEnviadosStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroEnviadosStatus.setText("Nº");
 
+        lblIconeConcluídos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeConcluídos.setText("Icone");
 
+        lblConcluidosStatus.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblConcluidosStatus.setText("Concluídos");
 
+        lblNumeroConcluidosStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroConcluidosStatus.setText("Nº");
 
+        lblIconeCanceladosStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeCanceladosStatus.setText("Icone");
 
+        lblCanceladosStatus.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
         lblCanceladosStatus.setText("Cancelados");
 
+        lblNumeroCanceladosStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroCanceladosStatus.setText("Nº");
 
+        tblEntregasStatus.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         tblEntregasStatus.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -2189,12 +2545,16 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane17.setViewportView(tblEntregasStatus);
 
+        btnNovoStatus.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoStatus.setText("Novo");
 
+        btnAlterarStatus.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarStatus.setText("Alterar");
 
+        btnExcluirStatus.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirStatus.setText("Excluir");
 
+        btnVoltarStatus.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarStatus.setText("Voltar");
 
         javax.swing.GroupLayout statusLayout = new javax.swing.GroupLayout(status);
@@ -2202,83 +2562,86 @@ public class TelaEntregas extends javax.swing.JFrame {
         statusLayout.setHorizontalGroup(
             statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(statusLayout.createSequentialGroup()
-                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(statusLayout.createSequentialGroup()
-                            .addGap(14, 14, 14)
-                            .addComponent(lblIconePagamentoStatus)
-                            .addGap(171, 171, 171)
-                            .addComponent(lblIconeSeparacaoStatus)
-                            .addGap(122, 122, 122)
-                            .addComponent(lblIconeProntosStatus)
-                            .addGap(115, 115, 115)
-                            .addComponent(lblIconeEnviadosStatus)
-                            .addGap(120, 120, 120)
-                            .addComponent(lblIconeConcluídos)
-                            .addGap(140, 140, 140)
-                            .addComponent(lblIconeCanceladosStatus))
-                        .addGroup(statusLayout.createSequentialGroup()
-                            .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(statusLayout.createSequentialGroup()
-                                    .addGap(60, 60, 60)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel4)
-                                        .addComponent(lblNumeroPagamentoStatus))
-                                    .addGap(69, 69, 69)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblSeparacaoStatus)
-                                        .addComponent(lblNumeroSeparacaoStatus))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE))
-                                .addGroup(statusLayout.createSequentialGroup()
-                                    .addContainerGap()
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblTituloStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblPeriodoStatus)
-                                        .addComponent(ftfPeriodoStatus))
-                                    .addGap(34, 34, 34)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblStatus)
-                                        .addComponent(cbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(statusLayout.createSequentialGroup()
-                                    .addGap(19, 19, 19)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblEntregadorStatus)
-                                        .addComponent(cbEntregadorStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(30, 30, 30)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblCliente)
-                                        .addComponent(txtClienteStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(statusLayout.createSequentialGroup()
-                                    .addGap(44, 44, 44)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblProntosStatus)
-                                        .addComponent(lblNumeroProntosStatus))
-                                    .addGap(110, 110, 110)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblEnviadosStatus)
-                                        .addComponent(lblNumeroEnviadosStatus))
-                                    .addGap(100, 100, 100)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblConcluidosStatus)
-                                        .addComponent(lblNumeroConcluidosStatus))
-                                    .addGap(109, 109, 109)
-                                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblNumeroCanceladosStatus)
-                                        .addComponent(lblCanceladosStatus)))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 942, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(statusLayout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, statusLayout.createSequentialGroup()
+                                .addComponent(lblIconePagamentoStatus)
+                                .addGap(263, 263, 263)
+                                .addComponent(lblIconeSeparacaoStatus))
+                            .addGroup(statusLayout.createSequentialGroup()
+                                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(statusLayout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblNumeroPagamentoStatus)
+                                            .addGroup(statusLayout.createSequentialGroup()
+                                                .addComponent(jLabel4)
+                                                .addGap(82, 82, 82)
+                                                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lblSeparacaoStatus)
+                                                    .addComponent(lblNumeroSeparacaoStatus))
+                                                .addGap(80, 80, 80)
+                                                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lblProntosStatus)
+                                                    .addGroup(statusLayout.createSequentialGroup()
+                                                        .addComponent(lblNumeroProntosStatus)
+                                                        .addGap(144, 144, 144)
+                                                        .addComponent(lblNumeroEnviadosStatus))))))
+                                    .addGroup(statusLayout.createSequentialGroup()
+                                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(lblTituloStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(lblPeriodoStatus)
+                                            .addComponent(ftfPeriodoStatus))
+                                        .addGap(34, 34, 34)
+                                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblStatus)
+                                            .addComponent(cbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(19, 19, 19)
+                                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusLayout.createSequentialGroup()
+                                                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lblEntregadorStatus)
+                                                    .addComponent(cbEntregadorStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(30, 30, 30)
+                                                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lblCliente)
+                                                    .addComponent(txtClienteStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusLayout.createSequentialGroup()
+                                                .addComponent(lblIconeProntosStatus)
+                                                .addGap(111, 111, 111)
+                                                .addComponent(lblIconeEnviadosStatus)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(lblEnviadosStatus)
+                                                .addGap(70, 70, 70))
+                                            .addComponent(lblIconeConcluídos, javax.swing.GroupLayout.Alignment.TRAILING))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblNumeroConcluidosStatus)
+                                    .addComponent(lblConcluidosStatus))))
+                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(statusLayout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(lblIconeCanceladosStatus))
+                            .addGroup(statusLayout.createSequentialGroup()
+                                .addGap(92, 92, 92)
+                                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCanceladosStatus)
+                                    .addComponent(lblNumeroCanceladosStatus))))
+                        .addContainerGap(802, Short.MAX_VALUE))
+                    .addGroup(statusLayout.createSequentialGroup()
                         .addComponent(btnNovoStatus)
                         .addGap(18, 18, 18)
                         .addComponent(btnAlterarStatus)
                         .addGap(18, 18, 18)
                         .addComponent(btnExcluirStatus)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnVoltarStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1062, Short.MAX_VALUE))
+                        .addComponent(btnVoltarStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(statusLayout.createSequentialGroup()
+                        .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 1161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         statusLayout.setVerticalGroup(
             statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2297,60 +2660,88 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(cbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbEntregadorStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtClienteStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(lblSeparacaoStatus)
-                    .addComponent(lblProntosStatus)
-                    .addComponent(lblEnviadosStatus)
-                    .addComponent(lblConcluidosStatus)
-                    .addComponent(lblCanceladosStatus))
-                .addGap(7, 7, 7)
-                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblIconePagamentoStatus)
-                    .addComponent(lblIconeSeparacaoStatus)
-                    .addComponent(lblIconeProntosStatus)
-                    .addComponent(lblIconeEnviadosStatus)
-                    .addComponent(lblIconeConcluídos)
-                    .addComponent(lblIconeCanceladosStatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNumeroPagamentoStatus)
-                    .addComponent(lblNumeroSeparacaoStatus)
-                    .addComponent(lblNumeroProntosStatus)
-                    .addComponent(lblNumeroEnviadosStatus)
-                    .addComponent(lblNumeroConcluidosStatus)
-                    .addComponent(lblNumeroCanceladosStatus))
+                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(lblSeparacaoStatus)
+                            .addComponent(lblProntosStatus)
+                            .addComponent(lblEnviadosStatus)
+                            .addComponent(lblConcluidosStatus)
+                            .addComponent(lblCanceladosStatus))
+                        .addGap(7, 7, 7)
+                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblIconePagamentoStatus)
+                            .addComponent(lblIconeSeparacaoStatus)
+                            .addComponent(lblIconeCanceladosStatus)
+                            .addComponent(lblIconeProntosStatus)
+                            .addComponent(lblIconeConcluídos))
+                        .addGap(21, 21, 21))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblIconeEnviadosStatus)
+                        .addGap(24, 24, 24)))
+                .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblNumeroCanceladosStatus)
+                        .addComponent(lblNumeroPagamentoStatus))
+                    .addGroup(statusLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNumeroEnviadosStatus)
+                            .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblNumeroProntosStatus)
+                                .addComponent(lblNumeroSeparacaoStatus)
+                                .addComponent(lblNumeroConcluidosStatus)))))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(20, 20, 20)
                 .addGroup(statusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnNovoStatus)
                     .addComponent(btnAlterarStatus)
                     .addComponent(btnExcluirStatus)
                     .addComponent(btnVoltarStatus))
-                .addContainerGap(354, Short.MAX_VALUE))
+                .addContainerGap(295, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Status", status);
 
         tentativas.setBackground(new java.awt.Color(236, 236, 236));
 
-        lblTituloTentativas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTituloTentativas.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         lblTituloTentativas.setText("Tentativas de Entrega");
 
+        lblPeriodoTentativas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblPeriodoTentativas.setText("Período");
 
+        ftfPeriodoTentativas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        try {
+            ftfPeriodoTentativas.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        ftfPeriodoTentativas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+
+        lblClienteTentativas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteTentativas.setText("Cliente");
 
+        txtClienteTentativas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        txtClienteTentativas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lblEntregadorTentativas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblEntregadorTentativas.setText("Entregador");
 
+        cbEntregadorTentativas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbEntregadorTentativas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o entregador" }));
 
+        lblStatusTentativas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblStatusTentativas.setText("Status da tentativa");
 
+        cbStatusTentativas.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         cbStatusTentativas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione o status ", "Entregue", "Em andamento", "Cancelada", "Nova tentativa" }));
 
+        btnPesquisarTentativas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarTentativas.setText("Pesquisar");
 
         lblIconeTotalTentativas.setText("Icone");
@@ -2395,12 +2786,16 @@ public class TelaEntregas extends javax.swing.JFrame {
         ));
         jScrollPane18.setViewportView(tblTentativasEntrega);
 
+        btnNovoTentativas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoTentativas.setText("Novo");
 
+        btnAlterarTentativas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnAlterarTentativas.setText("Alterar");
 
+        btnExcluirTentativas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnExcluirTentativas.setText("Excluir");
 
+        btnVoltarTentativas.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnVoltarTentativas.setText("Voltar");
 
         javax.swing.GroupLayout tentativasLayout = new javax.swing.GroupLayout(tentativas);
@@ -2515,7 +2910,7 @@ public class TelaEntregas extends javax.swing.JFrame {
                     .addComponent(btnAlterarTentativas)
                     .addComponent(btnExcluirTentativas)
                     .addComponent(btnVoltarTentativas))
-                .addContainerGap(346, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Tentativas", tentativas);
@@ -2742,6 +3137,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         btnPesquisarHistoricoRelatorio.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnPesquisarHistoricoRelatorio.setText("Pesquisar");
 
+        lblIconeTotalHistoricoRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeTotalHistoricoRelatorio.setText("Icone");
 
         lblTotalHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -2750,6 +3146,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         lblNumeroTotalHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroTotalHistoricoRelatorio.setText("Nº");
 
+        lblIconeEntregasHistoricoRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeEntregasHistoricoRelatorio.setText("Icone");
 
         lblEntregasHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -2758,6 +3155,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         lblNumeroEntregasHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroEntregasHistoricoRelatorio.setText("Nº");
 
+        lblIconeAndamentoHistoricoRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeAndamentoHistoricoRelatorio.setText("Icone");
 
         lblAndamentoHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -2766,6 +3164,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         lblNumeroAndamentoHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroAndamentoHistoricoRelatorio.setText("Nº");
 
+        lblIconeCanceladaHistoricoRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeCanceladaHistoricoRelatorio.setText("Icone");
 
         lblCanceladaHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -2774,6 +3173,7 @@ public class TelaEntregas extends javax.swing.JFrame {
         lblNumeroCanceladaHistoricoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblNumeroCanceladaHistoricoRelatorio.setText("Nº");
 
+        lblIconeTempoHistoricoRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblIconeTempoHistoricoRelatorio.setText("Icone");
 
         lblTempoHistoricoRelatorio.setFont(new java.awt.Font("Arial", 1, 20)); // NOI18N
@@ -2958,7 +3358,7 @@ public class TelaEntregas extends javax.swing.JFrame {
                         .addComponent(btnRelatorioStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnExportarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addContainerGap(351, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Histórico e Relatórios", historicoRelatorio);
