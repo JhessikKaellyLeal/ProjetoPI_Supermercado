@@ -61,7 +61,7 @@
     <Container class="javax.swing.JTabbedPane" name="abasClientes">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="14" style="0"/>
+          <Font name="Arial Rounded MT Bold" size="16" style="0"/>
         </Property>
       </Properties>
 
@@ -74,11 +74,17 @@
                 <BevelBorder/>
               </Border>
             </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial Black" size="18" style="0"/>
+            </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Cadastro">
                 <Property name="tabTitle" type="java.lang.String" value="Cadastro"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\user.png"/>
+                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -98,7 +104,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="painelDadosCliente" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="1976" max="32767" attributes="0"/>
+                      <EmptySpace pref="1974" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -303,6 +309,9 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Consulta">
                 <Property name="tabTitle" type="java.lang.String" value="Consulta"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\search 24.png"/>
+                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -327,7 +336,7 @@
                       <Component id="painelConsultaClientes" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="painelConsultaClientes1" min="-2" pref="436" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="1863" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1861" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -633,6 +642,9 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Edi&#xe7;&#xe3;o e Desativa&#xe7;&#xe3;o">
                 <Property name="tabTitle" type="java.lang.String" value="Edi&#xe7;&#xe3;o e Desativa&#xe7;&#xe3;o"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\edit 24.png"/>
+                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -667,7 +679,7 @@
                       <Component id="painelEdicaoClientes1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="painelHistoricoClientes" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="1411" max="32767" attributes="0"/>
+                      <EmptySpace pref="1409" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1283,6 +1295,9 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Hist&#xf3;rico de Compras e Pagamentos">
                 <Property name="tabTitle" type="java.lang.String" value="Hist&#xf3;rico de Compras e Pagamentos"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\history 24.png"/>
+                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1341,7 +1356,7 @@
                               <Component id="painelhistoricoPagamentos" min="-2" pref="252" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="1761" max="32767" attributes="0"/>
+                      <EmptySpace pref="1759" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1909,6 +1924,9 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Pedidos e Relat&#xf3;rio">
                 <Property name="tabTitle" type="java.lang.String" value="Pedidos e Relat&#xf3;rio"/>
+                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\newspaper.png"/>
+                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1953,7 +1971,7 @@
                       </Group>
                       <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                       <Component id="painelGerarRelatorio" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="1399" max="32767" attributes="0"/>
+                      <EmptySpace pref="1397" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

@@ -184,9 +184,10 @@ public class TelasClientes extends javax.swing.JFrame {
 
         painelConteudo.setLayout(new java.awt.BorderLayout());
 
-        abasClientes.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        abasClientes.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 16)); // NOI18N
 
         painelCadastro.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        painelCadastro.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
 
         painelDadosCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -299,10 +300,10 @@ public class TelasClientes extends javax.swing.JFrame {
             .addGroup(painelCadastroLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(painelDadosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1976, Short.MAX_VALUE))
+                .addContainerGap(1974, Short.MAX_VALUE))
         );
 
-        abasClientes.addTab("Cadastro", painelCadastro);
+        abasClientes.addTab("Cadastro", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\user.png"), painelCadastro); // NOI18N
 
         painelConsulta.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -464,10 +465,10 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addComponent(painelConsultaClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(painelConsultaClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1863, Short.MAX_VALUE))
+                .addGap(0, 1861, Short.MAX_VALUE))
         );
 
-        abasClientes.addTab("Consulta", painelConsulta);
+        abasClientes.addTab("Consulta", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\search 24.png"), painelConsulta); // NOI18N
 
         painelEdicao.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -782,10 +783,10 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addComponent(painelEdicaoClientes1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(painelHistoricoClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1411, Short.MAX_VALUE))
+                .addContainerGap(1409, Short.MAX_VALUE))
         );
 
-        abasClientes.addTab("Edição e Desativação", painelEdicao);
+        abasClientes.addTab("Edição e Desativação", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\edit 24.png"), painelEdicao); // NOI18N
 
         painelHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -1105,10 +1106,10 @@ public class TelasClientes extends javax.swing.JFrame {
                     .addGroup(painelHistoricoLayout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(painelhistoricoPagamentos, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1761, Short.MAX_VALUE))
+                .addContainerGap(1759, Short.MAX_VALUE))
         );
 
-        abasClientes.addTab("Histórico de Compras e Pagamentos", painelHistorico);
+        abasClientes.addTab("Histórico de Compras e Pagamentos", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\history 24.png"), painelHistorico); // NOI18N
 
         painelPedidosRelatorio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         painelPedidosRelatorio.setPreferredSize(new java.awt.Dimension(1200, 936));
@@ -1493,10 +1494,10 @@ public class TelasClientes extends javax.swing.JFrame {
                     .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(53, 53, 53)
                 .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1399, Short.MAX_VALUE))
+                .addContainerGap(1397, Short.MAX_VALUE))
         );
 
-        abasClientes.addTab("Pedidos e Relatório", painelPedidosRelatorio);
+        abasClientes.addTab("Pedidos e Relatório", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\newspaper.png"), painelPedidosRelatorio); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
