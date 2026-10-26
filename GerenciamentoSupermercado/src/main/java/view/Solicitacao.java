@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
+
+import View.MenuPadrao;
+import View.Usuario;
 
 /**
  *
@@ -15,8 +18,18 @@ public class Solicitacao extends javax.swing.JFrame {
     /**
      * Creates new form Solicitacao
      */
-    public Solicitacao() {
+    public Solicitacao(Usuario usuario) {
         initComponents();
+         MenuPadrao.instalar(
+        this,
+        usuario,
+        "clientes",
+        id -> {
+            // Aqui será definida a navegação entre as telas.
+            // Por enquanto, o formulário atual é preservado.
+        },
+        this::dispose
+    );  
     }
 
     /**
@@ -4552,6 +4565,7 @@ public class Solicitacao extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+          Usuario usuario = new Usuario("Israel", "Administradora", null);
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -4570,7 +4584,7 @@ public class Solicitacao extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Solicitacao().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Solicitacao(usuario).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
