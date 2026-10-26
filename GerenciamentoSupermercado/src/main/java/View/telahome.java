@@ -132,7 +132,6 @@ public class telahome extends javax.swing.JFrame {
         jpBanner.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jpBanner.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-        lbOla.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         lbOla.setText("Ola, Admin!");
 
         lbBemVindo.setText("Bem-vindo ao sistema do Supermrecado Boa Economia.");
@@ -194,22 +193,16 @@ public class telahome extends javax.swing.JFrame {
 
         lbAçoesRapidas.setText("Açoes Rapidas");
 
-        btnNovaVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         btnNovaVenda.setText("Nova Venda");
 
-        btnCadastrarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.png"))); // NOI18N
         btnCadastrarProduto.setText("Cadastar Produto");
 
-        btnCadastrarClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.png"))); // NOI18N
         btnCadastrarClientes.setText("Cadastrar Clientes");
 
-        btnNovoPedido.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         btnNovoPedido.setText("Novo Pedido");
 
-        btnContasPagarReceber.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document.png"))); // NOI18N
         btnContasPagarReceber.setText("Contas a Pagar/Receber");
 
-        btnRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/graph-bar.png"))); // NOI18N
         btnRelatorios.setText("Relatorios");
 
         javax.swing.GroupLayout jpAçoesRapidasLayout = new javax.swing.GroupLayout(jpAçoesRapidas);
@@ -254,10 +247,8 @@ public class telahome extends javax.swing.JFrame {
         jpResumoGeral.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jpResumoGeral.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-        lbResumoGeral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/graph-bar.png"))); // NOI18N
         lbResumoGeral.setText("Resumo geral");
 
-        lbVendasHoje.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         lbVendasHoje.setText("Vendas hoje");
 
         lb4258.setText("R$ 4.258,90");
@@ -293,7 +284,6 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cash-register.png"))); // NOI18N
         jLabel25.setText("Caixas abertos");
 
         jLabel31.setText("3");
@@ -329,7 +319,6 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document.png"))); // NOI18N
         jLabel26.setText("Pedidos Pendentes");
 
         jLabel33.setText("5");
@@ -364,7 +353,6 @@ public class telahome extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circle.png"))); // NOI18N
         jLabel27.setText("Contas a pagar");
 
         jLabel35.setText("2.340,00");
@@ -402,7 +390,6 @@ public class telahome extends javax.swing.JFrame {
         jPanel14.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel14.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/circle.png"))); // NOI18N
         jLabel28.setText("Contas a receber");
 
         jLabel37.setText("1.870,50");
@@ -481,25 +468,20 @@ public class telahome extends javax.swing.JFrame {
 
         lbVerTodas.setText("Ver todas");
 
-        lbPedido4587.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         lbPedido4587.setText("Pedido #4587 aguardando entrega");
 
         lb10e24.setText("10:24");
 
-        lbEstoqueBaixo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/warning.png"))); // NOI18N
         lbEstoqueBaixo.setText("Estoque baixo: Arroz (5 un.)");
 
         lb9e50.setText("09:50");
 
-        lbContaPagarVencida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/credit-card.png"))); // NOI18N
         lbContaPagarVencida.setText("Conta a pagar vencida");
 
         lb8e32.setText("08:32");
 
-        VendaFinalizada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/checked.png"))); // NOI18N
         VendaFinalizada.setText("Venda finalizada");
 
-        lbNovoClienteCadastrado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/information.png"))); // NOI18N
         lbNovoClienteCadastrado.setText("Novo cliente cadastrado");
 
         lb8e15.setText("08:15");
@@ -622,24 +604,18 @@ public class telahome extends javax.swing.JFrame {
 
         lbAtalhos.setText("Atalhos");
 
-        btnNovaVenda2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/shopping-cart.png"))); // NOI18N
         btnNovaVenda2.setText("Nova Venda");
         btnNovaVenda2.addActionListener(this::btnNovaVenda2ActionPerformed);
 
-        btnCadastrarProduto2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/box.png"))); // NOI18N
         btnCadastrarProduto2.setText("Cadastrar Produto");
         btnCadastrarProduto2.addActionListener(this::btnCadastrarProduto2ActionPerformed);
 
-        btnNovoPedido2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         btnNovoPedido2.setText("Novo Pedido");
 
-        btnRelatorio2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/graph-bar.png"))); // NOI18N
         btnRelatorio2.setText("Relatorio");
 
-        btnCadastrarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user.png"))); // NOI18N
         btnCadastrarCliente.setText("Cadastrar Cliente");
 
-        btnContasPagarReceber2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/document.png"))); // NOI18N
         btnContasPagarReceber2.setText("Contas a Pagar/Receber");
 
         javax.swing.GroupLayout jpAtalhosLayout = new javax.swing.GroupLayout(jpAtalhos);
@@ -710,7 +686,6 @@ public class telahome extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbPedidosEntregasPendentes);
 
-        lbPedidosEntregasPendentes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         lbPedidosEntregasPendentes.setText("Pedidos e entregas Pendentes");
 
         lbVerTodas2.setText("Ver todas >");
@@ -757,7 +732,6 @@ public class telahome extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tbContasPagarReceber);
 
-        lbContasPagarReceber.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cash-register.png"))); // NOI18N
         lbContasPagarReceber.setText("Contas a pagar/Receber");
 
         lbVerTodas3.setText("Ver todas >");
@@ -792,7 +766,6 @@ public class telahome extends javax.swing.JFrame {
         jpCentralNotificações.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jpCentralNotificações.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-        lbCentralNotificaçoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cargo-truck.png"))); // NOI18N
         lbCentralNotificaçoes.setText("Central de Notificações");
 
         lbVoçePossui3.setText("Voçe possui 3 novas notificações");
@@ -831,7 +804,6 @@ public class telahome extends javax.swing.JFrame {
         jpHistorico.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jpHistorico.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-        lbHistorico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clock.png"))); // NOI18N
         lbHistorico.setText("Historico");
 
         lbAcesseHistoricoMovimentaçoes.setText("Acesse o historico de movimentações do sistema");
@@ -870,7 +842,6 @@ public class telahome extends javax.swing.JFrame {
         jpAlertas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jpAlertas.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
 
-        lbConfigurarAlertas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/setting.png"))); // NOI18N
         lbConfigurarAlertas.setText("Configurar Alertas");
 
         lbPersonalizarAlertas.setText("Personalizar os alertas do sistema");
