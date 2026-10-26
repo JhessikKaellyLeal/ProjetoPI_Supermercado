@@ -4,8 +4,10 @@
  */
 package view;
 
+import Model.Cliente;
 import View.MenuPadrao;
 import View.Usuario;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,8 +16,7 @@ import View.Usuario;
 public class TelasClientes extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelasClientes.class.getName());
-
-
+    
     public TelasClientes(Usuario usuario) {
         initComponents();
          MenuPadrao.instalar(
@@ -30,6 +31,68 @@ public class TelasClientes extends javax.swing.JFrame {
     );  
         
     }
+    
+    private void cadastrarCliente() {
+
+    // 1. Pegar os dados digitados na tela
+    String nome = txtNome.getText().trim();
+    String cpf = ftfCPF.getText().trim();
+    String telefone = ftfTelefone.getText().trim();
+
+    // 2. Validar os campos obrigatórios
+    if (nome.isEmpty() || cpf.replaceAll("\\D", "").length() != 11
+            || telefone.replaceAll("\\D", "").isEmpty()) {
+
+        JOptionPane.showMessageDialog(
+                this,
+                "Preencha corretamente o nome, o CPF e o telefone!",
+                "Campos obrigatórios",
+                JOptionPane.WARNING_MESSAGE
+        );
+
+        return;
+    }
+
+    // 3. Criar o objeto Cliente
+    Cliente cliente = new Cliente();
+
+    cliente.setNome(nome);
+    cliente.setCpf(cpf);
+    cliente.setTelefone(telefone);
+    cliente.setStatus(true);
+
+    // 4. Chamar o controller para salvar no banco
+    ClienteController controller = new ClienteController();
+
+    boolean cadastrado = controller.cadastrar(cliente);
+
+    // 5. Mostrar o resultado
+    if (cadastrado) {
+
+        JOptionPane.showMessageDialog(
+                this,
+                "Cliente cadastrado com sucesso!",
+                "Cadastro realizado",
+                JOptionPane.INFORMATION_MESSAGE
+        );
+
+        // Limpar os campos após o cadastro
+        txtNome.setText("");
+        ftfCPF.setValue(null);
+        ftfTelefone.setValue(null);
+        txtNome.requestFocus();
+
+    } else {
+
+        JOptionPane.showMessageDialog(
+                this,
+                "Não foi possível cadastrar o cliente.\n"
+                + "Verifique se o CPF já está cadastrado e se a conexão com o banco funciona.",
+                "Erro no cadastro",
+                JOptionPane.ERROR_MESSAGE
+        );
+    }
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -140,8 +203,8 @@ public class TelasClientes extends javax.swing.JFrame {
         lBvalorPendente = new javax.swing.JLabel();
         lBsubValorPendente = new javax.swing.JLabel();
         painelPedidosRelatorio = new javax.swing.JPanel();
-        painelpedidosTitulo = new javax.swing.JPanel();
         lblTituloPedidosRelatorio = new javax.swing.JLabel();
+        painelpedidosTitulo = new javax.swing.JPanel();
         lblPesquisaClienteRelatorio = new javax.swing.JLabel();
         cbPeriodoRelatorio = new javax.swing.JComboBox<>();
         lblPeriodoRelatorio = new javax.swing.JLabel();
@@ -150,7 +213,6 @@ public class TelasClientes extends javax.swing.JFrame {
         btnLimparFiltrosRelatorio = new javax.swing.JButton();
         btnPesquisarRelatorio = new javax.swing.JButton();
         txtPesquisaClienteRelatorio = new javax.swing.JTextField();
-        lblDescricaoPedidosRelatorio = new javax.swing.JLabel();
         painelPedidosClientes = new javax.swing.JPanel();
         tabelaPedidosClientes = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -176,6 +238,7 @@ public class TelasClientes extends javax.swing.JFrame {
         cbMesRelatorio = new javax.swing.JComboBox<>();
         cbTipoRelatorio = new javax.swing.JComboBox<>();
         lblTituloGerarRelatorio = new javax.swing.JLabel();
+        lblDescricaoPedidosRelatorio = new javax.swing.JLabel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -204,6 +267,7 @@ public class TelasClientes extends javax.swing.JFrame {
         btnSalvar.setText("Salvar cadastro");
         btnSalvar.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(10, 4, 138)));
         btnSalvar.setPreferredSize(new java.awt.Dimension(183, 45));
+        btnSalvar.addActionListener(this::btnSalvarActionPerformed);
 
         try {
             ftfTelefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
@@ -1111,15 +1175,15 @@ public class TelasClientes extends javax.swing.JFrame {
 
         abasClientes.addTab("Histórico de Compras e Pagamentos", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\history 24.png"), painelHistorico); // NOI18N
 
-        painelPedidosRelatorio.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         painelPedidosRelatorio.setPreferredSize(new java.awt.Dimension(1200, 936));
-
-        painelpedidosTitulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblTituloPedidosRelatorio.setFont(new java.awt.Font("Arial Black", 1, 30)); // NOI18N
         lblTituloPedidosRelatorio.setText("Pedidos e Relatório de Clientes");
 
+        painelpedidosTitulo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         lblPesquisaClienteRelatorio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblPesquisaClienteRelatorio.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\search (4).png")); // NOI18N
         lblPesquisaClienteRelatorio.setText("Pesquisar cliente");
 
         cbPeriodoRelatorio.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
@@ -1134,23 +1198,24 @@ public class TelasClientes extends javax.swing.JFrame {
         cbStatusRelatorio.setPreferredSize(new java.awt.Dimension(76, 35));
 
         lblStatusRelatorio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblStatusRelatorio.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\three.png")); // NOI18N
         lblStatusRelatorio.setText("Status");
 
         btnLimparFiltrosRelatorio.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        btnLimparFiltrosRelatorio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnLimparFiltrosRelatorio.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\replay.png")); // NOI18N
+        btnLimparFiltrosRelatorio.setBorder(null);
         btnLimparFiltrosRelatorio.setLabel("Limpar");
         btnLimparFiltrosRelatorio.setPreferredSize(new java.awt.Dimension(138, 40));
 
+        btnPesquisarRelatorio.setBackground(new java.awt.Color(10, 4, 138));
         btnPesquisarRelatorio.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        btnPesquisarRelatorio.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\search (2).png")); // NOI18N
+        btnPesquisarRelatorio.setForeground(new java.awt.Color(255, 255, 255));
+        btnPesquisarRelatorio.setIcon(new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\search (3).png")); // NOI18N
         btnPesquisarRelatorio.setText("Pesquisar");
-        btnPesquisarRelatorio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnPesquisarRelatorio.setBorder(null);
         btnPesquisarRelatorio.setPreferredSize(new java.awt.Dimension(75, 40));
 
         txtPesquisaClienteRelatorio.setPreferredSize(new java.awt.Dimension(68, 35));
-
-        lblDescricaoPedidosRelatorio.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
-        lblDescricaoPedidosRelatorio.setText("Consulte os pedidos dos clientes e gere relatórios de cadastro e movimentação.");
 
         javax.swing.GroupLayout painelpedidosTituloLayout = new javax.swing.GroupLayout(painelpedidosTitulo);
         painelpedidosTitulo.setLayout(painelpedidosTituloLayout);
@@ -1159,54 +1224,46 @@ public class TelasClientes extends javax.swing.JFrame {
             .addGroup(painelpedidosTituloLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblStatusRelatorio)
+                    .addComponent(cbStatusRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
+                .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelpedidosTituloLayout.createSequentialGroup()
-                        .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPesquisaClienteRelatorio)
-                            .addComponent(txtPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(47, 47, 47)
-                        .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblStatusRelatorio)
-                            .addComponent(cbStatusRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(54, 54, 54)
-                        .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblPeriodoRelatorio)
-                            .addComponent(cbPeriodoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(lblTituloPedidosRelatorio)
-                    .addComponent(lblDescricaoPedidosRelatorio))
-                .addContainerGap(292, Short.MAX_VALUE))
-            .addGroup(painelpedidosTituloLayout.createSequentialGroup()
-                .addGap(594, 594, 594)
-                .addComponent(btnPesquisarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLimparFiltrosRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
+                        .addComponent(lblPeriodoRelatorio)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(painelpedidosTituloLayout.createSequentialGroup()
+                        .addComponent(cbPeriodoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                        .addComponent(btnPesquisarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(41, 41, 41)
+                        .addComponent(btnLimparFiltrosRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))))
         );
         painelpedidosTituloLayout.setVerticalGroup(
             painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelpedidosTituloLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(lblTituloPedidosRelatorio)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblDescricaoPedidosRelatorio)
                 .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelpedidosTituloLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblPesquisaClienteRelatorio)
                             .addComponent(lblStatusRelatorio)
                             .addComponent(lblPeriodoRelatorio))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cbStatusRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbPeriodoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 69, Short.MAX_VALUE))
-                    .addGroup(painelpedidosTituloLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(painelpedidosTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cbPeriodoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnPesquisarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnLimparFiltrosRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(26, 26, 26))
+                            .addComponent(btnLimparFiltrosRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(painelpedidosTituloLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(lblPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPesquisaClienteRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43))
         );
 
         painelPedidosClientes.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -1238,23 +1295,21 @@ public class TelasClientes extends javax.swing.JFrame {
         painelPedidosClientes.setLayout(painelPedidosClientesLayout);
         painelPedidosClientesLayout.setHorizontalGroup(
             painelPedidosClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPedidosClientesLayout.createSequentialGroup()
-                .addContainerGap(23, Short.MAX_VALUE)
-                .addComponent(tabelaPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 1230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
             .addGroup(painelPedidosClientesLayout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(lblTituloTabelaPedidos)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(20, 20, 20)
+                .addGroup(painelPedidosClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tabelaPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 1230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTituloTabelaPedidos))
+                .addContainerGap(951, Short.MAX_VALUE))
         );
         painelPedidosClientesLayout.setVerticalGroup(
             painelPedidosClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPedidosClientesLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addComponent(lblTituloTabelaPedidos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tabelaPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         painelTotalPedidos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -1461,6 +1516,9 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
+        lblDescricaoPedidosRelatorio.setFont(new java.awt.Font("Arial", 0, 22)); // NOI18N
+        lblDescricaoPedidosRelatorio.setText("Consulte os pedidos dos clientes e gere relatórios de cadastro e movimentação.");
+
         javax.swing.GroupLayout painelPedidosRelatorioLayout = new javax.swing.GroupLayout(painelPedidosRelatorio);
         painelPedidosRelatorio.setLayout(painelPedidosRelatorioLayout);
         painelPedidosRelatorioLayout.setHorizontalGroup(
@@ -1468,37 +1526,51 @@ public class TelasClientes extends javax.swing.JFrame {
             .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
                 .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
                         .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(painelpedidosTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(painelPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
-                                    .addComponent(painelTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(263, 263, 263)
-                                    .addComponent(painelPedidospendetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(268, 268, 268)
-                                    .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
+                                .addGap(67, 67, 67)
+                                .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
+                                .addGap(76, 76, 76)
+                                .addComponent(painelTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(195, 195, 195)
+                                .addComponent(painelPedidospendetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(222, 222, 222)
+                        .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1702, Short.MAX_VALUE))
+                        .addGap(24, 24, 24)
+                        .addComponent(painelPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblTituloPedidosRelatorio)
+                            .addComponent(lblDescricaoPedidosRelatorio)
+                            .addComponent(painelpedidosTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(760, Short.MAX_VALUE))
         );
         painelPedidosRelatorioLayout.setVerticalGroup(
             painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(27, 27, 27)
+                .addComponent(lblTituloPedidosRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblDescricaoPedidosRelatorio)
+                .addGap(42, 42, 42)
                 .addComponent(painelpedidosTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(130, 130, 130)
                 .addComponent(painelPedidosClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
                 .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(painelTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(painelPedidospendetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1399, Short.MAX_VALUE))
+                    .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(painelPedidosRelatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(painelPedidospendetes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(painelTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(37, 37, 37)
+                        .addComponent(painelGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(painelPedidosRelatorioLayout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(painelvalorTotalPedidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(1273, Short.MAX_VALUE))
         );
 
         abasClientes.addTab("Pedidos e Relatório", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\document.png"), painelPedidosRelatorio); // NOI18N
@@ -1554,6 +1626,27 @@ public class TelasClientes extends javax.swing.JFrame {
     private void cbMesRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMesRelatorioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbMesRelatorioActionPerformed
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        // TODO add your handling code here:
+        cadastrarCliente();
+        //TEXT FIELD
+        String nomeCompleto = txtNome.getText().toString();
+        
+      //FORMATTED FIELD
+        String cpf = ftfCPF.getSelectedText().toString();
+      String telefone = ftfTelefone.getSelectedText().toString();
+      
+//COMBO  BOX
+/*
+String nome  = nomeVariavel.getSelectedItem().toString();
+*/
+   
+//TEXT   AREA
+/*
+String nome = nomeVariavel.getText().toString();
+*/
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
     /**
      * @param args the command line arguments
