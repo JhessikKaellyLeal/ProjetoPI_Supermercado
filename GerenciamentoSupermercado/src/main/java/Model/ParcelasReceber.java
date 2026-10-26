@@ -9,9 +9,15 @@ package Model;
  * @author AntônioVieira
  */
 public class ParcelasReceber {
-  private int   idparcelasReceber, numeroParcela, contasReceber_idcontasReceber;
-  private String dataVencimento, dataPagamento, observacao;
-private double  valorParcela, valorRecebido;
+   private int idparcelasReceber;
+    private int numeroParcela;
+    private double valorParcela;
+    private String dataVencimento;
+    private String dataPagamento;
+    private Double valorRecebido;
+    private String statusParcela;
+    private String observacao;
+    private int contasReceber_idcontasReceber;
 
     public ParcelasReceber() {
     }
@@ -32,12 +38,12 @@ private double  valorParcela, valorRecebido;
         this.numeroParcela = numeroParcela;
     }
 
-    public int getContasReceber_idcontasReceber() {
-        return contasReceber_idcontasReceber;
+    public double getValorParcela() {
+        return valorParcela;
     }
 
-    public void setContasReceber_idcontasReceber(int contasReceber_idcontasReceber) {
-        this.contasReceber_idcontasReceber = contasReceber_idcontasReceber;
+    public void setValorParcela(double valorParcela) {
+        this.valorParcela = valorParcela;
     }
 
     public String getDataVencimento() {
@@ -56,6 +62,22 @@ private double  valorParcela, valorRecebido;
         this.dataPagamento = dataPagamento;
     }
 
+    public Double getValorRecebido() {
+        return valorRecebido;
+    }
+
+    public void setValorRecebido(Double valorRecebido) {
+        this.valorRecebido = valorRecebido;
+    }
+
+    public String getStatusParcela() {
+        return statusParcela;
+    }
+
+    public void setStatusParcela(String statusParcela) {
+        this.statusParcela = statusParcela;
+    }
+
     public String getObservacao() {
         return observacao;
     }
@@ -64,20 +86,13 @@ private double  valorParcela, valorRecebido;
         this.observacao = observacao;
     }
 
-    public double getValorParcela() {
-        return valorParcela;
+    public int getContasReceber_idcontasReceber() {
+        return contasReceber_idcontasReceber;
     }
 
-    public void setValorParcela(double valorParcela) {
-        this.valorParcela = valorParcela;
+    public void setContasReceber_idcontasReceber(int contasReceber_idcontasReceber) {
+        this.contasReceber_idcontasReceber = contasReceber_idcontasReceber;
     }
 
-    public double getValorRecebido() {
-        return valorRecebido;
-    }
-
-    public void setValorRecebido(double valorRecebido) {
-        this.valorRecebido = valorRecebido;
-    }
-
+ 
 }
