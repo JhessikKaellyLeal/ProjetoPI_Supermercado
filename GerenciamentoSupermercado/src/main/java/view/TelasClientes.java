@@ -786,7 +786,7 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addContainerGap(1409, Short.MAX_VALUE))
         );
 
-        abasClientes.addTab("Edição e Desativação", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\edit 24.png"), painelEdicao); // NOI18N
+        abasClientes.addTab("Edição e Desativação", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\pencil (1).png"), painelEdicao); // NOI18N
 
         painelHistorico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -1497,7 +1497,7 @@ public class TelasClientes extends javax.swing.JFrame {
                 .addContainerGap(1397, Short.MAX_VALUE))
         );
 
-        abasClientes.addTab("Pedidos e Relatório", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\newspaper.png"), painelPedidosRelatorio); // NOI18N
+        abasClientes.addTab("Pedidos e Relatório", new javax.swing.ImageIcon("C:\\Users\\CleicianeGomes\\Documents\\ProjetoPI_Supermercado\\GerenciamentoSupermercado\\src\\main\\resources\\assets\\files.png"), painelPedidosRelatorio); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
