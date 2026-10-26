@@ -1,6 +1,11 @@
 C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\com\mycompany\gerenciamentosupermercado\GerenciamentoSupermercado.java
 C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\Conection\Conexao.java
-C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\controller\controllerBD.java
+C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\Control\CategoriasController.java
+C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\Control\CodigoBarrasController.java
+C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\Control\EtiquetasController.java
+C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\Control\MarcasController.java
+C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\Control\ProdutosController.java
+C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\Control\UnidadeMedidasController.java
 C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\model\AberturaCaixas.java
 C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\model\Afastamentos.java
 C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\java\model\Caixas.java
