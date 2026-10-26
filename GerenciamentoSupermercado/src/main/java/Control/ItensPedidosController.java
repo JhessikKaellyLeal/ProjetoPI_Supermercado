@@ -34,11 +34,11 @@ public boolean cadastrar(ItensPedidos item) {
             stmt.setInt(1, item.getQuantidade());
             stmt.setDouble(2, item.getPrecoUnitario());
             stmt.setDouble(3, item.getDesconto());
-            stmt.setInt(4, item.getPedidosIdpedidos());
-            stmt.setInt(5, item.getProdutosIdprodutos());
-            stmt.setInt(6, item.getProdutosCategoriasIdcategorias());
-            stmt.setInt(7, item.getProdutosMarcasIdmarcas());
-            stmt.setInt(8, item.getProdutosUnidadeMedidasIdunidadeMedidas());
+            stmt.setInt(4, item.getPedidos_idpedidos());
+            stmt.setInt(5, item.getProdutos_idprodutos());
+            stmt.setInt(6, item.getProdutos_categorias_idcategorias());
+            stmt.setInt(7, item.getProdutos_marcas_idmarcas());
+            stmt.setInt(8, item.getProdutos_unidadeMedidas_idunidadeMedidas());
 
             return stmt.executeUpdate() > 0;
 
@@ -76,19 +76,19 @@ public boolean cadastrar(ItensPedidos item) {
                 item.setDesconto(
                         rs.getDouble("desconto"));
 
-                item.setPedidosIdpedidos(
+                item.setPedidos_idpedidos(
                         rs.getInt("pedidos_idpedidos"));
 
-                item.setProdutosIdprodutos(
+                item.setProdutos_idprodutos(
                         rs.getInt("produtos_idprodutos"));
 
-                item.setProdutosCategoriasIdcategorias(
+                item.setProdutos_categorias_idcategorias(
                         rs.getInt("produtos_categorias_idcategorias"));
 
-                item.setProdutosMarcasIdmarcas(
+                item.setProdutos_marcas_idmarcas(
                         rs.getInt("produtos_marcas_idmarcas"));
 
-                item.setProdutosUnidadeMedidasIdunidadeMedidas(
+                item.setProdutos_unidadeMedidas_idunidadeMedidas(
                         rs.getInt("produtos_unidadeMedidas_idunidadeMedidas"));
 
                 lista.add(item);
@@ -131,19 +131,19 @@ public boolean cadastrar(ItensPedidos item) {
                     item.setDesconto(
                             rs.getDouble("desconto"));
 
-                    item.setPedidosIdpedidos(
+                    item.setPedidos_idpedidos(
                             rs.getInt("pedidos_idpedidos"));
 
-                    item.setProdutosIdprodutos(
+                    item.setProdutos_idprodutos(
                             rs.getInt("produtos_idprodutos"));
 
-                    item.setProdutosCategoriasIdcategorias(
+                    item.setProdutos_categorias_idcategorias(
                             rs.getInt("produtos_categorias_idcategorias"));
 
-                    item.setProdutosMarcasIdmarcas(
+                    item.setProdutos_marcas_idmarcas(
                             rs.getInt("produtos_marcas_idmarcas"));
 
-                    item.setProdutosUnidadeMedidasIdunidadeMedidas(
+                    item.setProdutos_unidadeMedidas_idunidadeMedidas(
                             rs.getInt("produtos_unidadeMedidas_idunidadeMedidas"));
 
                     return item;
@@ -189,19 +189,19 @@ public boolean cadastrar(ItensPedidos item) {
                     item.setDesconto(
                             rs.getDouble("desconto"));
 
-                    item.setPedidosIdpedidos(
+                    item.setPedidos_idpedidos(
                             rs.getInt("pedidos_idpedidos"));
 
-                    item.setProdutosIdprodutos(
+                    item.setProdutos_idprodutos(
                             rs.getInt("produtos_idprodutos"));
 
-                    item.setProdutosCategoriasIdcategorias(
+                    item.setProdutos_categorias_idcategorias(
                             rs.getInt("produtos_categorias_idcategorias"));
 
-                    item.setProdutosMarcasIdmarcas(
+                    item.setProdutos_marcas_idmarcas(
                             rs.getInt("produtos_marcas_idmarcas"));
 
-                    item.setProdutosUnidadeMedidasIdunidadeMedidas(
+                    item.setProdutos_unidadeMedidas_idunidadeMedidas(
                             rs.getInt("produtos_unidadeMedidas_idunidadeMedidas"));
 
                     lista.add(item);
@@ -236,11 +236,11 @@ public boolean cadastrar(ItensPedidos item) {
             stmt.setInt(1, item.getQuantidade());
             stmt.setDouble(2, item.getPrecoUnitario());
             stmt.setDouble(3, item.getDesconto());
-            stmt.setInt(4, item.getPedidosIdpedidos());
-            stmt.setInt(5, item.getProdutosIdprodutos());
-            stmt.setInt(6, item.getProdutosCategoriasIdcategorias());
-            stmt.setInt(7, item.getProdutosMarcasIdmarcas());
-            stmt.setInt(8, item.getProdutosUnidadeMedidasIdunidadeMedidas());
+            stmt.setInt(4, item.getPedidos_idpedidos());
+            stmt.setInt(5, item.getProdutos_idprodutos());
+            stmt.setInt(6, item.getProdutos_categorias_idcategorias());
+            stmt.setInt(7, item.getProdutos_marcas_idmarcas());
+            stmt.setInt(8, item.getProdutos_unidadeMedidas_idunidadeMedidas());
             stmt.setInt(9, iditensPedidos);
 
             return stmt.executeUpdate() > 0;

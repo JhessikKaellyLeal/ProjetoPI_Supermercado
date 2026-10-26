@@ -41,7 +41,7 @@ public class CupomController {
             stmt.setString(8, cupom.getDataInicio());
             stmt.setString(9, cupom.getDataFinal());
             stmt.setString(10, cupom.getObservacao());
-            stmt.setInt(11, cupom.getPromocaoIdpromocao());
+            stmt.setInt(11, cupom.getPromocao_idpromocao());
 
             return stmt.executeUpdate() > 0;
 
@@ -82,7 +82,7 @@ public class CupomController {
                 cupom.setDataInicio(rs.getString("dataInicio"));
                 cupom.setDataFinal(rs.getString("dataFinal"));
                 cupom.setObservacao(rs.getString("observacao"));
-                cupom.setPromocaoIdpromocao(
+                cupom.setPromocao_idpromocao(
                         rs.getInt("promocao_idpromocao"));
 
                 cupons.add(cupom);
@@ -128,7 +128,7 @@ public class CupomController {
                     cupom.setDataInicio(rs.getString("dataInicio"));
                     cupom.setDataFinal(rs.getString("dataFinal"));
                     cupom.setObservacao(rs.getString("observacao"));
-                    cupom.setPromocaoIdpromocao(
+                    cupom.setPromocao_idpromocao(
                             rs.getInt("promocao_idpromocao"));
 
                     return cupom;
@@ -166,7 +166,7 @@ public class CupomController {
             stmt.setString(8, cupom.getDataInicio());
             stmt.setString(9, cupom.getDataFinal());
             stmt.setString(10, cupom.getObservacao());
-            stmt.setInt(11, cupom.getPromocaoIdpromocao());
+            stmt.setInt(11, cupom.getPromocao_idpromocao());
             stmt.setInt(12, idcupom);
 
             return stmt.executeUpdate() > 0;

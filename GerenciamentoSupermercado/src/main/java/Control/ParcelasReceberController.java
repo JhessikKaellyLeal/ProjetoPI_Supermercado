@@ -48,7 +48,7 @@ public class ParcelasReceberController {
 
             stmt.setString(6, parcela.getStatusParcela());
             stmt.setString(7, parcela.getObservacao());
-            stmt.setInt(8, parcela.getContasReceberIdcontasReceber());
+            stmt.setInt(8, parcela.getContasReceber_idcontasReceber());
 
             return stmt.executeUpdate() > 0;
 
@@ -172,7 +172,7 @@ public class ParcelasReceberController {
 
             stmt.setString(6, parcela.getStatusParcela());
             stmt.setString(7, parcela.getObservacao());
-            stmt.setInt(8, parcela.getContasReceberIdcontasReceber());
+            stmt.setInt(8, parcela.getContasReceber_idcontasReceber());
             stmt.setInt(9, idparcelasReceber);
 
             return stmt.executeUpdate() > 0;
@@ -228,7 +228,7 @@ public class ParcelasReceberController {
         double valorRecebido = rs.getDouble("valorRecebido");
 
         if (rs.wasNull()) {
-            parcela.setValorRecebido(0);
+            parcela.setValorRecebido(null);
         } else {
             parcela.setValorRecebido(valorRecebido);
         }
@@ -239,7 +239,7 @@ public class ParcelasReceberController {
         parcela.setObservacao(
                 rs.getString("observacao"));
 
-        parcela.setContasReceberIdcontasReceber(
+        parcela.setContasReceber_idcontasReceber(
                 rs.getInt("contasReceber_idcontasReceber"));
 
         return parcela;
