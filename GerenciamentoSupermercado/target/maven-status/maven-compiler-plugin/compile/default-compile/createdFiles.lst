@@ -19,6 +19,7 @@ Model\Caixas.class
 Model\Permissoes.class
 Model\MovimentacoesFinanceiras.class
 control\ItensCompraController.class
+control\FuncionarioController.class
 View\Solicitacao$10.class
 Model\CondicoesPagamento.class
 Model\Ferias.class
@@ -49,8 +50,10 @@ Model\Marcas.class
 View\AlterarSenha.class
 Model\ItensCompras.class
 control\ItensPedidosController.class
+control\TrunosController.class
 Model\Afastamentos.class
 Model\PagamentoVenda.class
+control\DiasTrabalhadosController.class
 Model\Compras.class
 Model\AberturaCaixas.class
 Model\Estoque.class
@@ -86,6 +89,7 @@ Model\Cliente.class
 Model\ParcelasReceber.class
 View\RecuperacaoSenha.class
 control\ParcelasReceberController.class
+control\EscalaController.class
 Model\PerdasEstoque.class
 Model\Setores.class
 View\TelaProdutos$2.class
