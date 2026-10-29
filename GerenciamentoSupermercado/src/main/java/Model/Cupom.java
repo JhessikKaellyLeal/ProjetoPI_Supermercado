@@ -111,5 +111,13 @@ public class Cupom {
     public void setValorMinimoCompra(double valorMinimoCompra) {
         this.valorMinimoCompra = valorMinimoCompra;
     }
+
+    public int getPromocaoIdpromocao() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setPromocaoIdpromocao(int aInt) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
   
 }

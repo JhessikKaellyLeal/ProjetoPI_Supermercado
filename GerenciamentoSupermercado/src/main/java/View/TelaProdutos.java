@@ -1,7 +1,7 @@
 package View;
 
 import View.MenuPadrao;
-
+import Model.Usuario;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -14,25 +14,74 @@ import View.MenuPadrao;
 public class TelaProdutos extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaProdutos.class.getName());
-
+    private MenuPadrao menu;
+     private Usuario usuario;
     /**
      * Creates new form TelaProdutos
      */
     public TelaProdutos(Usuario usuario) {
         initComponents();
-          MenuPadrao.instalar(
-        this,
-        usuario,
-        "clientes",
-        id -> {
-            // Aqui será definida a navegação entre as telas.
-            // Por enquanto, o formulário atual é preservado.
-        },
-        this::dispose
-    );
+          
+   this.usuario=usuario;
         
+    MenuPadrao.instalar(
+    this,
+    usuario,
+   "inicio",
+    this::navegar,
+    this::dispose
+    );
+    menu.mostrarTela(new TelaProdutos(usuario));     
     }
 
+    public void navegar (String idtela){
+        switch (idtela){
+            case "inicio":
+                menu.mostrarTela(new TelaHome(usuario));
+                break;
+            case "produtos":
+                menu.mostrarTela(new TelaProdutos(usuario));
+                break;
+            case "estoque":
+               // menu.mostrarTela();
+                break;
+            case "fornecedores":
+               // menu.mostrarTela();
+                break;
+            case "clientes":
+                menu.mostrarTela(new TelasClientes(usuario));
+                break;
+            case "promocoes" :
+               // menu.mostrarTela();
+                break;
+            case "caixas":
+               // menu.mostrarTela();
+                break;
+            case "vendas":
+                menu.mostrarTela(new TelaPdvRealizacao(usuario));
+                break;
+            case "pedidos":
+                menu.mostrarTela(new TelaPedidos(usuario));
+                break;
+            case "entregas":
+                menu.mostrarTela(new TelaEntregas(usuario));
+                break;
+                case "rh":
+                menu.mostrarTela(new Tela_Funcionario_RH(usuario));
+                break;
+                case "financeiro":
+               // menu.mostrarTela();
+                break;
+                case "relatorios":
+               // menu.mostrarTela();
+                break;
+                case "permissoes":
+                menu.mostrarTela(new TelaPerfilUsuarios(usuario));
+                break;
+                
+        }   
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -1239,7 +1288,7 @@ public class TelaProdutos extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        Usuario usuario = new Usuario("Rogério ", "Gerente de Vendas", null);
+        Usuario usuario = new Usuario();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
