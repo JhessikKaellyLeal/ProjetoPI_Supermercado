@@ -477,11 +477,6 @@
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButton1">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
               </Events>
@@ -528,9 +523,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\+.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Adicionar Item"/>
               </Properties>
             </Component>
@@ -610,9 +602,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
               <Events>
@@ -623,9 +612,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
@@ -641,9 +627,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
               <Events>
@@ -658,9 +641,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
               <Events>
@@ -671,9 +651,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
@@ -686,9 +663,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
               <Events>
@@ -699,9 +673,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
@@ -1217,11 +1188,6 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="jButton38">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton38ActionPerformed"/>
               </Events>
@@ -1233,9 +1199,6 @@
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
@@ -1250,9 +1213,6 @@
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
@@ -1271,9 +1231,6 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
               <Events>
@@ -1291,9 +1248,6 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
               <Events>
@@ -1307,9 +1261,6 @@
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
@@ -1325,9 +1276,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
               <Events>
@@ -1342,9 +1290,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="0"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
               <Events>
@@ -1353,9 +1298,6 @@
             </Component>
             <Component class="javax.swing.JButton" name="jButton9">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\+.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Adicionar Item"/>
               </Properties>
             </Component>
@@ -1680,9 +1622,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
               <Events>
@@ -1693,9 +1632,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
@@ -1708,9 +1644,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
               <Events>
@@ -1721,9 +1654,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
@@ -1736,9 +1666,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
               <Events>
@@ -1750,9 +1677,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
               <Events>
@@ -1763,9 +1687,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
@@ -1803,11 +1724,6 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="jButton16">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\lupa (2).png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
               </Events>
@@ -1822,11 +1738,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton17">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\lupa (2).png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton17ActionPerformed"/>
               </Events>
@@ -2326,57 +2237,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton59">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton60">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton61">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton62">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton63">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton64">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton65">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -2774,57 +2664,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton114">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton115">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton116">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton117">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton118">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton119">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton120">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -3160,9 +3029,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
               <Events>
@@ -3173,9 +3039,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
@@ -3188,9 +3051,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
               <Events>
@@ -3201,9 +3061,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
@@ -3216,9 +3073,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
               <Events>
@@ -3230,9 +3084,6 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
               <Events>
@@ -3243,9 +3094,6 @@
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="14" style="1"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
@@ -3283,11 +3131,6 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JButton" name="jButton18">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\lupa (2).png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton18ActionPerformed"/>
               </Events>
@@ -3302,11 +3145,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton27">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\lupa (2).png"/>
-                </Property>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton27ActionPerformed"/>
               </Events>
@@ -3798,57 +3636,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton121">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton122">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton123">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton124">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton125">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton126">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton127">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -4243,57 +4060,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton163">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton164">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton165">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton166">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton167">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton168">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton169">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -4688,57 +4484,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton156">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton157">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton158">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton159">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton160">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton161">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton162">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -5133,57 +4908,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton149">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton150">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton151">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton152">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton153">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton154">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton155">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -5578,57 +5332,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton142">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton143">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton144">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton145">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton146">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton147">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton148">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -6023,57 +5756,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton135">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton136">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton137">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton138">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton139">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton140">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton141">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -6468,57 +6180,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton107">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton108">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton109">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton110">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton111">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton112">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton113">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>
@@ -6913,57 +6604,36 @@
             </Container>
             <Component class="javax.swing.JButton" name="jButton128">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\NOVO.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Novo"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton129">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\SALVAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Salvar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton130">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EDITAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Editar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton131">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\EXCLUIR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Excluir"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton132">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\LIMPAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Limpar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton133">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\PESQUISAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton134">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\IsraelSantos\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\VOLTAR.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Voltar"/>
               </Properties>
             </Component>

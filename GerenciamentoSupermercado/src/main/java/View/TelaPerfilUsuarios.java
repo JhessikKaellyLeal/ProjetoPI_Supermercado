@@ -3,28 +3,79 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package View;
-import View.Usuario;
+import Model.Usuario;
 import View.MenuPadrao;
 
 public class TelaPerfilUsuarios extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaPerfilUsuarios.class.getName());
 
-  
+   private MenuPadrao menu;
+    private Usuario usuario;
     public TelaPerfilUsuarios(Usuario usuario) {
         initComponents();
-         MenuPadrao.instalar(
+          this.usuario= usuario;
+        
+      MenuPadrao.instalar(
         this,
         usuario,
-        "clientes",
-        id -> {
-            // Aqui será definida a navegação entre as telas.
-            // Por enquanto, o formulário atual é preservado.
-        },
+        "inicio",
+        this::navegar,
         this::dispose
     );
+      
+       // exibe a tela inicial dentro do menu 
+    menu.mostrarTela(new TelaPerfilUsuarios(usuario));
     }
-
+public void navegar (String idtela){
+    
+    switch (idtela){   
+        case "inicio":
+        menu.mostrarTela(new TelaHome(usuario));
+        break;
+        case "produtos":
+        menu.mostrarTela(new TelaProdutos(usuario));
+        break;
+        case "estoque":
+        // menu.mostrarTela();
+        break;
+        case "fornecedores":
+         //   menu.mostrarTela();
+            break;
+        case "clientes":
+            menu.mostrarTela(new TelasClientes(usuario));
+            break;
+        case "promocoes":
+         //   menu.mostrarTela();
+            break;
+        case "caixas":
+         //   menu.mostrarTela();
+            break;
+        case "vendas":
+          //  menu.mostrarTela(new TelaPdvRealizacao(usuario));
+          break;
+        case "pedidos":
+            menu.mostrarTela(new TelaPedidos(usuario));
+            break;
+        case "entregas":
+            menu.mostrarTela(new TelaEntregas(usuario));
+            break;
+        case "rh":
+            menu.mostrarTela(new Tela_Funcionarios_RH(usuario));
+            break;
+        case "financeiro":
+         //   menu.mostrarTela();
+            break;
+        case "relatorios":
+          //  menu.mostrarTela();
+         break;
+        case "permissoes":
+            menu.mostrarTela(new TelaPerfilUsuarios(usuario));
+           break; 
+        
+    }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,11 +105,6 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tbUsuarios = new javax.swing.JTable();
         btnCadastroUsuarioNovo = new javax.swing.JButton();
-        areaPermissoes = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tbControlePermissoes = new javax.swing.JTable();
-        btnSalvarPermissoes = new javax.swing.JButton();
-        btnControlePermissoes = new javax.swing.JButton();
         areaBloqueioDesbloqueio = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tbBoqueioDesbloqueio = new javax.swing.JTable();
@@ -87,6 +133,11 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
         cbRegistroAtividade = new javax.swing.JComboBox<>();
         jScrollPane5 = new javax.swing.JScrollPane();
         areaRegistrodeAtividades = new javax.swing.JTable();
+        areaPermissoes = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tbControlePermissoes = new javax.swing.JTable();
+        btnSalvarPermissoes = new javax.swing.JButton();
+        btnControlePermissoes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,6 +162,7 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
         lbPerfilAcessoPerfil.setText("Perfil de acesso");
 
         btnSalvarAlteracoesPerfil.setText("Salvar Alteracões");
+        btnSalvarAlteracoesPerfil.addActionListener(this::btnSalvarAlteracoesPerfilActionPerformed);
 
         javax.swing.GroupLayout areaPerfilUsuarioLayout = new javax.swing.GroupLayout(areaPerfilUsuario);
         areaPerfilUsuario.setLayout(areaPerfilUsuarioLayout);
@@ -121,58 +173,59 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
                     .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbEmailPerfil)
-                            .addComponent(lbLojaPerfil)
-                            .addComponent(tfLojaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tfEmailPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfNomecompletoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbNomeCompletoPerfil))))
-                .addGap(18, 18, 18)
-                .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfPerfilAcessoPerfil)
-                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
-                        .addComponent(lbPerfilAcessoPerfil)
-                        .addGap(0, 1301, Short.MAX_VALUE))
-                    .addComponent(ffTelefonePerfil))
-                .addContainerGap())
-            .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
-                .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
-                        .addGap(78, 78, 78)
-                        .addComponent(lbNomePerfil))
-                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
-                        .addGap(258, 258, 258)
-                        .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tfCargoPerfil)
                             .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
                                 .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbTelefonePerfil)
-                                    .addComponent(lbCargoPerfil))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(12, 12, 12))
-            .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnSalvarAlteracoesPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(tfEmailPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
+                                        .addComponent(lbEmailPerfil)
+                                        .addGap(573, 573, 573)
+                                        .addComponent(lbTelefonePerfil))
+                                    .addComponent(tfLojaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 772, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPerfilUsuarioLayout.createSequentialGroup()
+                                .addComponent(lbLojaPerfil)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbPerfilAcessoPerfil)
+                                    .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(ffTelefonePerfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 818, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(tfPerfilAcessoPerfil, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 818, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
+                        .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
+                                .addGap(78, 78, 78)
+                                .addComponent(lbNomePerfil))
+                            .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(btnSalvarAlteracoesPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbNomeCompletoPerfil)
+                                    .addComponent(tfNomecompletoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(109, 109, 109)
+                        .addComponent(lbCargoPerfil)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPerfilUsuarioLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(tfCargoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 824, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         areaPerfilUsuarioLayout.setVerticalGroup(
             areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(lbNomePerfil)
-                .addGap(28, 28, 28)
                 .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
+                        .addComponent(lbNomePerfil)
+                        .addGap(34, 34, 34)
+                        .addComponent(lbNomeCompletoPerfil)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tfNomecompletoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
                         .addComponent(lbCargoPerfil)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfCargoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(areaPerfilUsuarioLayout.createSequentialGroup()
-                        .addComponent(lbNomeCompletoPerfil)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNomecompletoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tfCargoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(33, 33, 33)
                 .addGroup(areaPerfilUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbEmailPerfil)
@@ -191,7 +244,7 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
                     .addComponent(tfPerfilAcessoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnSalvarAlteracoesPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addContainerGap(400, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Perfil do Usuário", areaPerfilUsuario);
@@ -222,75 +275,26 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
         areaCadastroDeUsuarioLayout.setHorizontalGroup(
             areaCadastroDeUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaCadastroDeUsuarioLayout.createSequentialGroup()
-                .addGap(485, 485, 485)
-                .addComponent(btnCadastroUsuarioNovo)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaCadastroDeUsuarioLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 838, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE)
+                .addGroup(areaCadastroDeUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaCadastroDeUsuarioLayout.createSequentialGroup()
+                        .addComponent(btnCadastroUsuarioNovo)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaCadastroDeUsuarioLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1434, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40))))
         );
         areaCadastroDeUsuarioLayout.setVerticalGroup(
             areaCadastroDeUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaCadastroDeUsuarioLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(23, 23, 23)
                 .addComponent(btnCadastroUsuarioNovo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(350, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 656, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Cadastro de Usuário", areaCadastroDeUsuario);
-
-        areaPermissoes.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-
-        tbControlePermissoes.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "PERMISSÃO", "ADMINISTRADOR", "GERENTE DA LOJA", "OPERADOR DE CAIXA", "REPOSITOR"
-            }
-        ));
-        jScrollPane2.setViewportView(tbControlePermissoes);
-
-        btnSalvarPermissoes.setText("Salvar alterções de permissões");
-
-        btnControlePermissoes.setText("Comparar todos os perfis");
-
-        javax.swing.GroupLayout areaPermissoesLayout = new javax.swing.GroupLayout(areaPermissoes);
-        areaPermissoes.setLayout(areaPermissoesLayout);
-        areaPermissoesLayout.setHorizontalGroup(
-            areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPermissoesLayout.createSequentialGroup()
-                .addContainerGap(1029, Short.MAX_VALUE)
-                .addGroup(areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPermissoesLayout.createSequentialGroup()
-                        .addComponent(btnControlePermissoes)
-                        .addGap(153, 153, 153))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPermissoesLayout.createSequentialGroup()
-                        .addComponent(btnSalvarPermissoes, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(145, 145, 145))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPermissoesLayout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36))))
-        );
-        areaPermissoesLayout.setVerticalGroup(
-            areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaPermissoesLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(btnControlePermissoes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addComponent(btnSalvarPermissoes)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        areaPerfil.addTab("Área Permissões", areaPermissoes);
 
         areaBloqueioDesbloqueio.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
@@ -319,17 +323,17 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
         areaBloqueioDesbloqueio.setLayout(areaBloqueioDesbloqueioLayout);
         areaBloqueioDesbloqueioLayout.setHorizontalGroup(
             areaBloqueioDesbloqueioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaBloqueioDesbloqueioLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 706, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(988, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaBloqueioDesbloqueioLayout.createSequentialGroup()
+                .addContainerGap(59, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 1403, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
         );
         areaBloqueioDesbloqueioLayout.setVerticalGroup(
             areaBloqueioDesbloqueioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(areaBloqueioDesbloqueioLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(314, Short.MAX_VALUE))
+                .addGap(38, 38, 38)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Bloqueio e desbloqueio de usuário", areaBloqueioDesbloqueio);
@@ -369,7 +373,7 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
                 .addGap(159, 159, 159))
             .addGroup(areaHistoricoAcessoLayout.createSequentialGroup()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1015, Short.MAX_VALUE))
+                .addGap(0, 816, Short.MAX_VALUE))
         );
         areaHistoricoAcessoLayout.setVerticalGroup(
             areaHistoricoAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -518,7 +522,7 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
                 .addComponent(areaGerenteLoja, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(areaOperadorCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1014, Short.MAX_VALUE))
+                .addContainerGap(887, Short.MAX_VALUE))
         );
         areaPerfisdeAcessoLayout.setVerticalGroup(
             areaPerfisdeAcessoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -565,13 +569,13 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
         areaRegistroAtividade.setLayout(areaRegistroAtividadeLayout);
         areaRegistroAtividadeLayout.setHorizontalGroup(
             areaRegistroAtividadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(areaRegistroAtividadeLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(areaRegistroAtividadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaRegistroAtividadeLayout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
+                .addGroup(areaRegistroAtividadeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(areaRegistroAtividadeLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(cbRegistroAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 1688, Short.MAX_VALUE))
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 1422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))
+                    .addComponent(cbRegistroAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         areaRegistroAtividadeLayout.setVerticalGroup(
@@ -580,41 +584,91 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
                 .addGap(22, 22, 22)
                 .addComponent(cbRegistroAtividade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(372, Short.MAX_VALUE))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 668, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         areaPerfil.addTab("Registro de atividades", areaRegistroAtividade);
+
+        areaPermissoes.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+
+        tbControlePermissoes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "PERMISSÃO", "ADMINISTRADOR", "GERENTE DA LOJA", "OPERADOR DE CAIXA", "REPOSITOR"
+            }
+        ));
+        jScrollPane2.setViewportView(tbControlePermissoes);
+
+        btnSalvarPermissoes.setText("Salvar alterções de permissões");
+
+        btnControlePermissoes.setText("Comparar todos os perfis");
+
+        javax.swing.GroupLayout areaPermissoesLayout = new javax.swing.GroupLayout(areaPermissoes);
+        areaPermissoes.setLayout(areaPermissoesLayout);
+        areaPermissoesLayout.setHorizontalGroup(
+            areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPermissoesLayout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addGroup(areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPermissoesLayout.createSequentialGroup()
+                        .addComponent(btnControlePermissoes)
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, areaPermissoesLayout.createSequentialGroup()
+                        .addGroup(areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1438, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSalvarPermissoes, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(22, 22, 22))))
+        );
+        areaPermissoesLayout.setVerticalGroup(
+            areaPermissoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(areaPermissoesLayout.createSequentialGroup()
+                .addGap(8, 8, 8)
+                .addComponent(btnControlePermissoes)
+                .addGap(12, 12, 12)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 644, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(btnSalvarPermissoes)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        areaPerfil.addTab("Área Permissões", areaPermissoes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 926, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(37, 37, 37)
-                    .addComponent(areaPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, 1500, Short.MAX_VALUE)
-                    .addContainerGap(37, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(areaPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, 1500, Short.MAX_VALUE)
+                .addGap(32, 32, 32))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 762, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(50, 50, 50)
-                    .addComponent(areaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(50, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(areaPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSalvarAlteracoesPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarAlteracoesPerfilActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnSalvarAlteracoesPerfilActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-         Usuario usuario = new Usuario("ANTÔNIO JOSÉ", "Administrador", null);
+         Usuario usuario = new Usuario();
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -692,4 +746,6 @@ public class TelaPerfilUsuarios extends javax.swing.JFrame {
     private javax.swing.JTextField tfPerfilAcessoPerfil;
     private javax.swing.JTextField tfRepositor;
     // End of variables declaration//GEN-END:variables
+
+    
 }

@@ -82,9 +82,6 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Cadastro">
                 <Property name="tabTitle" type="java.lang.String" value="Cadastro"/>
-                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\user.png"/>
-                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -309,9 +306,6 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Consulta">
                 <Property name="tabTitle" type="java.lang.String" value="Consulta"/>
-                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\search 24.png"/>
-                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -642,9 +636,6 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Edi&#xe7;&#xe3;o e Desativa&#xe7;&#xe3;o">
                 <Property name="tabTitle" type="java.lang.String" value="Edi&#xe7;&#xe3;o e Desativa&#xe7;&#xe3;o"/>
-                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\pencil (1).png"/>
-                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1295,9 +1286,6 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Hist&#xf3;rico de Compras e Pagamentos">
                 <Property name="tabTitle" type="java.lang.String" value="Hist&#xf3;rico de Compras e Pagamentos"/>
-                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\history 24.png"/>
-                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -1924,9 +1912,6 @@
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Pedidos e Relat&#xf3;rio">
                 <Property name="tabTitle" type="java.lang.String" value="Pedidos e Relat&#xf3;rio"/>
-                <Property name="tabIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\CleicianeGomes\Documents\ProjetoPI_Supermercado\GerenciamentoSupermercado\src\main\resources\assets\files.png"/>
-                </Property>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>

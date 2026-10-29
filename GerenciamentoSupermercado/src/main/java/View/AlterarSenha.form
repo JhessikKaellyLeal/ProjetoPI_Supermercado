@@ -55,7 +55,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="tfSenhaNovaAlterarSenha" min="-2" pref="285" max="-2" attributes="0"/>
+                                  <Component id="txSenhaNovaAlterarSenha" min="-2" pref="285" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnMostrarSenhaNova" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -63,9 +63,17 @@
                                   <Component id="lbConfirmarSenharNovaAlterarSenha" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                  <Component id="tfConfirmarSenhaNovaAlterarSenha" max="32767" attributes="0"/>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="btnSalvarSenhaNovaAlterarSenha" min="-2" pref="241" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                          <Component id="txConfirmaxSenhaNovaAlterarSenha" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnMostrarConfirmarNovaSenha" min="-2" pref="75" max="-2" attributes="0"/>
                               </Group>
@@ -78,10 +86,6 @@
                       <Component id="jScrollPane4" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                  <Component id="btnSalvarSenhaNovaAlterarSenha" min="-2" pref="241" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -128,20 +132,21 @@
                   <Component id="lbSenhaNovaAlterarSenha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="tfSenhaNovaAlterarSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txSenhaNovaAlterarSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnMostrarSenhaNova" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   <Component id="lbConfirmarSenharNovaAlterarSenha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="tfConfirmarSenhaNovaAlterarSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txConfirmaxSenhaNovaAlterarSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnMostrarConfirmarNovaSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnCancelarAlterarSenha" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnSalvarSenhaNovaAlterarSenha" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -179,6 +184,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Digite sua senha atual"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txSenhaAtualActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnMostrarSenhaAtualAlterarSenha">
           <Properties>
@@ -195,7 +203,7 @@
             <Property name="text" type="java.lang.String" value="Nova Senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tfSenhaNovaAlterarSenha">
+        <Component class="javax.swing.JTextField" name="txSenhaNovaAlterarSenha">
           <Properties>
             <Property name="text" type="java.lang.String" value="Minimo 8 caracteres"/>
           </Properties>
@@ -213,7 +221,7 @@
             <Property name="text" type="java.lang.String" value="Confirmar nova senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="tfConfirmarSenhaNovaAlterarSenha">
+        <Component class="javax.swing.JTextField" name="txConfirmaxSenhaNovaAlterarSenha">
           <Properties>
             <Property name="text" type="java.lang.String" value="Repita a nova senha"/>
           </Properties>
@@ -235,6 +243,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Salvar nova senha"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalvarSenhaNovaAlterarSenhaActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lbLogotipoAlteraSenha">
           <Properties>

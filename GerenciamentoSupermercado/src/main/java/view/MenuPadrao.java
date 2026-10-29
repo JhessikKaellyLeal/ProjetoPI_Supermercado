@@ -3,6 +3,7 @@ package View;
 
 
 
+import Model.Usuario;
 import java.awt.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -147,7 +148,7 @@ public class MenuPadrao extends JPanel {
 
     public void atualizarUsuario(Usuario usuario) {
         nome.setText(usuario.getNome());
-        perfil.setText(usuario.getPerfil());
+       /* perfil.setText(usuario.getPerfil());
         ImageIcon imagem = usuario.getFoto();
         if (imagem != null && imagem.getIconWidth() > 0) {
             // Mantém a proporção da foto dentro de um espaço de 56 x 56.
@@ -159,7 +160,7 @@ public class MenuPadrao extends JPanel {
                     Image.SCALE_SMOOTH)));
         } else {
             foto.setIcon(new IconeMenu("clientes", 48));
-        }
+        }*/
     }
 
     // Troca só a parte central; os menus continuam visíveis.
