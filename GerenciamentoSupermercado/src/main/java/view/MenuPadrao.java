@@ -1,6 +1,6 @@
 package View;
 
-
+import Model.Usuario;
 import java.awt.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -27,7 +27,7 @@ public class MenuPadrao extends JPanel {
         {"caixas", "Caixas"}, {"vendas", "Vendas e PDV"},
         {"pedidos", "Pedidos"}, {"entregas", "Entregas"},
         {"rh", "RH"}, {"financeiro", "Financeiro"},
-        {"relatorios", "Relatórios"}, {"configuracoes", "Configurações"}
+        {"relatorios", "Relatórios"},{"permissoes", "Permissões"}, {"configuracoes", "Configurações"}
     };
 
     public MenuPadrao() {
