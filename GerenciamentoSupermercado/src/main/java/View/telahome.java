@@ -4,30 +4,106 @@
  */
 package View;
 
+import Model.Usuario;
+
 /**
  *
  * @author ArthurAquino
  */
-public class telahome extends javax.swing.JFrame {
+public class TelaHome extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(telahome.class.getName());
-
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaHome.class.getName());
+    
+    
+    private MenuPadrao menu;
+    private Usuario usuario;
     /**
      * Creates new form telahome
      */
-    public telahome(Usuario usuario) {
+    public TelaHome(Usuario usuario) {
         initComponents();
+        
+        this.usuario = usuario;
+        
         MenuPadrao.instalar(
         this,
         usuario,
-        "clientes",
-        id -> {
-            // Aqui será definida a navegação entre as telas.
-            // Por enquanto, o formulário atual é preservado.
-        },
+        "inicio",
+        this::navegar,
         this::dispose
     );
-    }
+        
+        menu.mostrarTela(new TelaHome(usuario));
+        
+    }/*fim do construtor*/
+    
+    
+    
+    //metodo de acessar as telas
+    
+    public void navegar (String idtela){
+        switch  (idtela) {
+            case "inicio":
+                menu.mostrarTela(new TelaHome(usuario));
+                break;
+            case "produtos":
+                menu.mostrarTela(new TelaProdutos(usuario));
+                break;  
+            case "etoque":
+             //   menu.mostrarTela();
+                break;
+            case "fornecedores":
+             //   menu.mostrarTela();
+                break; 
+            case "clientes":
+                menu.mostrarTela(new TelasClientes(usuario));
+                break;
+            case "promocoes":
+              //  menu.mostrarTela();
+                break;
+            case "caixas":
+             //   menu.mostrarTela();
+                break;
+            case "vendas":
+                menu.mostrarTela(new TelaPdvRealizacao(usuario));
+                break; 
+            case "pedidos":
+                menu.mostrarTela(new TelaPedidos(usuario));
+                break;
+            case "entregas":
+                menu.mostrarTela(new TelaEntregas(usuario));
+                break;    
+            case "rh":
+                menu.mostrarTela(new Tela_Funcionarios_RH(usuario));
+                break;
+            case "financeiro":
+               // menu.mostrarTela();
+                break;
+            case "relatorios":
+               // menu.mostrarTela();
+                break;
+            case "permisoes":
+                menu.mostrarTela(new TelaPerfilUsuarios(usuario));
+                break;    
+        }
+        
+        
+    } 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -126,8 +202,6 @@ public class telahome extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
-        setMaximumSize(new java.awt.Dimension(2100000, 2100000));
-        setPreferredSize(new java.awt.Dimension(720, 864));
 
         jpBanner.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         jpBanner.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
@@ -959,7 +1033,7 @@ public class telahome extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        Usuario usuario = new Usuario("Arthur","Administrador",null);
+        Usuario usuario = new Usuario();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -978,7 +1052,7 @@ public class telahome extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new telahome(usuario).setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TelaHome(usuario).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

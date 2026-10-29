@@ -8,12 +8,12 @@ package View;
  *
  * @author AntônioVieira
  */
-public class telaLogout extends javax.swing.JPanel {
+public class TelaLogout extends javax.swing.JPanel {
 
     /**
      * Creates new form telaLogout
      */
-    public telaLogout() {
+    public TelaLogout() {
         initComponents();
     }
 
