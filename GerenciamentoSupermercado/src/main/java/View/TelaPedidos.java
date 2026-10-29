@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
 
 import View.MenuPadrao;
-import View.Usuario;
+import Model.Usuario;
 
 /**
  *
@@ -15,23 +15,75 @@ public class TelaPedidos extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaPedidos.class.getName());
 
-    /**
-     * Creates new form TelaPedidos
-     */
+private MenuPadrao menu;
+private Usuario usuario;
+    
     public TelaPedidos(Usuario usuario) {
         initComponents();
-        MenuPadrao.instalar(
+        this.usuario= usuario;
+        
+         MenuPadrao.instalar(
         this,
         usuario,
-        "clientes",
-        id -> {
-            // Aqui será definida a navegação entre as telas.
-            // Por enquanto, o formulário atual é preservado.
-        },
-        this::dispose
+        "inicio",
+         
+        this :: navegar,
+        this ::dispose
     );
+         
+         //exibe a tela inicial dentro do menu
+         menu.mostrarTela(new TelaPedidos(usuario));
     }
 
+    // METODO DE ACESSAR AS TELAS
+    public void navegar (String  idtela){
+          switch (idtela){
+          case "inicio":
+                menu.mostrarTela( new TelaHome(usuario) );
+                break;
+          case "produtos":
+                menu.mostrarTela( new TelaProdutos(usuario));
+                break; 
+           case "estoque":
+             //   menu.mostrarTela();
+                break;
+           case "fornecedores":
+               // menu.mostrarTela();
+                break;
+            case"clientes":
+                 menu .mostrarTela(new TelasClientes(usuario));
+          case"promocoes":
+                 //menu .mostrarTela();
+           case "caixas":
+               // menu.mostrarTela();
+                break;
+            case "vendas":
+                menu.mostrarTela(new TelaPdvRealizacao(usuario));
+                break;
+            case "pedidos":
+                menu.mostrarTela(new TelaPedidos(usuario));
+                break;
+            case "entregas":
+                menu.mostrarTela(new TelaEntregas(usuario));
+                break;
+         case "rh":
+                menu.mostrarTela(new  Tela_Funcionarios_RH(usuario));
+                break; 
+          case "financeiro":
+              //  menu.mostrarTela();
+                break;
+          case "relatorios":
+                //menu.mostrarTela();
+                break;
+          case "permissoes":
+                //menu.mostrarTela();
+                break;
+        }
+        
+        
+    }     
+                 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -1470,12 +1522,13 @@ public class TelaPedidos extends javax.swing.JFrame {
                     .addComponent(lblClienteAlteracao)
                     .addComponent(lblStatusAlteracao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNumeroPedidoAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtClienteAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ftfDataPedidoAlteracao)
-                    .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ftfDataPedidoAlteracao, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtNumeroPedidoAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtClienteAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPesquisarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1797,7 +1850,7 @@ public class TelaPedidos extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-          Usuario usuario = new Usuario("Samara", "Administradora", null);
+          Usuario usuario = new Usuario();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

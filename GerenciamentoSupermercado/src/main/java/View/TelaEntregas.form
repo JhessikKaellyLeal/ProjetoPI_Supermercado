@@ -3251,7 +3251,7 @@
                                               <Component id="lblIconeEntregasAgenda" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="217" max="-2" attributes="0"/>
                                               <Component id="lblIconeAndamentoAgenda" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="198" max="32767" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                               <Component id="lblIconrPendentesAgenda" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                           </Group>
