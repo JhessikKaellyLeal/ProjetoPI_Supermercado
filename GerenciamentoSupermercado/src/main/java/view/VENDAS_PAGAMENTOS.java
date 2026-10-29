@@ -2,7 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
+
+import Model.Usuario;
+import View.MenuPadrao;
 
 /**
  *
@@ -12,9 +15,10 @@ public class VENDAS_PAGAMENTOS extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VENDAS_PAGAMENTOS.class.getName());
 
-    /**
-     * Creates new form VENDAS_PAGAMENTOS
-     */
+    private MenuPadrao menu;
+ private Usuario usuario;
+    
+    
     public VENDAS_PAGAMENTOS() {
         initComponents();
     }

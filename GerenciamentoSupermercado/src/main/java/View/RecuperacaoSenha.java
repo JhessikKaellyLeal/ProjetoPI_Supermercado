@@ -10,9 +10,9 @@ package View;
  */
 public class RecuperacaoSenha extends javax.swing.JPanel {
 
-    /**
-     * Creates new form RecuperacaoSenha
-     */
+    
+    
+    
     public RecuperacaoSenha() {
         initComponents();
     }

@@ -4,6 +4,8 @@
  */
 package View;
 
+import Control.UsuarioController; 
+import Model.Usuario;
 /**
  *
  * @author JhéssikLeal
@@ -66,6 +68,7 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
         jPanel1.add(cbLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
 
         btnEntrada.setText("Entrar no sistema");
+        btnEntrada.addActionListener(this::btnEntradaActionPerformed);
         jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 280, 30));
 
         btnEsqueciSenha.setText("Esqueceu a senha");
@@ -91,6 +94,23 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
+
+    UsuarioController controller = new UsuarioController ();
+    String email = tfUsuario.getText(). trim();
+    String senha = new String (pfSenha.getPassword()).trim();
+    
+  Usuario usuariomodel =  controller.login(email,senha);
+
+  TelaHome home = new TelaHome(usuariomodel);
+  home.setVisible(true);
+//dispose fecha a tela login
+  dispose();
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEntradaActionPerformed
 
     /**
      * @param args the command line arguments

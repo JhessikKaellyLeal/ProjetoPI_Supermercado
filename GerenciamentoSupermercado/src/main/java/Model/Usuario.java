@@ -2,96 +2,84 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package Model; 
 
-/**
- *
- * @author SamaraTavares
- */
-// dentro do java Class não se uma "main"
+import javax.swing.ImageIcon;
+
+
 public class Usuario {
-   /*Primeira regra de Segurança:
-   - todos os atributos são declarados como privados
-   - private informa que somente a classe(Usuario) pode acessar 
-   */
-   private String nome,dataNascimento,cpf,email; 
-   private String senha,telefone,endereco,sexo;       
    
-   // construtor - metodo que inicializa o objeto criado
-   // construtor - precisa ter o mesmo nom da classe
-   public void Usuario(){
-       
-   }        
-           
-   // SETTER - é utilizado para cadastrar e atualizar dados
-   // metodo com parametro - quem chamar tem que passar texto
-    public void setNome(String valor){// metodo
-       this.nome = valor;   
-    }// fim do setNome
-   
-    public void setCpf(String valor){
-       this.cpf = valor;
-    }// fim do setCpf
-   
-    public void setDataNascimento(String valor){
-       this.dataNascimento = valor;
-    }// fim do setDataNascimento
+   int idusuario, funcionario_idfuncionario ;
+   String nome,cpf,email,senha;
+   boolean bloqueio;
 
-    public void setEmail(String email) {
-        this.email = email;
-    }// fim do setEmail
+    public Usuario() {
+    }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }// fim do setSenha
+    public int getIdusuario() {
+        return idusuario;
+    }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }// fim do setTelefone
+    public void setIdusuario(int idusuario) {
+        this.idusuario = idusuario;
+    }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }// fim do setEndereco
+    public int getFuncionario_idfuncionario() {
+        return funcionario_idfuncionario;
+    }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }// fim do setSexo
-    
-    //GETTER - possibilita ler o dado que tem na variavel
-    // metodo com retorno do tipo String
-    // this - serve para indicar que a váriavel está dentro da classe
-    public String getNome(){
-        return this.nome;
-    }// fim so getNome
+    public void setFuncionario_idfuncionario(int funcionario_idfuncionario) {
+        this.funcionario_idfuncionario = funcionario_idfuncionario;
+    }
 
-    public String getDataNascimento() {
-        return dataNascimento;
-    }// fim do getDataNascimento
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
     public String getCpf() {
         return cpf;
-    }// fim do getCpf
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
     public String getEmail() {
         return email;
-    }// fim do getEmail
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getSenha() {
         return senha;
-    }// fim do getSenha
+    }
 
-    public String getTelefone() {
-        return telefone;
-    }// fim do getTelefone
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
-    public String getEndereco() {
-        return endereco;
-    }// fim do getEndereço
+    public boolean isBloqueio() {
+        return bloqueio;
+    }
 
-    public String getSexo() {
-        return sexo;
-    }// fim do getSexo 
-   
+    public void setBloqueio(boolean bloqueio) {
+        this.bloqueio = bloqueio;
+    }
+
+    public String getPerfil() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public ImageIcon getFoto() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     
    
    
