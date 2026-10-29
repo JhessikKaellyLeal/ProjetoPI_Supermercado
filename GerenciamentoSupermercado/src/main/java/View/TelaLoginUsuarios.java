@@ -4,6 +4,9 @@
  */
 package View;
 
+import control.UsuarioController;
+import model.Usuario;
+
 /**
  *
  * @author JhéssikLeal
@@ -18,7 +21,6 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
     public TelaLoginUsuarios() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,6 +30,7 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFrame1 = new javax.swing.JFrame();
         jPanel1 = new javax.swing.JPanel();
         lbNomeSupermercado = new javax.swing.JLabel();
         lbUsuario = new javax.swing.JLabel();
@@ -41,6 +44,17 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
         btnAjuda = new javax.swing.JButton();
         btnMostrarSenha = new javax.swing.JButton();
         spLogin = new javax.swing.JSeparator();
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +80,7 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
         jPanel1.add(cbLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
 
         btnEntrada.setText("Entrar no sistema");
+        btnEntrada.addActionListener(this::btnEntradaActionPerformed);
         jPanel1.add(btnEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 280, 30));
 
         btnEsqueciSenha.setText("Esqueceu a senha");
@@ -92,10 +107,28 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaActionPerformed
+        // TODO add your handling code here:
+        UsuarioController controller = new UsuarioController();
+        String email = tfUsuario.getText().trim();
+        String senha = new String(pfSenha.getPassword()).trim();
+        
+        Usuario usuariomodel = controller.login(email, senha);
+        
+        TelaHome home = new TelaHome(usuariomodel);
+        home.setVisible(true);
+        
+        dispose();
+        
+        
+    }//GEN-LAST:event_btnEntradaActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -123,6 +156,7 @@ public class TelaLoginUsuarios extends javax.swing.JFrame {
     private javax.swing.JButton btnEsqueciSenha;
     private javax.swing.JButton btnMostrarSenha;
     private javax.swing.JCheckBox cbLogin;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbLogotipo;
     private javax.swing.JLabel lbNomeSupermercado;

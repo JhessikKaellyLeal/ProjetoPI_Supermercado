@@ -2,10 +2,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
 
+import Control.PedidosController;
 import View.MenuPadrao;
-import View.Usuario;
+import View.TelaHome;
+import View.TelaPerfilUsuarios;
+import View.TelaProdutos;
+import View.Tela_Funcionarios_RH;
+import model.Usuario;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,23 +20,146 @@ import View.Usuario;
 public class TelaPedidos extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaPedidos.class.getName());
-
+    
+    private MenuPadrao menu;
+    private Usuario usuario;
     /**
      * Creates new form TelaPedidos
      */
     public TelaPedidos(Usuario usuario) {
         initComponents();
+        this.usuario = usuario;
+        
         MenuPadrao.instalar(
         this,
         usuario,
-        "clientes",
-        id -> {
-            // Aqui será definida a navegação entre as telas.
-            // Por enquanto, o formulário atual é preservado.
-        },
+        "inicio",
+        this::navegar,
         this::dispose
     );
+        //
+        menu.mostrarTela(new TelaPedidos(usuario));
     }
+    
+        public void navegar(String idtela){
+        switch(idtela){
+            case "inicio":
+                menu.mostrarTela(new TelaHome(usuario));
+                break;
+            case "produtos":
+                menu.mostrarTela(new TelaProdutos(usuario));
+                break;
+            case "estoque":
+             //   menu.mostrarTela();
+                break;
+            case "fornecedores":
+             //   menu.mostrarTela();
+                break;
+            case "clientes":
+                menu.mostrarTela(new TelasClientes(usuario));
+                break;
+            case "promocoes":
+             //   menu.mostrarTela();
+                break;
+            case "caixas":
+             //   menu.mostrarTela();
+                break;
+            case "vendas":
+                menu.mostrarTela(new TelaPdvRealizacao(usuario));
+                break;
+            case "pedidos":
+                menu.mostrarTela(new TelaPedidos(usuario));
+                break;
+            case "entregas":
+                menu.mostrarTela(new TelaEntregas(usuario));
+                break;
+            case "rh":
+                menu.mostrarTela(new Tela_Funcionarios_RH(usuario));
+                break;
+            case"financeiro":
+             //   menu.mostrarTela();
+                break;
+            case "relatorios":
+             //   menu.mostrarTela();
+                break;
+            case "premissoes":
+                menu.mostrarTela(new TelaPerfilUsuarios(usuario));
+                break;
+        }
+    }
+    
+private void cadastrar() {
+    try {
+        // Recupera os dados digitados na tela
+        String numeroPedido = txtNumeroPedidoCadastro.getText().trim();
+        String dataPedido = ftfDataPedidoCadastro.getText().trim();
+        String statusPedido = cbStatusPedidoCadastro.getSelectedItem().toString();
+        String observacao = txtaObservacoesCadastro.getText().trim();
+
+        // Valida os campos obrigatórios
+        if (numeroPedido.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                    "Informe o número do pedido.");
+            txtNumeroPedidoCadastro.requestFocus();
+            return;
+        }
+
+        if (dataPedido.isEmpty() || dataPedido.equals("//")) {
+            JOptionPane.showMessageDialog(this,
+                    "Informe a data do pedido.");
+            ftfDataPedidoCadastro.requestFocus();
+            return;
+        }
+
+        // Atenção: este exemplo pressupõe que o campo Cliente
+        // contém o ID numérico do cliente, e não o nome.
+        int idCliente = Integer.parseInt(
+                txtClienteCadastro.getText().trim()
+        );
+
+        // Precisamos obter estes IDs da lógica do seu sistema.
+        int idUsuario = 1;
+        int idEntrega = 1;
+
+        // Utiliza o Controller original
+        PedidosController controller = new PedidosController();
+
+        boolean cadastrado = controller.cadastrar(
+                numeroPedido,
+                dataPedido,
+                statusPedido,
+                observacao,
+                idCliente,
+                idUsuario,
+                idEntrega
+        );
+
+        if (cadastrado) {
+            JOptionPane.showMessageDialog(this,
+                    "Pedido cadastrado com sucesso!");
+
+            // Limpa os campos após o cadastro
+            txtNumeroPedidoCadastro.setText("");
+            ftfDataPedidoCadastro.setText("");
+            txtClienteCadastro.setText("");
+            txtaObservacoesCadastro.setText("");
+
+            // Atualize a tabela de pedidos aqui,
+            // quando o método de listagem estiver integrado.
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Não foi possível cadastrar o pedido.");
+        }
+
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this,
+                "O ID do cliente precisa ser numérico.");
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(this,
+                "Erro ao cadastrar pedido: " + e.getMessage());
+    }
+}
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -263,6 +392,7 @@ public class TelaPedidos extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         ftfDataPedidoCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
+        ftfDataPedidoCadastro.addActionListener(this::ftfDataPedidoCadastroActionPerformed);
 
         lblClienteCadastro.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         lblClienteCadastro.setText("Cliente");
@@ -335,6 +465,7 @@ public class TelaPedidos extends javax.swing.JFrame {
 
         btnNovoCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnNovoCadastro.setText("Novo");
+        btnNovoCadastro.addActionListener(this::btnNovoCadastroActionPerformed);
 
         btnEditarCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         btnEditarCadastro.setText("Editar");
@@ -1470,12 +1601,13 @@ public class TelaPedidos extends javax.swing.JFrame {
                     .addComponent(lblClienteAlteracao)
                     .addComponent(lblStatusAlteracao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNumeroPedidoAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtClienteAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPesquisarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ftfDataPedidoAlteracao)
-                    .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ftfDataPedidoAlteracao, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(alteracaoStatusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtNumeroPedidoAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtClienteAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPesquisarAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbStatusAlteracao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 359, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -1793,11 +1925,21 @@ public class TelaPedidos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnNovoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoCadastroActionPerformed
+        // TODO add your handling code here:
+        cadastrar();
+        
+    }//GEN-LAST:event_btnNovoCadastroActionPerformed
+
+    private void ftfDataPedidoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ftfDataPedidoCadastroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ftfDataPedidoCadastroActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-          Usuario usuario = new Usuario("Samara", "Administradora", null);
+          Usuario usuario = new Usuario();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

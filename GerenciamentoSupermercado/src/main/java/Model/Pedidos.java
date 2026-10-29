@@ -1,16 +1,18 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
-/**
- *
- * @author AntônioVieira
- */
+import java.time.LocalDate;
+
 public class Pedidos {
-  private int idpedidos, cliente_idcliente, usuario_idusuario,entregas_identregas;
-private String numeroPedidos, dataPedidos, statusPedido,observacao;
+
+    private int idpedidos;
+    private int cliente_idcliente;
+    private int usuario_idUsuario;
+
+    private String numeroPedido;
+    private LocalDate dataPedido;
+    private String statusPedido;
+    private String observacao;
 
     public Pedidos() {
     }
@@ -23,44 +25,20 @@ private String numeroPedidos, dataPedidos, statusPedido,observacao;
         this.idpedidos = idpedidos;
     }
 
-    public int getCliente_idcliente() {
-        return cliente_idcliente;
+    public String getNumeroPedido() {
+        return numeroPedido;
     }
 
-    public void setCliente_idcliente(int cliente_idcliente) {
-        this.cliente_idcliente = cliente_idcliente;
+    public void setNumeroPedido(String numeroPedido) {
+        this.numeroPedido = numeroPedido;
     }
 
-    public int getUsuario_idusuario() {
-        return usuario_idusuario;
+    public LocalDate getDataPedido() {
+        return dataPedido;
     }
 
-    public void setUsuario_idusuario(int usuario_idusuario) {
-        this.usuario_idusuario = usuario_idusuario;
-    }
-
-    public int getEntregas_identregas() {
-        return entregas_identregas;
-    }
-
-    public void setEntregas_identregas(int entregas_identregas) {
-        this.entregas_identregas = entregas_identregas;
-    }
-
-    public String getNumeroPedidos() {
-        return numeroPedidos;
-    }
-
-    public void setNumeroPedidos(String numeroPedidos) {
-        this.numeroPedidos = numeroPedidos;
-    }
-
-    public String getDataPedidos() {
-        return dataPedidos;
-    }
-
-    public void setDataPedidos(String dataPedidos) {
-        this.dataPedidos = dataPedidos;
+    public void setDataPedido(LocalDate dataPedido) {
+        this.dataPedido = dataPedido;
     }
 
     public String getStatusPedido() {
@@ -78,5 +56,20 @@ private String numeroPedidos, dataPedidos, statusPedido,observacao;
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-        
+
+    public int getCliente_idcliente() {
+        return cliente_idcliente;
+    }
+
+    public void setCliente_idcliente(int cliente_idcliente) {
+        this.cliente_idcliente = cliente_idcliente;
+    }
+
+    public int getUsuario_idUsuario() {
+        return usuario_idUsuario;
+    }
+
+    public void setUsuario_idUsuario(int usuario_idUsuario) {
+        this.usuario_idUsuario = usuario_idUsuario;
+    }
 }

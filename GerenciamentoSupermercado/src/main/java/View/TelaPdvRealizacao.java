@@ -2,23 +2,90 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
+
+import View.MenuPadrao;
+import View.TelaHome;
+import View.TelaPerfilUsuarios;
+import View.TelaProdutos;
+import View.Tela_Funcionarios_RH;
+import model.Usuario;
 
 /**
  *
  * @author KalebeMorais
  */
-public class pvdRealizacaoTela extends javax.swing.JFrame {
+public class TelaPdvRealizacao extends javax.swing.JFrame {
 
-private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(pvdRealizacaoTela.class.getName());
+private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaPdvRealizacao.class.getName());
 
 /**
  * Creates new form pvdRealizacaoTela
  */
-public pvdRealizacaoTela() {
+private MenuPadrao menu;
+    private Usuario usuario;
+    
+public TelaPdvRealizacao(Usuario usuario) {
     initComponents();
+    this.usuario = usuario;
+        
+        MenuPadrao.instalar(
+        this,
+        usuario,
+        "inicio",
+        this::navegar,
+        this::dispose
+    );
+        //
+        menu.mostrarTela(new TelaPdvRealizacao(usuario));
 }
 
+    public void navegar(String idtela){
+        switch(idtela){
+            case "inicio":
+                menu.mostrarTela(new TelaHome(usuario));
+                break;
+            case "produtos":
+                menu.mostrarTela(new TelaProdutos(usuario));
+                break;
+            case "estoque":
+             //   menu.mostrarTela();
+                break;
+            case "fornecedores":
+             //   menu.mostrarTela();
+                break;
+            case "clientes":
+                menu.mostrarTela(new TelasClientes(usuario));
+                break;
+            case "promocoes":
+             //   menu.mostrarTela();
+                break;
+            case "caixas":
+             //   menu.mostrarTela();
+                break;
+            case "vendas":
+                menu.mostrarTela(new TelaPdvRealizacao(usuario));
+                break;
+            case "pedidos":
+                menu.mostrarTela(new TelaPedidos(usuario));
+                break;
+            case "entregas":
+                menu.mostrarTela(new TelaEntregas(usuario));
+                break;
+            case "rh":
+                menu.mostrarTela(new Tela_Funcionarios_RH(usuario));
+                break;
+            case"financeiro":
+             //   menu.mostrarTela();
+                break;
+            case "relatorios":
+             //   menu.mostrarTela();
+                break;
+            case "premissoes":
+                menu.mostrarTela(new TelaPerfilUsuarios(usuario));
+                break;
+        }
+    }
 /**
  * This method is called from within the constructor to initialize the form.
  * WARNING: Do NOT modify this code. The content of this method is always
@@ -1330,9 +1397,10 @@ public static void main(String args[]) {
         logger.log(java.util.logging.Level.SEVERE, null, ex);
     }
     //</editor-fold>
+    Usuario usuario = new Usuario();
 
     /* Create and display the form */
-    java.awt.EventQueue.invokeLater(() -> new pvdRealizacaoTela().setVisible(true));
+    java.awt.EventQueue.invokeLater(() -> new TelaPdvRealizacao(usuario).setVisible(true));
 }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -2,10 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package view;
+package View;
 
 import View.MenuPadrao;
-import View.Usuario;
+import View.TelaHome;
+import View.TelaPerfilUsuarios;
+import View.TelaProdutos;
+import View.Tela_Funcionarios_RH;
+import model.Usuario;
+
 
 /**
  *
@@ -14,21 +19,72 @@ import View.Usuario;
 public class TelasClientes extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelasClientes.class.getName());
+    
+    private MenuPadrao menu;
+    private Usuario usuario;
 
 
     public TelasClientes(Usuario usuario) {
         initComponents();
-         MenuPadrao.instalar(
+        this.usuario = usuario;
+        
+        MenuPadrao.instalar(
         this,
         usuario,
-        "clientes",
-        id -> {
-            // Aqui será definida a navegação entre as telas.
-            // Por enquanto, o formulário atual é preservado.
-        },
+        "inicio",
+        this::navegar,
         this::dispose
-    );  
+    );
+        //
+        menu.mostrarTela(new TelasClientes(usuario));
         
+    }
+    
+        public void navegar(String idtela){
+        switch(idtela){
+            case "inicio":
+                menu.mostrarTela(new TelaHome(usuario));
+                break;
+            case "produtos":
+                menu.mostrarTela(new TelaProdutos(usuario));
+                break;
+            case "estoque":
+             //   menu.mostrarTela();
+                break;
+            case "fornecedores":
+             //   menu.mostrarTela();
+                break;
+            case "clientes":
+                menu.mostrarTela(new TelasClientes(usuario));
+                break;
+            case "promocoes":
+             //   menu.mostrarTela();
+                break;
+            case "caixas":
+             //   menu.mostrarTela();
+                break;
+            case "vendas":
+                menu.mostrarTela(new TelaPdvRealizacao(usuario));
+                break;
+            case "pedidos":
+                menu.mostrarTela(new TelaPedidos(usuario));
+                break;
+            case "entregas":
+                menu.mostrarTela(new TelaEntregas(usuario));
+                break;
+            case "rh":
+                menu.mostrarTela(new Tela_Funcionarios_RH(usuario));
+                break;
+            case"financeiro":
+             //   menu.mostrarTela();
+                break;
+            case "relatorios":
+             //   menu.mostrarTela();
+                break;
+            case "premissoes":
+                menu.mostrarTela(new TelaPerfilUsuarios(usuario));
+                break;
+        }
     }
 
     /**
@@ -1555,7 +1611,7 @@ public class TelasClientes extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-           Usuario usuario = new Usuario("cleiciane", "Administradora", null);
+           Usuario usuario = new Usuario();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

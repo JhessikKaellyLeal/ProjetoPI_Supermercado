@@ -4,29 +4,82 @@
  */
 package View;
 
+import model.Usuario;
+
+
 /**
  *
  * @author ArthurGiuvannucci
  */
-public class tela_Funcionarios_RH extends javax.swing.JFrame {
+public class Tela_Funcionarios_RH extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(tela_Funcionarios_RH.class.getName());
-
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Tela_Funcionarios_RH.class.getName());
+    
+    private MenuPadrao menu;
+    private Usuario usuario;
     /**
      * Creates new form tela_Funcionarios_RH
      */
-    public tela_Funcionarios_RH(Usuario usuario) {
+    public Tela_Funcionarios_RH(Usuario usuario) {
         initComponents();
-         MenuPadrao.instalar(
+        this.usuario = usuario;
+        
+        MenuPadrao.instalar(
         this,
         usuario,
-        "clientes",
-        id -> {
-            // Aqui será definida a navegação entre as telas.
-            // Por enquanto, o formulário atual é preservado.
-        },
+        "inicio",
+        this::navegar,
         this::dispose
     );
+        //
+        menu.mostrarTela(new Tela_Funcionarios_RH(usuario));
+    }
+    
+        public void navegar(String idtela){
+        switch(idtela){
+            case "inicio":
+                menu.mostrarTela(new TelaHome(usuario));
+                break;
+            case "produtos":
+                menu.mostrarTela(new TelaProdutos(usuario));
+                break;
+            case "estoque":
+             //   menu.mostrarTela();
+                break;
+            case "fornecedores":
+             //   menu.mostrarTela();
+                break;
+            case "clientes":
+                menu.mostrarTela(new TelasClientes(usuario));
+                break;
+            case "promocoes":
+             //   menu.mostrarTela();
+                break;
+            case "caixas":
+             //   menu.mostrarTela();
+                break;
+            case "vendas":
+                menu.mostrarTela(new TelaPdvRealizacao(usuario));
+                break;
+            case "pedidos":
+                menu.mostrarTela(new TelaPedidos(usuario));
+                break;
+            case "entregas":
+                menu.mostrarTela(new TelaEntregas(usuario));
+                break;
+            case "rh":
+                menu.mostrarTela(new Tela_Funcionarios_RH(usuario));
+                break;
+            case"financeiro":
+             //   menu.mostrarTela();
+                break;
+            case "relatorios":
+             //   menu.mostrarTela();
+                break;
+            case "premissoes":
+                menu.mostrarTela(new TelaPerfilUsuarios(usuario));
+                break;
+        }
     }
 
     /** 
@@ -777,75 +830,72 @@ public class tela_Funcionarios_RH extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3)
+                    .addComponent(lbAvisoBarraPesquisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 1170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pagSetoresLayout.createSequentialGroup()
                         .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbAvisoBarraPesquisa2, javax.swing.GroupLayout.PREFERRED_SIZE, 1170, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pagSetoresLayout.createSequentialGroup()
+                                .addComponent(lbPesquisarFuncionario2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txBarraPesquisaFuncionarios2, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(lbStatus2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbStatusPF2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(33, 33, 33)
+                                .addComponent(lbSetorpai)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(pagSetoresLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
                                 .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pagSetoresLayout.createSequentialGroup()
-                                        .addComponent(lbPesquisarFuncionario2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(txBarraPesquisaFuncionarios2, javax.swing.GroupLayout.PREFERRED_SIZE, 577, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(31, 31, 31)
-                                        .addComponent(lbStatus2)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(cbStatusPF2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(lbSetorpai)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(tfCodigoCargos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(85, 85, 85)
+                                        .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lbNomeSetor)
+                                            .addComponent(tfNomeSetor, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(149, 149, 149)
+                                        .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lbDescricoaSetores)
+                                            .addComponent(tfDescricaoSetores)))
                                     .addGroup(pagSetoresLayout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
+                                        .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(pagSetoresLayout.createSequentialGroup()
+                                                .addComponent(btnNovo2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(103, 103, 103)
+                                                .addComponent(btnSalvar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lbSetorPai)
+                                                .addComponent(cbSetorCargos1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(pagSetoresLayout.createSequentialGroup()
-                                                .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jLabel3)
-                                                    .addComponent(tfCodigoCargos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(85, 85, 85)
-                                                .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(lbNomeSetor)
-                                                    .addComponent(tfNomeSetor, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(149, 149, 149)
-                                                .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(lbDescricoaSetores)
-                                                    .addComponent(tfDescricaoSetores)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnVoltar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(42, 42, 42))
                                             .addGroup(pagSetoresLayout.createSequentialGroup()
-                                                .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                    .addGroup(pagSetoresLayout.createSequentialGroup()
-                                                        .addComponent(btnNovo2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(103, 103, 103)
-                                                        .addComponent(btnSalvar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(lbSetorPai)
-                                                        .addComponent(cbSetorCargos1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                                 .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addGroup(pagSetoresLayout.createSequentialGroup()
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(btnVoltar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(42, 42, 42))
-                                                    .addGroup(pagSetoresLayout.createSequentialGroup()
+                                                        .addGap(60, 60, 60)
                                                         .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addGroup(pagSetoresLayout.createSequentialGroup()
-                                                                .addGap(60, 60, 60)
-                                                                .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                    .addComponent(lbGerenteResponsavel)
-                                                                    .addComponent(cbNivelHierarquia1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                .addGap(55, 55, 55)
-                                                                .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                                    .addComponent(lbAtivoSetores)
-                                                                    .addComponent(chbCargoAtivo1)))
-                                                            .addGroup(pagSetoresLayout.createSequentialGroup()
-                                                                .addGap(113, 113, 113)
-                                                                .addComponent(btnEditar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(97, 97, 97)
-                                                                .addComponent(btnExcluir2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(90, 90, 90)
-                                                                .addComponent(btnLimpar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                        .addGap(0, 247, Short.MAX_VALUE)))))
-                                        .addGap(54, 54, 54)))
-                                .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbStatusPF3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                                            .addComponent(lbGerenteResponsavel)
+                                                            .addComponent(cbNivelHierarquia1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGap(55, 55, 55)
+                                                        .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(lbAtivoSetores)
+                                                            .addComponent(chbCargoAtivo1)))
+                                                    .addGroup(pagSetoresLayout.createSequentialGroup()
+                                                        .addGap(113, 113, 113)
+                                                        .addComponent(btnEditar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(97, 97, 97)
+                                                        .addComponent(btnExcluir2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addGap(90, 90, 90)
+                                                        .addComponent(btnLimpar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(0, 247, Short.MAX_VALUE)))))
+                                .addGap(54, 54, 54)))
+                        .addGroup(pagSetoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cbStatusPF3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         pagSetoresLayout.setVerticalGroup(
@@ -3183,7 +3233,7 @@ public class tela_Funcionarios_RH extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        Usuario usuario = new Usuario("Arthur G.", "RH", null);
+        Usuario usuario = new Usuario();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -3202,7 +3252,7 @@ public class tela_Funcionarios_RH extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new tela_Funcionarios_RH(usuario).setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Tela_Funcionarios_RH(usuario).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
